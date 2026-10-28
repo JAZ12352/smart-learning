@@ -45,7 +45,7 @@ ZHIPU_VISION_BASE_URL=https://open.bigmodel.cn/api/paas/v4/chat/completions
         transport: stdio
         command: python
         args: ['mcp/zhipu_vision_mcp.py']
-        cwd: 'C:/Users/20873/Downloads/84015876yuanma'
+        cwd: '.'
         env:
           ZHIPU_API_KEY: !!js process.env.ZHIPU_API_KEY || ''
           ZHIPU_VISION_MODEL: !!js process.env.ZHIPU_VISION_MODEL || 'glm-4.6v-flash'

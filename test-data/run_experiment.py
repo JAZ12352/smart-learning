@@ -1,7 +1,7 @@
-import json, sys, time, urllib.request
+import json, os, sys, time, urllib.request
 
 tok = sys.argv[1]
-out = r'C:\Users\20873\Downloads\84015876yuanma\test-data\run_experiment_result.json'
+out = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'run_experiment_result.json')
 req = urllib.request.Request('http://localhost:8001/api/admin/evaluation/run-experiment',
     data=b'{}', headers={'Content-Type': 'application/json', 'token': tok}, method='POST')
 t0 = time.time()

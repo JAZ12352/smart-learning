@@ -138,6 +138,12 @@
 │       ├── exam/                   # 考试管理
 │       └── knowledge-base/         # 知识库管理
 │
+├── scripts/                        # 运维与数据脚本
+│   ├── import_kb.sh                # 知识库素材批量导入
+│   ├── sync_kb_fallback.py         # 知识库回退数据同步
+│   ├── deploy-on-server.sh         # 服务器端一键部署
+│   └── ecs_bootstrap.sh            # 云主机环境引导（Docker 等）
+│
 ├── docker-compose.yml              # 三服务编排（mysql / backend / admin）
 ├── .env.example                    # 环境变量模板（复制为 .env 后填写密钥）
 ├── backend/xzs/src/main/resources/db/   # 数据库脚本（schema / 种子数据）

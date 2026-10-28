@@ -41,7 +41,7 @@ curl -X POST http://localhost:8001/api/user/login \
 
 ### 3. 修改 Token
 
-打开 `zhihuibeike-stress-test.jmx`，将变量 `TOKEN` 的值替换为你的登录 Token。
+打开 `xzs-stress-test.jmx`，将变量 `TOKEN` 的值替换为你的登录 Token。
 
 或在 JMeter GUI 中修改：
 - 打开测试计划 → 用户定义变量 → 修改 `TOKEN` 的值
@@ -49,7 +49,7 @@ curl -X POST http://localhost:8001/api/user/login \
 ### 4. GUI 模式运行
 
 ```bash
-jmeter -t tests/jmeter/zhihuibeike-stress-test.jmx
+jmeter -t tests/jmeter/xzs-stress-test.jmx
 ```
 
 ### 5. 命令行运行（生成 HTML 报告）
@@ -60,7 +60,7 @@ mkdir -p tests/jmeter/report
 
 # 运行测试并生成报告
 jmeter -n \
-  -t tests/jmeter/zhihuibeike-stress-test.jmx \
+  -t tests/jmeter/xzs-stress-test.jmx \
   -l tests/jmeter/result.jtl \
   -e -o tests/jmeter/report
 
