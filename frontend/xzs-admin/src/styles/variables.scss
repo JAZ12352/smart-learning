@@ -1,0 +1,42 @@
+// ═══════════════════════════════════════
+// Indigo Wave 设计系统 — 靛蓝海浪 + 玻璃质感
+// ═══════════════════════════════════════
+$blue:var(--acid);
+$light-blue:var(--acid);
+$sky-blue:var(--ice);
+$red:#ef4444;
+$pink: var(--ice);
+$green: #22c55e;
+$tiffany: var(--ice);
+$yellow:#f59e0b;
+$panGreen: #22c55e;
+
+// 侧边栏 — 靛蓝海浪渐变
+$menuText:var(--ice);                    // 浅蓝文字
+$menuActiveText:#ffffff;
+$subMenuActiveText:#ffffff;
+
+$menuBg:var(--ink-4);                     // 深海蓝
+$menuHover:rgba(var(--acid-rgb), 0.15);
+
+$subMenuBg:#141A14;
+$subMenuHover:rgba(var(--acid-rgb), 0.12);
+
+$sideBarWidth: 240px;
+
+// 品牌色
+$brandGradient: linear-gradient(135deg, var(--acid) 0%, var(--ice) 50%, var(--acid) 100%);
+$brandAccent: var(--acid);
+$brandAccentGlow: var(--ice);
+
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+  brandAccent: $brandAccent;
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "course": "深度学习实战",
+    "videoCount": 7,
+    "playState": "OK_iframe",
+    "pptSlides": 12,
+    "pptTitle": "课堂教学课件 第1章 深度学习概述与环境搭建 B站 · 动手学深度学习 · 主讲：李沐团队 · 本章共6个知识点 · 教材：动手学深度学习（d2l.ai 中文版"
+  },
+  {
+    "course": "大模型应用开发：RAG",
+    "videoCount": 6,
+    "playState": "OK_iframe",
+    "pptSlides": 12,
+    "pptTitle": "课堂教学课件 第1章 大模型API与Prompt工程 DataWhale 开源社区 · 主讲：DataWhale LLM 组 · 本章共6个知识点 · 教材：L"
+  },
+  {
+    "course": "提示工程",
+    "videoCount": 3,
+    "playState": "OK_iframe",
+    "pptSlides": 12,
+    "pptTitle": "课堂教学课件 第1章 提示工程两大原则 DeepLearning.AI · B站翻译版 · 主讲：Andrew Ng · Isa Fulford · 本章共6个"
+  },
+  {
+    "course": "大模型微调实战",
+    "videoCount": 4,
+    "playState": "OK_iframe",
+    "pptSlides": 12,
+    "pptTitle": "课堂教学课件 第1章 微调路线决策框架 Hugging Face Course · B站中文区 · 主讲：HF 社区讲师 · 本章共6个知识点 · 教材：Hug"
+  },
+  {
+    "course": "模型部署",
+    "videoCount": 5,
+    "playState": "OK_iframe",
+    "pptSlides": 12,
+    "pptTitle": "课堂教学课件 第1章 部署架构与服务化基础 B站技术区 · MLOps 讲师团 · 主讲：一线推理优化工程师 · 本章共6个知识点 · 教材：ML模型部署实战手"
+  },
+  {
+    "course": "工业视觉质检",
+    "videoCount": 5,
+    "playState": "OK_iframe",
+    "pptSlides": 12,
+    "pptTitle": "课堂教学课件 第1章 产线图像采集基础 阿里云天池 · B站实训 · 主讲：天池认证讲师 · 本章共6个知识点 · 教材：工业机器视觉项目实战讲义"
+  },
+  {
+    "course": "预测性维护",
+    "videoCount": 5,
+    "playState": "OK_iframe",
+    "pptSlides": 12,
+    "pptTitle": "课堂教学课件 第1章 工业数据采集与时序基础 阿里云天池 · C-MAPSS实战 · 主讲：工业大数据讲师团 · 本章共6个知识点 · 教材：基于深度学习的装备"
+  },
+  {
+    "course": "MLOps工程实践",
+    "videoCount": 5,
+    "playState": "OK_iframe",
+    "pptSlides": 12,
+    "pptTitle": "课堂教学课件 第1章 MLOps成熟度模型 Microsoft Learn · DataWhale · 主讲：MLOps Community · 本章共6个知识"
+  },
+  {
+    "course": "多智能体系统",
+    "videoCount": 4,
+    "playState": "OK_iframe",
+    "pptSlides": 12,
+    "pptTitle": "课堂教学课件 第1章 Agent设计模式总览 B站技术区 · LangGraph中文社区 · 主讲：LLM Ops 讲师 · 本章共6个知识点 · 教材：Lan"
+  }
+]

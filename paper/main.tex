@@ -1,0 +1,107 @@
+%=====================================================================
+%  ZhileXue (智慧乐学) — Manuscript for IEEE Transactions on Learning Technologies
+%  Target: IEEE TLT (SCI Q2). Switch to elsarticle for Elsevier venues.
+%  Build: pdflatex -> bibtex -> pdflatex -> pdflatex
+%  Notes: search "TODO" for every placeholder that must be filled with
+%         real measured numbers before submission. NEVER ship a TODO.
+%=====================================================================
+\documentclass[journal,compsoc]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{cite}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes.geometric,arrows.meta,fit,calc}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\sysname}{\textsc{ZhiLeXue}}
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
+\newcommand{\naive}{$\varnothing$}
+
+\begin{document}
+
+\title{A Multi-Agent Collaborative Framework with Debate-Driven Verification for Personalized Domain Knowledge Generation in Skill Training}
+
+\author{Yihao~Xu,~\IEEEmembership{Student Member,~IEEE}% <-this % stops a space
+\thanks{This work was supported by the ``Challenge Cup'' Revealing-the-List
+Research Program (Topic XH-202630).}% <-this % stops a space
+\thanks{Y. Xu is with the School of Artificial Intelligence, Wuchang University
+of Technology, Wuhan, China (e-mail: TODO).}}
+
+\markboth{Preprint submitted to IEEE Transactions on Learning Technologies}%
+{Shell \MakeLowercase{\textit{et al.}}: A Multi-Agent Framework for Personalized Domain Knowledge Generation}
+
+\IEEEtitleabstractindextext{%
+\begin{abstract}
+Domain-specific skill training (e.g., artificial intelligence, smart
+manufacturing, industrial internet) requires learning resources that are
+simultaneously \emph{personally adapted} to heterogeneous learner priors and
+\emph{factually grounded} in rapidly evolving domain knowledge. Single-pass
+large language model (LLM) generation satisfies neither requirement: it
+produces uniformly-styled content that ignores learner state, and it
+hallucinates technical claims that are costly in engineering education where
+learners cannot detect errors. We present \sysname{}, a multi-agent
+collaborative framework that closes the loop from \emph{learner profiling} to
+\emph{resource generation} to \emph{verification} to \emph{adaptive
+decision-making}. Eight specialist agents coordinated by a supervisor
+construct a dialogue-driven learner profile, generate six resource modalities
+from a shared state, and---critically---subject every generated artifact to an
+adversarial \emph{debate and cross-validation} stage before delivery. A
+separate reviewer agent scores artifacts along accuracy, difficulty fit,
+completeness, and cross-modal consistency, and an adaptation agent consumes
+interaction feedback to trigger either dimension reduction or advancement.
+
+Our first end-to-end measurement was a three-case pilot probe whose adaptation
+accuracy was only 33.3\%, with every error shifted exactly one difficulty
+level downward. We trace the cause to a calibration defect with three
+compounding parts: the supervisor was instructed to ``comprehensively
+consider'' learner scores without being given aggregation rules or thresholds;
+no mapping from teaching topics to prerequisite subjects existed; and the
+evaluation harness omitted the modifier terms that the calibration rule
+requires. Making the rule explicit---while logging any evidence-backed
+deviation rather than forbidding it---is expected to remove the shift, and we
+report this as a calibration-instruction ablation rather than as a bug fix.
+Over the full \todo{61}-case set spanning \todo{14} vertical topics and
+\todo{12} learner profiles, \sysname{} achieves \todo{XX\%}
+profile--difficulty adaptation accuracy, \todo{XX\%} core knowledge-point
+coverage, and \todo{X.X\%} hallucination rate.
+
+Because a system that grades its own output with the model that produced it is
+not by itself credible, we additionally anchor every reported hallucination
+rate against human raters and against judges from a different model family,
+and report the agreement. \sysname{} is deployed as a working system, and all
+evaluation scripts are released for reproducibility.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Multi-agent systems, large language models, personalized learning, learner
+modeling, hallucination mitigation, generative AI in education.
+\end{IEEEkeywords}}
+
+\maketitle
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle
+
+\input{sections/01-introduction}
+\input{sections/02-related-work}
+\input{sections/03-method}
+\input{sections/04-experiments}
+\input{sections/05-results}
+\input{sections/06-discussion}
+\input{sections/07-conclusion}
+
+\appendices
+\input{sections/appendix-agent-prompts}
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

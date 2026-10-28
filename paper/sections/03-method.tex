@@ -1,0 +1,233 @@
+%=====================================================================
+%  3. Method
+%=====================================================================
+\section{The \sysname{} Framework}
+\label{sec:method}
+
+\subsection{Overview}
+\label{ssec:overview}
+
+\sysname{} formulates personalized resource generation as a coordinated
+multi-agent decision process rather than a single inference call. Given a
+learning topic $t$ and a learner profile $p$, the system returns a bundle
+$\mathcal{R} = \{r_1,\ldots,r_M\}$ of resources across $M$ modalities together
+with a verification report and an adaptation decision. Formally,
+
+\begin{equation}
+\mathcal{R}, \hat{h}, a \;=\; \mathcal{F}(t, p, \mathcal{K}),
+\end{equation}
+
+where $\mathcal{K}$ is the domain knowledge base, $\hat{h}$ is the estimated
+hallucination rate of the bundle, and $a$ is the adaptation action for the next
+iteration.
+
+Figure~\ref{fig:arch} depicts the architecture. A supervisor decomposes the
+request and routes it; a diagnosis agent converts the profile into an explicit
+difficulty target and gap list; six specialist agents generate resources from a
+shared state; a debate agent adversarially verifies the bundle; a review agent
+scores it; and---only if verification passes---an adaptation agent decides the
+next difficulty transition. A critical structural property is that
+\emph{verification precedes delivery}: the loop back to generation is triggered
+by severity-graded evidence, not by a fixed iteration count.
+
+\begin{figure*}[!t]
+\centering
+\input{figures/architecture.tex}
+\caption{Architecture of \sysname{}. Solid arrows denote the forward
+generation path; dashed arrows denote verification-driven retry and the
+feedback path that updates the learner profile across sessions.}
+\label{fig:arch}
+\end{figure*}
+
+\subsection{Dialogue-Driven Learner Profiling}
+\label{ssec:profile}
+
+Rather than requiring learners to complete a survey, the profile agent
+extracts features incrementally from natural conversation. The profile is a
+structured record $p = \langle e, j, s, w, g, c, r \rangle$ whose fields are
+listed below, with $s$ denoting per-subject theory test scores in $[0,100]$:
+
+\begin{itemize}
+\item \textbf{$e$ educational background} (e.g., vocational diploma, BSc, MSc,
+PhD) and \textbf{$j$ job target} (in-school, career changer, in-service
+upskilling, corporate trainee);
+\item \textbf{$s$ theory test results} per subject, used as the quantitative
+basis for difficulty calibration;
+\item \textbf{$c$ cognitive style} (visual / auditory / kinesthetic /
+read-write);
+\item \textbf{$w$ identified weaknesses}, each with a subject and a severity;
+\item \textbf{$g$ learning goal}, \textbf{$r$ preferred pace}, interest
+preferences, and motivation level.
+\end{itemize}
+
+Because extraction is incremental, the profile is refreshed whenever new
+evidence appears (a quiz result, an explicit statement, a resource
+completion event), which is what makes the closed loop in
+Figure~\ref{fig:arch} meaningful across sessions rather than within a single
+request.
+
+\subsection{Diagnosis and Difficulty Calibration}
+\label{ssec:diagnosis}
+
+The diagnosis agent maps $p$ onto an explicit difficulty target. Let
+$\mathcal{S}(t)$ be the set of subjects a topic $t$ draws on. The base
+competence score is
+
+\begin{equation}
+b(p,t) = \left\lfloor \frac{1}{|\mathcal{S}(t)|}
+\sum_{u \in \mathcal{S}(t)} s_u + \frac{1}{2} \right\rfloor,
+\end{equation}
+
+where a missing subject score is imputed by the median of the learner's
+observed scores, rounded by the same half-up rule. We adopt round-half-up
+rather than a ceiling so that the base score is unbiased with respect to the
+underlying per-subject scores; the implementation
+(\texttt{orchestrator/workflow.py}, \texttt{tests/evaluate\_quality.py}) and the
+dataset specification (\texttt{test\_cases.json}) use this identical rule, so
+the expected label is reproducible across the system, the harness, and a
+reviewer's own recomputation. The calibrated target score is then
+
+\begin{equation}
+d(p,t) = \mathrm{clip}_{[0,100]}\bigl(b(p,t) + \delta_g + \delta_r + \delta_j\bigr),
+\end{equation}
+
+with $\delta_g, \delta_r, \delta_j \in \mathbb{Z}$ the goal, pace, and
+career-stage modifiers. The difficulty label is
+$\ell = \textsc{basic}$ if $d < 60$, $\textsc{intermediate}$ if $60 \le d < 85$,
+and $\textsc{advanced}$ otherwise. Crucially, this rule is \emph{public and
+deterministic}: given a profile and a topic, any reviewer can recompute the
+expected label, which is what makes the adaptation accuracy reported in
+Section~\ref{sec:results} auditable instead of self-reported.
+
+The computed quantities---prerequisite subjects, aggregate score $b$, modifier
+terms, and resulting level $\ell$---are injected into the supervisor's
+instruction together with the boundaries, so that the decision is a checked
+computation rather than an impression. The supervisor retains an escape hatch:
+it may deviate from the computed level only by stating concrete evidence, and
+the deviation is logged. Our first measurement showed why this matters: without
+the injected rule, the same supervisor produced a systematic one-level-downward
+bias (Section~\ref{ssec:calib_ablation}).
+
+\subsection{Specialized Generation Agents}
+
+Six specialists operate on a shared state object, so that later agents observe
+what earlier ones produced. This shared state is the mechanism behind
+cross-modal consistency: the quiz agent writes questions about the same
+knowledge points the document agent covered, and the video agent scripts
+against the same outline the mind map produced.
+
+\begin{table}[!t]
+\centering
+\caption{Agents participating in the collaboration workflow.}
+\label{tab:agents}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Agent} & \textbf{Output} \\
+\midrule
+Supervisor & Task decomposition, agent routing, difficulty plan \\
+Diagnosis & Gap localization, difficulty target, priority focus \\
+MindMap & Hierarchical knowledge structure reused downstream \\
+Document & Personalized explanatory prose at target difficulty \\
+Reading & Academic frontier extension material \\
+Code & Runnable, commented code case \\
+Quiz & Graded questions (5 item types) with rubric \\
+Video & Lecture video script with scene breakdown \\
+Debate & Hallucination findings, cross-agent contradiction rulings \\
+Review & Four-dimension quality scores and issue list \\
+Adapt & Difficulty transition decision for next iteration \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Debate and Cross-Validation}
+\label{ssec:debate}
+
+The debate agent is the component that most directly addresses the reliability
+problem. It receives the union of generated resources and performs two
+distinct checks. \emph{Internal cross-validation} looks for contradictions
+between agents---for example, a code sample using an API signature that the
+document describes differently---and issues an explicit ruling for each.
+\emph{External fact-checking} compares each extracted key claim against
+retrieved knowledge-base evidence and returns, per claim, a verdict with a
+pointer to supporting text.
+
+Findings are graded by severity. Let $\mathcal{C}$ be the set of checked
+claims and $\mathcal{H} \subseteq \mathcal{C}$ the subset flagged as
+unsupported. The bundle-level hallucination rate is
+
+\begin{equation}
+\hat{h} = \frac{|\mathcal{H}|}{|\mathcal{C}|}.
+\end{equation}
+
+Algorithm~\ref{alg:verify} gives the control flow. A retry is triggered only
+when a finding is graded \textsc{critical} \emph{and} the verifier recommends
+one, and at most one retry is permitted; this bounded policy prevents the
+unbounded self-critique loops that plague iterative refinement methods.
+
+\begin{algorithm}[!t]
+\caption{Verification-gated generation (per request)}
+\label{alg:verify}
+\begin{algorithmic}[1]
+\STATE $p \leftarrow$ profile agent extraction or lookup
+\STATE $\tau \leftarrow$ diagnosis$(p, t)$ \COMMENT{difficulty target and gaps}
+\STATE $\mathcal{R} \leftarrow \emptyset$
+\FOR{$a \in \{\text{MindMap}, \text{Doc}, \text{Reading}, \text{Code}, \text{Quiz}, \text{Video}\}$}
+  \STATE $\mathcal{R} \leftarrow \mathcal{R} \cup \{ a(\tau, \mathcal{K}, \mathcal{R}) \}$ \COMMENT{shared state}
+\ENDFOR
+\FOR{$i \in \{1,2\}$} \COMMENT{at most one retry}
+  \STATE $(\mathcal{H}, \hat{h}) \leftarrow$ debate$(\mathcal{R}, \mathcal{K})$
+  \STATE $(q, \mathcal{I}) \leftarrow$ review$(\mathcal{R}, \tau)$
+  \IF{$\neg \text{critical}(\mathcal{H}) \;\wedge\; \neg \text{critical}(\mathcal{I})$}
+    \STATE \textbf{break}
+  \ELSIF{$i = 1$}
+    \STATE $\mathcal{R} \leftarrow$ regenerate$(\tau, \mathcal{K}, \mathcal{H}, \mathcal{I})$
+  \ENDIF
+\ENDFOR
+\STATE $a \leftarrow$ adapt$(p, \tau, \mathcal{R}, q)$ \COMMENT{next-iteration decision}
+\STATE \textbf{return} $(\mathcal{R}, \hat{h}, q, a)$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Quality Review and Adaptive Decision}
+
+The review agent scores the bundle on four dimensions---accuracy, difficulty
+fit, completeness, and cross-modal consistency---each on a 10-point scale, and
+emits a severity-graded issue list. The adaptation agent then applies an
+explicit, publishable rule (Table~\ref{tab:adapt}) that maps mastery and
+observed accuracy onto one of four actions. Stating this rule explicitly is
+deliberate: it converts ``the model adapts'' from an unfalsifiable claim into a
+testable one.
+
+\begin{table}[!t]
+\centering
+\caption{Adaptation decision rules. $\mu$ is mastery on the knowledge point,
+$\alpha$ quiz accuracy, $q_{\text{fit}}$ the reviewer's difficulty-fit score.}
+\label{tab:adapt}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Condition} & \textbf{Action} \\
+\midrule
+$\mu < 60$ \textbf{or} $q_{\text{fit}} < 6$ & Dimension reduction \\
+$\mu \ge 85$ \textbf{and} $\alpha \ge 80\%$ & Advanced challenge \\
+critical issue pending & Content correction \\
+otherwise & Maintain \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Retrieval Grounding}
+
+Domain knowledge is stored as chunked documents embedded in a vector store.
+Every generation agent receives retrieved context, and the debate agent reuses
+the same index when checking claims, so generation and verification are
+grounded in \emph{the same} evidence rather than in two inconsistent views of
+the domain.
+
+\subsection{Implementation}
+
+The orchestration layer is implemented as an explicit state graph; the service
+layer exposes it over HTTP with server-sent events for incremental display; the
+application layer (learner management, quiz administration, persistence) is a
+conventional web service. All agents in the reported experiments call the same
+commercial LLM endpoint with per-agent temperature settings, so no component
+has access to a differently-capable model.

@@ -1,0 +1,39 @@
+%=====================================================================
+%  Appendix A — Reproducibility: agent contracts (abbreviated)
+%=====================================================================
+\section{Agent Contracts}
+\label{sec:appendix}
+
+Each agent is defined by a system prompt that fixes its role, the schema of
+its output, and its temperature. Contracts are abbreviated here; the full
+prompts ship with the released code.
+
+\begin{table}[!h]
+\centering
+\caption{Agent contracts and decoding temperature.}
+\label{tab:contracts}
+\begin{tabular}{@{}p{1.9cm}p{3.1cm}p{1.4cm}@{}}
+\toprule
+\textbf{Agent} & \textbf{Required output schema} & \textbf{Temp.} \\
+\midrule
+Supervisor & \texttt{\{agents[], difficulty, rationale\}} & 0.3 \\
+Diagnosis & \texttt{\{knowledge\_gaps[], difficulty\_target, priority\_focus[], adaptation\_strategy\}} & 0.3 \\
+MindMap & hierarchical outline & 0.4 \\
+Document & prose at target difficulty & 0.5 \\
+Reading & cited frontier material & 0.6 \\
+Code & runnable, commented code & 0.3 \\
+Quiz & graded items with rubric & 0.4 \\
+Video & scene-level script & 0.6 \\
+Debate & \texttt{\{hallucinations[$\{$type, agent, content, severity, correction$\}$], fact\_check, cross\_validation, debate\_summary\}} & 0.2 \\
+Review & \texttt{\{scores, issues[], overall, retry\}} & 0.2 \\
+Adapt & \texttt{\{decision, reason, actions[], learning\_feedback\}} & 0.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The debate agent's schema deserves comment: requiring \texttt{type},
+\texttt{severity}, \texttt{correction}, and an evidence pointer for every
+finding is what converts ``the model noticed a problem'' into an auditable
+record. Without a structured schema, a verifier's objections are not
+actionable by downstream components, and the retry decision cannot be
+expressed as the deterministic policy of Algorithm~\ref{alg:verify}.

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mindskip.xzs.repository.DialogueSessionMapper">
+  <resultMap id="BaseResultMap" type="com.mindskip.xzs.domain.DialogueSession">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="session_type" jdbcType="VARCHAR" property="sessionType" />
+    <result column="messages" jdbcType="VARCHAR" property="messages" />
+    <result column="extracted_profile_delta" jdbcType="VARCHAR" property="extractedProfileDelta" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, session_type, messages, extracted_profile_delta,
+    status, create_time, modify_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_dialogue_session
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_dialogue_session
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mindskip.xzs.domain.DialogueSession" useGeneratedKeys="true" keyProperty="id">
+    insert into t_dialogue_session (id, user_id, session_type,
+      messages, extracted_profile_delta, status,
+      create_time, modify_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{sessionType,jdbcType=VARCHAR},
+      #{messages,jdbcType=VARCHAR}, #{extractedProfileDelta,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR},
+      #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.mindskip.xzs.domain.DialogueSession" useGeneratedKeys="true" keyProperty="id">
+    insert into t_dialogue_session
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="sessionType != null">
+        session_type,
+      </if>
+      <if test="messages != null">
+        messages,
+      </if>
+      <if test="extractedProfileDelta != null">
+        extracted_profile_delta,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="modifyTime != null">
+        modify_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="sessionType != null">
+        #{sessionType,jdbcType=VARCHAR},
+      </if>
+      <if test="messages != null">
+        #{messages,jdbcType=VARCHAR},
+      </if>
+      <if test="extractedProfileDelta != null">
+        #{extractedProfileDelta,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null">
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mindskip.xzs.domain.DialogueSession">
+    update t_dialogue_session
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="sessionType != null">
+        session_type = #{sessionType,jdbcType=VARCHAR},
+      </if>
+      <if test="messages != null">
+        messages = #{messages,jdbcType=VARCHAR},
+      </if>
+      <if test="extractedProfileDelta != null">
+        extracted_profile_delta = #{extractedProfileDelta,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null">
+        modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mindskip.xzs.domain.DialogueSession">
+    update t_dialogue_session
+    set user_id = #{userId,jdbcType=INTEGER},
+      session_type = #{sessionType,jdbcType=VARCHAR},
+      messages = #{messages,jdbcType=VARCHAR},
+      extracted_profile_delta = #{extractedProfileDelta,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <select id="selectByUserId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_dialogue_session
+    where user_id=#{userId,jdbcType=INTEGER}
+    order by id desc
+  </select>
+
+  <select id="selectActiveByUserId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_dialogue_session
+    where user_id=#{userId,jdbcType=INTEGER} and session_type=#{sessionType,jdbcType=VARCHAR} and status='active'
+    order by id desc
+    limit 1
+  </select>
+
+</mapper>

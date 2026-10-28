@@ -1,0 +1,212 @@
+{
+  "code": 1,
+  "message": "成功",
+  "response": {
+    "sampleCount": 20,
+    "learnerTier": "进阶",
+    "judgeFailedCount": 0,
+    "details": [
+      {
+        "title": "大语言模型-预训练微调",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "内容涵盖预训练与微调的原理、公式（如因果语言建模损失）及模型架构细节，属于原理性阐述，符合进阶难度标准。",
+        "judgeFailed": false
+      },
+      {
+        "title": "大语言模型-Transformer",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "内容准确涵盖Transformer核心公式与机制，属于原理层面的介绍而非仅概念定义。",
+        "judgeFailed": false
+      },
+      {
+        "title": "强化学习-策略梯度",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "生成内容中的策略梯度定理、对数导数技巧及目标函数公式与权威知识库一致，且涉及原理推导与公式细节，属于进阶难度。",
+        "judgeFailed": false
+      },
+      {
+        "title": "强化学习-Q学习",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "基础",
+        "reason": "Q学习定义、MDP框架与Bellman最优方程表述准确，属于概念入门级内容。",
+        "judgeFailed": false
+      },
+      {
+        "title": "计算机视觉-图像分割",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "基础",
+        "reason": "生成内容对图像分割的定义、分类及传统阈值方法描述准确，与知识库中图像分割分类一致，且属于概念定义与入门介绍。",
+        "judgeFailed": false
+      },
+      {
+        "title": "计算机视觉-目标检测",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "生成内容准确描述了目标检测的概念、流程及两阶段检测器细节，并涉及原理与模型机制，属于进阶难度。",
+        "judgeFailed": false
+      },
+      {
+        "title": "自然语言处理-命名实体识别",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "内容涵盖NER定义、标注模式、统计与深度学习方法及解码细节，事实准确且属于原理与模型介绍，符合进阶档位。",
+        "judgeFailed": false
+      },
+      {
+        "title": "自然语言处理-文本分类",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "内容准确阐述了文本分类的概念、分类类型、流程及TF-IDF公式和词表示等原理细节，属于进阶难度。",
+        "judgeFailed": false
+      },
+      {
+        "title": "自然语言处理-词向量",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "内容涵盖词向量概念及Word2Vec、GloVe等模型的目标函数与公式，属于原理推导和模型细节层面的阐述。",
+        "judgeFailed": false
+      },
+      {
+        "title": "神经网络-注意力机制",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "内容对注意力机制及缩放点积注意力的定义和公式描述准确，属于原理推导与模型细节层面。",
+        "judgeFailed": false
+      },
+      {
+        "title": "神经网络-RNN与LSTM",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "RNN/LSTM概念与公式描述准确，包含原理和门控机制细节，符合进阶标准。",
+        "judgeFailed": false
+      },
+      {
+        "title": "深度学习-优化器",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "优化器定义、梯度下降变体及动量公式均与通用学科知识一致，内容涉及公式与原理推导，属进阶难度。",
+        "judgeFailed": false
+      },
+      {
+        "title": "深度学习-卷积神经网络",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "生成内容与权威片段中CNN核心组件及公式一致，并包含卷积运算、感受野等原理推导，属进阶难度。",
+        "judgeFailed": false
+      },
+      {
+        "title": "深度学习-反向传播",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "生成内容准确描述了反向传播的原理、公式和链式法则推导，符合权威片段，属于原理推导级别。",
+        "judgeFailed": false
+      },
+      {
+        "title": "机器学习基础-模型评估",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "生成内容的模型评估概念、混淆矩阵及公式均正确，且涉及数据划分和指标推导，属于进阶难度。",
+        "judgeFailed": false
+      },
+      {
+        "title": "机器学习基础-无监督学习",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "生成内容与权威片段中无监督学习概念及算法描述一致，并涵盖K-means、PCA的数学公式与GMM等模型细节，属原理推导层面。",
+        "judgeFailed": false
+      },
+      {
+        "title": "机器学习基础-监督学习",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "基础",
+        "reason": "内容与权威知识库中监督学习的定义、分类回归、评估指标等一致，且属于概念入门介绍，未涉及复杂推导。",
+        "judgeFailed": false
+      },
+      {
+        "title": "自然语言处理-词向量",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "内容准确解释了词向量的概念、分布式假设、NNLM及Word2Vec的CBOW与Skip-gram细节，与知识库中文本表示部分相符，且涉及模型原理与实现细节。",
+        "judgeFailed": false
+      },
+      {
+        "title": "深度学习-反向传播",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "生成内容正确阐述反向传播的链式法则与梯度计算公式，符合深度学习原理；由于涉及公式推导与模型细节，难度为进阶。",
+        "judgeFailed": false
+      },
+      {
+        "title": "机器学习基础-监督学习",
+        "type": "document",
+        "accurate": true,
+        "difficulty": "进阶",
+        "reason": "内容涵盖经验风险最小化、损失函数、正则化与数据划分等原理性知识，属于监督学习的中层原理与模型细节，而非仅概念介绍。",
+        "judgeFailed": false
+      }
+    ],
+    "durationMs": 173113,
+    "metrics": [
+      {
+        "key": "knowledge_accuracy",
+        "name": "知识准确率",
+        "value": 100.0,
+        "target": 95.0,
+        "unit": "%",
+        "pass": true,
+        "method": "LLM-as-Judge：对抽样生成资源做 RAG 检索增强的事实性核验，判定与权威知识库一致的比例"
+      },
+      {
+        "key": "matching_accuracy",
+        "name": "画像-资源难度匹配准确率",
+        "value": 85.0,
+        "target": 85.0,
+        "unit": "%",
+        "pass": true,
+        "method": "资源难度档位（基础/进阶/高级）与学习者画像水平档位的匹配率"
+      },
+      {
+        "key": "coverage",
+        "name": "知识点覆盖率",
+        "value": 100.0,
+        "target": 90.0,
+        "unit": "%",
+        "pass": true,
+        "method": "生成资源对垂直知识库 7 大子领域的覆盖比例"
+      },
+      {
+        "key": "hallucination_rate",
+        "name": "幻觉率",
+        "value": 0.0,
+        "target": 5.0,
+        "unit": "%",
+        "pass": true,
+        "method": "由事实性核验判定为不准确的生成内容占比（目标 <5%）"
+      }
+    ]
+  },
+  "elapsed": 173.2,
+  "state": "done"
+}

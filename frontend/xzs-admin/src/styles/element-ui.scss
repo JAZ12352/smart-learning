@@ -1,0 +1,79 @@
+// Element UI 细节覆盖 — 高端科技感 · 紫罗兰辉光
+
+/* ── 面包屑 ── */
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important; color: #94a3b8 !important;
+}
+.el-breadcrumb__inner.is-link,
+.el-breadcrumb__inner a {
+  color: #94a3b8 !important;
+  &:hover { color: var(--acid) !important; }
+}
+.el-breadcrumb__separator { color: #cbd5e1 !important; }
+
+/* ── Upload ── */
+.el-upload { input[type="file"] { display: none !important; } }
+.el-upload__input { display: none; }
+
+/* ── 表格辅助 ── */
+.cell .el-tag { margin-right: 0px; }
+.small-padding .cell { padding-left: 5px; padding-right: 5px; }
+.fixed-width .el-button--mini { padding: 7px 10px; width: 60px; }
+.status-col .cell { padding: 0 10px; text-align: center; .el-tag { margin-right: 0px; } }
+
+/* ── 对话框 ── */
+.el-dialog {
+  transform: none; left: 0; position: relative; margin: 0 auto;
+  background: var(--ink-3); border: 1px solid #f1f5f9; border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.03);
+}
+.el-dialog__title { color: #1e293b !important; font-weight: 600; }
+.el-dialog__header { border-bottom: 1px solid #f8fafc; padding: 20px 24px; }
+.el-dialog__body { color: var(--grey) !important; padding: 24px; }
+
+/* ── Upload 拖拽 ── */
+.upload-container .el-upload { width: 100%;
+  .el-upload-dragger { width: 100%; height: 200px; border-radius: 10px; }
+}
+
+/* ── 下拉菜单 ── */
+.el-dropdown-menu {
+  background: var(--ink-3) !important; border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.02) !important;
+  border-radius: 12px !important; padding: 6px !important;
+  a { display: block }
+  .el-dropdown-menu__item {
+    color: var(--grey) !important; border-radius: 7px; margin: 1px 4px;
+    &:hover { background: var(--ink-3) !important; color: #1e293b !important; }
+  }
+  .el-dropdown-menu__item--divided::before { background: var(--ink-3) !important; }
+}
+.el-dropdown-menu__item--divided { border-top-color: var(--ink-5) !important; margin-top: 6px !important; }
+
+.el-popper[x-placement^=bottom] .popper__arrow::after { border-bottom-color: var(--ink-5) !important; }
+.el-popper[x-placement^=bottom] .popper__arrow { border-bottom-color: var(--ink-5) !important; }
+
+/* ── 日期范围 ── */
+.el-range-editor.el-input__inner { display: inline-flex !important; border-radius: 8px; }
+
+/* ── 消息框 ── */
+.el-message-box {
+  background: var(--ink-3) !important; border: 1px solid #f1f5f9 !important; border-radius: 14px;
+}
+.el-message-box__title { color: #1e293b !important; font-weight: 600; }
+.el-message-box__content { color: var(--grey) !important; }
+
+/* ── Tooltip ── */
+.el-tooltip__popper.is-dark {
+  background: #141A14 !important; border: 1px solid #334155 !important; border-radius: 8px;
+}
+.el-tooltip__popper.is-light {
+  background: var(--ink-3) !important; border: 1px solid #e2e8f0 !important; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* ── Menu 全局增强 (非侧边栏) ── */
+.el-menu--horizontal {
+  border-bottom: none !important;
+  .el-menu-item { border-radius: 8px; margin: 0 2px; }
+}

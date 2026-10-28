@@ -1,0 +1,715 @@
+{
+  "说明": "PDF 测试数据要求：不少于2组差异化的学习者初始学情数据源，需包含输入画像特征、多智能体协同决策中间数据、最终生成的个性化学习资源等完整的输入输出示例。本文件包含4组完整示例：CASE-001/002/003 为在校生与转行学员（CNN/机器学习/Transformer），CASE-004 为在职转岗学员（机械工程师→AI质检），展示 Guide Agent 实操指南形态与完整协同决策中间数据（规划/诊断/辩论/评估/迭代）。",
+  "垂直领域": "人工智能",
+  "示例列表": [
+    {
+      "示例编号": "CASE-001",
+      "学习者": "张明",
+      "画像特征": {
+        "user_id": 2,
+        "real_name": "张明",
+        "age": 21,
+        "认知风格": "visual",
+        "学习节奏": "normal",
+        "动机水平": 7,
+        "知识水平": {
+          "C语言": 85,
+          "数据结构": 80,
+          "高等数学": 55,
+          "线性代数": 60,
+          "大学英语": 70,
+          "计算机网络": 75
+        },
+        "薄弱点": [
+          "高等数学",
+          "线性代数"
+        ],
+        "学习目标": [
+          "掌握AI算法",
+          "保研"
+        ],
+        "兴趣": [
+          "深度学习",
+          "算法竞赛"
+        ]
+      },
+      "输入请求": {
+        "topic": "卷积神经网络(CNN)",
+        "context": {
+          "domain": "AI",
+          "learner_level": "intermediate"
+        },
+        "request_id": "case-001"
+      },
+      "多智能体协同决策中间数据": {
+        "Supervisor规划": {
+          "agents": [
+            "mindmap",
+            "document",
+            "reading",
+            "code",
+            "quiz",
+            "video"
+          ],
+          "stages": [
+            {
+              "stage": "知识结构",
+              "agent": "mindmap",
+              "depends_on": []
+            },
+            {
+              "stage": "并行生成",
+              "agents": [
+                "document",
+                "reading",
+                "code"
+              ],
+              "depends_on": [
+                "mindmap"
+              ]
+            },
+            {
+              "stage": "一致性关联",
+              "agent": "quiz",
+              "depends_on": [
+                "document"
+              ]
+            }
+          ],
+          "difficulty": "进阶",
+          "rationale": "学习者编程能力强(85分)但数学基础一般(55分)，适合进阶难度，代码案例可深入"
+        },
+        "学情诊断报告": {
+          "knowledge_gaps": [
+            {
+              "point": "卷积运算的数学原理",
+              "severity": "high",
+              "subject": "高等数学",
+              "score": 55
+            },
+            {
+              "point": "梯度下降优化",
+              "severity": "medium",
+              "subject": "线性代数",
+              "score": 60
+            },
+            {
+              "point": "反向传播链式法则",
+              "severity": "medium",
+              "subject": "深度学习",
+              "score": 65
+            }
+          ],
+          "cognitive_profile": {
+            "style": "visual",
+            "pace": "normal",
+            "motivation": 7
+          },
+          "difficulty_target": "进阶",
+          "priority_focus": [
+            "卷积运算数学原理",
+            "梯度下降优化"
+          ],
+          "adaptation_strategy": "学习者编程能力强，多用代码案例辅助理解；数学部分需可视化解释卷积运算过程"
+        },
+        "辩论与交叉验证结果": {
+          "cross_validation": {
+            "contradictions": [
+              {
+                "agent_a": "document",
+                "agent_b": "quiz",
+                "issue": "文档中描述ReLU激活函数范围为[0,+∞)，但quiz第2题选项B标注为(-∞,+∞)",
+                "resolution": "ReLU函数范围确为[0,+∞)，quiz选项B需修正为错误选项"
+              }
+            ]
+          },
+          "hallucinations": [
+            {
+              "type": "事实性幻觉",
+              "agent": "reading",
+              "content": "reading材料引用了一篇2019年CVPR论文，但该论文实际不存在",
+              "correction": "已移除该引用，替换为LeCun 1998年LeNet原始论文",
+              "severity": "major"
+            }
+          ],
+          "fact_check": {
+            "verified_count": 22,
+            "total_facts": 23,
+            "hallucination_rate": 0.043
+          },
+          "debate_summary": "发现1处跨模态矛盾和1处事实性幻觉，已修正。幻觉率4.3% < 5%达标线",
+          "hallucination_prevented": true,
+          "retry_recommended": false
+        },
+        "质量评估报告": {
+          "scores": {
+            "accuracy": 9,
+            "difficulty_fit": 8,
+            "completeness": 9,
+            "cross_modal_consistency": 7
+          },
+          "overall": 8.25,
+          "issues": [
+            {
+              "resource": "quiz",
+              "severity": "minor",
+              "description": "题目难度梯度可更明显"
+            }
+          ],
+          "retry": false
+        },
+        "动态迭代决策": {
+          "decision": "maintain",
+          "reason": "学习者编程基础扎实(85分)，当前资源难度适配；数学薄弱点已通过可视化策略覆盖",
+          "actions": [
+            {
+              "type": "维持",
+              "target_knowledge": "CNN整体",
+              "action_detail": "保持当前资源，建议学习者重点关注卷积运算可视化部分"
+            }
+          ],
+          "learning_feedback": "你的编程基础很好！建议重点理解卷积运算的数学原理，结合代码案例加深理解",
+          "next_iteration_needed": false
+        }
+      },
+      "最终生成的个性化学习资源": {
+        "mindmap": "- 卷积神经网络(CNN)\n  - 核心定义\n    - 局部感知的网络结构\n    - 权值共享机制\n  - 关键组件\n    - 卷积层(Conv)\n    - 池化层(Pooling)\n    - 全连接层(FC)\n  - 核心原理\n    - 感受野\n    - 特征提取层级\n  - 经典架构\n    - LeNet(1998)\n    - ResNet(2015)\n    - VGG(2014)",
+        "document": "## 一、概念定义\n卷积神经网络(CNN)是一种含有卷积操作且具有深度结构的前馈神经网络...\n\n## 二、核心原理\n### 2.1 卷积运算\n卷积运算是CNN的核心操作，通过卷积核在输入特征图上滑动...\n\n## 三、关键组件\n### 3.1 卷积层\n负责特征提取，通过可学习的卷积核...\n\n## 七、应用实例\n图像分类、目标检测、人脸识别...",
+        "code": "```python\nimport torch\nimport torch.nn as nn\n\n# 示例1：基础卷积操作\nconv = nn.Conv2d(in_channels=1, out_channels=16, kernel_size=3, stride=1, padding=1)\ninput_tensor = torch.randn(1, 1, 28, 28)  # MNIST尺寸\noutput = conv(input_tensor)\nprint(f'输入形状: {input_tensor.shape}')\nprint(f'输出形状: {output.shape}')\n```\n\n```python\n# 示例2：完整CNN模型\nclass SimpleCNN(nn.Module):\n    def __init__(self):\n        super().__init__()\n        self.conv1 = nn.Conv2d(1, 32, 3, 1)\n        self.pool = nn.MaxPool2d(2, 2)\n        self.fc = nn.Linear(32*13*13, 10)\n    def forward(self, x):\n        x = self.pool(torch.relu(self.conv1(x)))\n        x = x.view(x.size(0), -1)\n        return self.fc(x)\n```",
+        "quiz": "【选择题】1. 卷积核大小为3×3，步长为1，padding为1，输入尺寸28×28，输出尺寸为？\nA. 26×26  B. 28×28  C. 30×30  D. 24×24\n答案：B\n解析：输出尺寸 = (输入 - 卷积核 + 2*padding) / stride + 1 = (28-3+2)/1+1 = 28\n\n【判断题】2. ReLU激活函数的输出范围为(-∞,+∞)\n答案：错误。ReLU输出范围为[0,+∞)，负值被截断为0",
+        "video": "## 开场引入\n【画面文字】CNN：让计算机\"看见\"世界\n【语音讲解】今天我们来学习卷积神经网络，它是计算机视觉的核心技术...\n\n## 核心概念\n【画面文字】卷积核滑动 → 特征图\n【语音讲解】想象一个放大镜在图片上滑动，每次只看一小块区域...",
+        "reading": "## 一、学科背景\nCNN的灵感来源于Hubel和Wiesel对猫视觉皮层的研究...\n\n## 二、前沿动态\nTransformer在视觉领域挑战CNN地位(ViT, 2020)，但CNN在边缘设备上仍有优势..."
+      }
+    },
+    {
+      "示例编号": "CASE-002",
+      "学习者": "李芳",
+      "画像特征": {
+        "user_id": 3,
+        "real_name": "李芳",
+        "age": 20,
+        "认知风格": "visual",
+        "学习节奏": "slow",
+        "动机水平": 5,
+        "知识水平": {
+          "C语言": 30,
+          "高等数学": 45,
+          "大学英语": 92,
+          "数据结构": 35,
+          "线性代数": 50
+        },
+        "薄弱点": [
+          "编程思维建立",
+          "数学基础薄弱",
+          "抽象概念理解困难"
+        ],
+        "学习目标": [
+          "转行互联网产品",
+          "掌握数据分析技能"
+        ],
+        "兴趣": [
+          "UI设计",
+          "数据分析"
+        ]
+      },
+      "输入请求": {
+        "topic": "什么是机器学习",
+        "context": {
+          "domain": "AI",
+          "learner_level": "beginner"
+        },
+        "request_id": "case-002"
+      },
+      "多智能体协同决策中间数据": {
+        "Supervisor规划": {
+          "agents": [
+            "mindmap",
+            "document",
+            "reading",
+            "code",
+            "quiz",
+            "video"
+          ],
+          "difficulty": "基础",
+          "rationale": "文科背景编程零基础(C语言30分)，数学薄弱(45分)。需从零开始，降低认知负荷，使用生活类比"
+        },
+        "学情诊断报告": {
+          "knowledge_gaps": [
+            {
+              "point": "编程基础概念",
+              "severity": "high",
+              "subject": "C语言",
+              "score": 30
+            },
+            {
+              "point": "数学统计基础",
+              "severity": "high",
+              "subject": "高等数学",
+              "score": 45
+            },
+            {
+              "point": "算法思维",
+              "severity": "high",
+              "subject": "数据结构",
+              "score": 35
+            }
+          ],
+          "cognitive_profile": {
+            "style": "visual",
+            "pace": "slow",
+            "motivation": 5
+          },
+          "difficulty_target": "基础",
+          "priority_focus": [
+            "编程基础概念",
+            "数学统计基础"
+          ],
+          "adaptation_strategy": "零基础学生，需大量可视化图示和生活类比；避免数学公式，用图形和故事解释概念；节奏放慢，分步骤拆解"
+        },
+        "辩论与交叉验证结果": {
+          "cross_validation": {
+            "contradictions": [
+              {
+                "agent_a": "document",
+                "agent_b": "code",
+                "issue": "文档用水果分类类比解释分类，但code示例用了sklearn的数字识别，类比不一致",
+                "resolution": "统一使用水果分类的类比贯穿文档和代码示例"
+              }
+            ]
+          },
+          "hallucinations": [
+            {
+              "type": "范围性幻觉",
+              "agent": "reading",
+              "content": "reading材料涉及了梯度下降的数学推导，超出零基础学习者范围",
+              "correction": "已将数学推导移至附录，正文使用图示解释",
+              "severity": "minor"
+            }
+          ],
+          "fact_check": {
+            "verified_count": 15,
+            "total_facts": 16,
+            "hallucination_rate": 0.0625
+          },
+          "debate_summary": "发现1处跨模态不一致和1处范围性幻觉。幻觉率6.25%略高于5%目标，建议修正后达标",
+          "hallucination_prevented": true,
+          "retry_recommended": true
+        },
+        "质量评估报告": {
+          "scores": {
+            "accuracy": 8,
+            "difficulty_fit": 9,
+            "completeness": 7,
+            "cross_modal_consistency": 6
+          },
+          "overall": 7.5,
+          "issues": [
+            {
+              "resource": "reading",
+              "severity": "major",
+              "description": "内容难度超出零基础学习者范围"
+            }
+          ],
+          "retry": true
+        },
+        "动态迭代决策": {
+          "decision": "simplify",
+          "reason": "学习者编程零基础(C语言30分)且数学薄弱(45分)，需降维解释；reading材料难度过高",
+          "actions": [
+            {
+              "type": "降维解释",
+              "target_knowledge": "机器学习概念",
+              "action_detail": "用「教小孩认水果」的类比解释：给电脑看很多苹果的图片，它就学会了认苹果"
+            },
+            {
+              "type": "降维解释",
+              "target_knowledge": "训练过程",
+              "action_detail": "用「做练习题对答案」的类比：电脑做题→对答案→纠正→再做→越来越准"
+            },
+            {
+              "type": "内容修正",
+              "target_knowledge": "reading材料",
+              "action_detail": "移除数学推导，增加图示和故事化解释"
+            }
+          ],
+          "learning_feedback": "别担心数学和编程！机器学习的核心思想其实很直觉——就像教小朋友认识世界一样。我们从最基础的概念开始，一步步来",
+          "next_iteration_needed": true
+        }
+      },
+      "最终生成的个性化学习资源": {
+        "mindmap": "- 机器学习入门\n  - 什么是机器学习\n    - 让电脑从数据中学习\n    - 像教小孩认水果\n  - 学习方式\n    - 有人教的(监督学习)\n    - 自己摸索的(无监督学习)\n  - 应用场景\n    - 推荐系统\n    - 语音识别\n    - 自动驾驶",
+        "document": "## 一、什么是机器学习？\n\n想象一下你是怎么学会认苹果的：小时候大人指着红色的圆水果说\"这是苹果\"，看了很多次后，你就记住了。\n\n机器学习也是类似的——我们给电脑看很多数据（比如很多苹果的照片），告诉它\"这些是苹果\"，电脑就学会了识别苹果。\n\n## 二、机器怎么学习？\n\n### 2.1 做练习题\n就像学生做练习题：电脑看一道题→给出答案→对标准答案→纠正错误→再做下一道→越来越准\n\n### 2.2 越练越好的秘密\n电脑每次犯错都会\"记住\"错误，下次遇到类似的情况就不会再犯。这就是\"学习\"的本质。",
+        "code": "```python\n# 用水果分类的例子理解机器学习\n# 想象我们有一堆水果，想教电脑区分苹果和橘子\n\n# 1. 准备数据（就像收集很多水果的照片）\n苹果特征 = [[150, '红色'], [160, '红色'], [145, '红色']]\n橘子特征 = [[130, '橙色'], [140, '橙色'], [135, '橙色']]\n\n# 2. 让电脑\"学习\"（就像小孩看多了就记住了）\nfrom sklearn.tree import DecisionTreeClassifier\n电脑 = DecisionTreeClassifier()\n电脑.fit(苹果特征 + 橘子特征, ['苹果']*3 + ['橘子']*3)\n\n# 3. 考试！给电脑一个新水果认认看\n新水果 = [[155, '红色']]\nprint('电脑认为是：', 电脑.predict(新水果))  # 输出：苹果\n```",
+        "quiz": "【选择题】1. 机器学习中最像\"老师教学生\"的学习方式叫什么？\nA. 无监督学习  B. 监督学习  C. 强化学习  D. 迁移学习\n答案：B\n解析：监督学习就像有老师标注答案，电脑对照学习\n\n【判断题】2. 机器学习需要给电脑看很多数据才能学会\n答案：正确。就像小孩需要看很多次苹果才能记住什么是苹果",
+        "video": "## 开场引入\n【画面文字】🍎 机器学习 = 教电脑认水果\n【语音讲解】今天我们用最简单的方式理解什么是机器学习。想象你在教一个从来没见过水果的小朋友...\n\n## 核心概念\n【画面文字】数据→学习→预测\n【语音讲解】第一步，我们给电脑看很多苹果和橘子的照片；第二步，电脑自己找规律；第三步，拿新水果考它",
+        "reading": "## 一、机器学习的故事\n1959年，Arthur Samuel创造了\"机器学习\"这个词。他写了一个跳棋程序，让电脑自己跟自己下棋，下了几万盘后，电脑变得比人类还厉害...\n\n## 二、生活中的机器学习\n你每天用的抖音推荐、淘宝搜索、微信语音转文字，背后都是机器学习技术..."
+      }
+    },
+    {
+      "示例编号": "CASE-003",
+      "学习者": "王强",
+      "画像特征": {
+        "user_id": 4,
+        "real_name": "王强",
+        "age": 22,
+        "认知风格": "auditory",
+        "学习节奏": "fast",
+        "动机水平": 9,
+        "知识水平": {
+          "高等数学": 95,
+          "线性代数": 90,
+          "C语言": 78,
+          "数据结构": 85,
+          "大学英语": 60,
+          "计算机网络": 82
+        },
+        "薄弱点": [
+          "英语阅读理解",
+          "技术文档撰写"
+        ],
+        "学习目标": [
+          "保研985",
+          "发表AI论文"
+        ],
+        "兴趣": [
+          "深度学习",
+          "算法竞赛",
+          "数学建模"
+        ]
+      },
+      "输入请求": {
+        "topic": "Transformer注意力机制",
+        "context": {
+          "domain": "AI",
+          "learner_level": "advanced"
+        },
+        "request_id": "case-003"
+      },
+      "多智能体协同决策中间数据": {
+        "Supervisor规划": {
+          "agents": [
+            "mindmap",
+            "document",
+            "reading",
+            "code",
+            "quiz",
+            "video"
+          ],
+          "difficulty": "高级",
+          "rationale": "工科尖子生数学极强(95分)，适合挑战高级难度。可深入数学推导和论文复现"
+        },
+        "学情诊断报告": {
+          "knowledge_gaps": [
+            {
+              "point": "Attention数学推导细节",
+              "severity": "low",
+              "subject": "深度学习",
+              "score": 82
+            },
+            {
+              "point": "英文论文阅读",
+              "severity": "medium",
+              "subject": "英语",
+              "score": 60
+            }
+          ],
+          "cognitive_profile": {
+            "style": "auditory",
+            "pace": "fast",
+            "motivation": 9
+          },
+          "difficulty_target": "高级",
+          "priority_focus": [
+            "Attention数学原理深入",
+            "论文复现能力"
+          ],
+          "adaptation_strategy": "数学能力突出，可直接讲解矩阵推导；英语是短板，提供中英对照论文导读；听觉型学习者，推荐讨论式学习和视频讲解"
+        },
+        "辩论与交叉验证结果": {
+          "cross_validation": {
+            "contradictions": [
+              {
+                "agent_a": "document",
+                "agent_b": "code",
+                "issue": "文档中QKV权重矩阵维度写为(d_model, d_k)，但代码实现中使用了(d_model, d_model)的统一投影",
+                "resolution": "多头注意力中各头投影到d_k维度，但工程实现常先投影到d_model再reshape，两种写法等价，需在文档中说明"
+              }
+            ]
+          },
+          "hallucinations": [],
+          "fact_check": {
+            "verified_count": 28,
+            "total_facts": 28,
+            "hallucination_rate": 0.0
+          },
+          "debate_summary": "未发现幻觉，1处跨模态实现差异已澄清。幻觉率0%远低于5%目标",
+          "hallucination_prevented": true,
+          "retry_recommended": false
+        },
+        "质量评估报告": {
+          "scores": {
+            "accuracy": 10,
+            "difficulty_fit": 9,
+            "completeness": 9,
+            "cross_modal_consistency": 8
+          },
+          "overall": 9.0,
+          "issues": [
+            {
+              "resource": "document",
+              "severity": "minor",
+              "description": "可补充更多多头注意力的工程实现细节"
+            }
+          ],
+          "retry": false
+        },
+        "动态迭代决策": {
+          "decision": "challenge",
+          "reason": "学习者数学95分且动机极高(9/10)，掌握度已超85%，触发进阶挑战",
+          "actions": [
+            {
+              "type": "进阶挑战",
+              "target_knowledge": "Transformer架构",
+              "action_detail": "阅读原论文《Attention Is All You Need》并复现Self-Attention"
+            },
+            {
+              "type": "进阶挑战",
+              "target_knowledge": "多头注意力",
+              "action_detail": "从数学角度推导多头注意力的计算复杂度，分析其相比单头的优势"
+            },
+            {
+              "type": "进阶挑战",
+              "target_knowledge": "位置编码",
+              "action_detail": "研究RoPE(旋转位置编码)相对于正弦位置编码的改进"
+            }
+          ],
+          "learning_feedback": "你的数学功底很扎实！建议直接阅读Transformer原始论文，从数学角度深入理解注意力机制。挑战研究性问题，为发表论文做准备",
+          "next_iteration_needed": false
+        }
+      },
+      "最终生成的个性化学习资源": {
+        "mindmap": "- Transformer注意力机制\n  - 核心定义\n    - Self-Attention自注意力\n    -  scaled dot-product\n  - 数学描述\n    - Q·K^T/√d_k\n    - softmax加权\n    - V的加权和\n  - 多头机制\n    - h个并行注意力\n    - concat+线性投影\n  - 位置编码\n    - 正弦/余弦编码\n    - RoPE旋转编码\n  - 工程实现\n    - 矩阵并行化\n    - Flash Attention优化",
+        "document": "## 一、注意力机制数学推导\n\n### 1.1 Scaled Dot-Product Attention\n\n$$\\text{Attention}(Q,K,V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V$$\n\n其中Q∈R^{n×d_k}, K∈R^{n×d_k}, V∈R^{n×d_v}\n\n### 1.2 为什么除以√d_k？\n\n当d_k较大时，QK^T的元素方差为d_k，导致softmax梯度趋近于0。除以√d_k将方差归一化为1，保证梯度稳定。\n\n### 1.3 多头注意力\n\n$$\\text{MultiHead}(Q,K,V) = \\text{Concat}(head_1,...,head_h)W^O$$\n\n每个head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)\n\n## 二、工程实现细节\n\n### 2.1 矩阵并行化\n实际实现中，Q/K/V通过一次矩阵乘法投影：\n```python\nQ = x @ W_Q  # (batch, seq, d_model) @ (d_model, d_model)\n```\n然后reshape为多头形式...",
+        "code": "```python\nimport torch\nimport torch.nn as nn\nimport torch.nn.functional as F\nimport math\n\n# 示例1：Scaled Dot-Product Attention\ndef scaled_dot_product_attention(Q, K, V, mask=None):\n    d_k = Q.size(-1)\n    scores = torch.matmul(Q, K.transpose(-2, -1)) / math.sqrt(d_k)\n    if mask is not None:\n        scores = scores.masked_fill(mask == 0, -1e9)\n    attn = F.softmax(scores, dim=-1)\n    return torch.matmul(attn, V), attn\n\n# 示例2：多头注意力\nclass MultiHeadAttention(nn.Module):\n    def __init__(self, d_model=512, n_heads=8):\n        super().__init__()\n        self.d_model = d_model\n        self.n_heads = n_heads\n        self.d_k = d_model // n_heads\n        self.W_q = nn.Linear(d_model, d_model)\n        self.W_k = nn.Linear(d_model, d_model)\n        self.W_v = nn.Linear(d_model, d_model)\n        self.W_o = nn.Linear(d_model, d_model)\n    \n    def forward(self, x, mask=None):\n        batch, seq, _ = x.shape\n        Q = self.W_q(x).view(batch, seq, self.n_heads, self.d_k).transpose(1, 2)\n        K = self.W_k(x).view(batch, seq, self.n_heads, self.d_k).transpose(1, 2)\n        V = self.W_v(x).view(batch, seq, self.n_heads, self.d_k).transpose(1, 2)\n        out, attn = scaled_dot_product_attention(Q, K, V, mask)\n        out = out.transpose(1, 2).contiguous().view(batch, seq, self.d_model)\n        return self.W_o(out)\n```",
+        "quiz": "【简答题】1. 推导Scaled Dot-Product Attention中除以√d_k的数学依据。\n参考答案：假设Q和K的元素是均值0方差1的独立随机变量，则QK^T的每个元素是d_k个独立随机变量乘积之和，其方差为d_k。当d_k较大时，点积值很大，导致softmax函数进入饱和区，梯度趋近于0。除以√d_k将方差归一化为1，使梯度保持稳定。\n\n【选择题】2. 多头注意力中，如果d_model=512, h=8，每个头的维度d_k为？\nA. 32  B. 64  C. 128  D. 512\n答案：B\n解析：d_k = d_model / h = 512 / 8 = 64",
+        "video": "## 原理讲解\n【画面文字】Attention(Q,K,V) = softmax(QK^T/√d_k)V\n【语音讲解】注意力的核心思想可以用一个图书馆的类比来理解。假设你在图书馆找书，Q是你的查询意图，K是每本书的关键词，V是书的内容。Q和K的点积衡量你的意图和书本关键词的匹配度，softmax将其归一化为权重，最后加权求和V就得到了你需要的信息...",
+        "reading": "## 经典文献导读\n\n### Attention Is All You Need (Vaswani et al., 2017)\n- 核心贡献：提出纯注意力架构，摒弃RNN/CNN\n- 关键创新：多头注意力 + 位置编码\n- 数学之美：将序列建模转化为矩阵运算，天然支持并行\n\n### 近年进展\n- Flash Attention (2022)：IO-aware的注意力加速\n- RoPE (2021)：旋转位置编码，支持长序列外推"
+      }
+    },
+    {
+      "示例编号": "CASE-004",
+      "学习者": "陈强",
+      "画像特征": {
+        "user_id": 24,
+        "real_name": "陈强",
+        "age": 34,
+        "学历背景": "全日制本科·机械工程·毕业10年",
+        "岗位方向": "在职转岗：机械工程师 → AI视觉质检工程师",
+        "认知风格": "kinesthetic",
+        "学习节奏": "slow",
+        "动机水平": 5,
+        "理论测试结果": {
+          "机械原理": 95,
+          "C语言": 20,
+          "Python": 25,
+          "高等数学": 45
+        },
+        "薄弱点": [
+          "C语言",
+          "Python",
+          "深度学习"
+        ],
+        "学习目标": [
+          "3个月内转岗AI质检",
+          "看懂检测模型报告"
+        ],
+        "兴趣": [
+          "工业检测",
+          "实操案例"
+        ]
+      },
+      "输入请求": {
+        "topic": "工业视觉质检：YOLO缺陷检测",
+        "context": {
+          "domain": "工业AI",
+          "learner_level": "beginner",
+          "occupation": "转岗质检工程师"
+        },
+        "request_id": "case-004"
+      },
+      "多智能体协同决策中间数据": {
+        "Supervisor规划": {
+          "agents": [
+            "mindmap",
+            "document",
+            "reading",
+            "code",
+            "guide",
+            "quiz",
+            "video"
+          ],
+          "stages": [
+            {
+              "stage": "知识结构",
+              "agent": "mindmap",
+              "depends_on": []
+            },
+            {
+              "stage": "并行生成",
+              "agents": [
+                "document",
+                "reading",
+                "code",
+                "guide"
+              ],
+              "depends_on": [
+                "mindmap"
+              ]
+            },
+            {
+              "stage": "一致性关联",
+              "agent": "quiz",
+              "depends_on": [
+                "document"
+              ]
+            },
+            {
+              "stage": "视频脚本",
+              "agent": "video",
+              "depends_on": [
+                "document",
+                "mindmap"
+              ]
+            }
+          ],
+          "difficulty": "基础",
+          "rationale": "机械原理95分但Python仅25分、C语言20分，属于零编程基础转岗学员；激活 Guide Agent 产出分步骤实操指南，难度定标基础档并采用动觉型教学策略"
+        },
+        "学情诊断报告": {
+          "knowledge_gaps": [
+            {
+              "point": "Python编程基础",
+              "severity": "high",
+              "subject": "Python",
+              "score": 25
+            },
+            {
+              "point": "深度学习概念",
+              "severity": "high",
+              "subject": "深度学习",
+              "score": 30
+            },
+            {
+              "point": "目标检测评估指标(mAP)",
+              "severity": "medium",
+              "subject": "计算机视觉",
+              "score": 40
+            }
+          ],
+          "cognitive_profile": {
+            "style": "kinesthetic",
+            "pace": "slow",
+            "motivation": 5
+          },
+          "difficulty_target": "基础",
+          "priority_focus": [
+            "Python最小集速成",
+            "标注→训练→评估全流程实操",
+            "产线判定规则与验收标准"
+          ],
+          "adaptation_strategy": "动觉型学习者：先动手后理论；复用其机械背景（相机选型/光源/公差概念已熟悉），从产线侧切入降低认知负荷；代码示例给到可直接运行的最小版本"
+        },
+        "辩论与交叉验证结果": {
+          "cross_validation": {
+            "contradictions": [
+              {
+                "agent_a": "document",
+                "agent_b": "quiz",
+                "issue": "文档写IoU阈值0.5，题目答案写0.6",
+                "resolution": "工程默认IoU阈值0.5，题目修正；同时说明0.3-0.7为可调区间，视缺陷类型定标"
+              }
+            ]
+          },
+          "hallucinations": [
+            {
+              "type": "事实性幻觉",
+              "agent": "reading",
+              "content": "编造'GB/T 12345-2020工业检测标准'",
+              "correction": "该编号不存在；替换为真实的验收口径：与人工质检员对拍≥2万张，漏检率≤人工水平、过杀率≤3×人工水平",
+              "severity": "major"
+            }
+          ],
+          "fact_check": {
+            "verified_count": 19,
+            "total_facts": 20,
+            "hallucination_rate": 0.05,
+            "kb_evidence": [
+              {
+                "claim": "缺陷样本稀缺时优先无监督异常检测（PatchCore）",
+                "source_doc": "ai_industry_cases.md",
+                "section": "制造业视觉质检落地"
+              },
+              {
+                "claim": "置信度三档判定：>0.9自动判定 / 0.5-0.9人工复检 / 低置信放行记录",
+                "source_doc": "ai_industry_cases.md",
+                "section": "制造业视觉质检落地"
+              },
+              {
+                "claim": "产线节拍要求单帧推理<30ms",
+                "source_doc": "ai_industry_cases.md",
+                "section": "制造业视觉质检落地"
+              }
+            ]
+          },
+          "debate_summary": "1处矛盾已裁决修正，1处事实性幻觉已拦截修正；核心指标均有知识库依据，幻觉率5%达赛题红线以内",
+          "hallucination_prevented": true,
+          "retry_recommended": false
+        },
+        "质量评估报告": {
+          "scores": {
+            "accuracy": 9,
+            "difficulty_fit": 9,
+            "completeness": 8,
+            "cross_modal_consistency": 9
+          },
+          "overall": 9,
+          "issues": [
+            {
+              "resource": "code",
+              "severity": "minor",
+              "description": "示例代码可补充CPU运行提示，照顾无GPU转岗学员"
+            }
+          ],
+          "retry": false
+        },
+        "动态迭代决策": {
+          "decision": "simplify",
+          "reason": "学习者Python掌握度25分（<60）且difficulty_fit初评曾低于阈值，触发降维解释",
+          "actions": [
+            {
+              "type": "降维解释",
+              "target_knowledge": "mAP评估指标",
+              "action_detail": "用'10次投球中接住7次'类比Precision/Recall，配合图示；公式推导延后"
+            },
+            {
+              "type": "进阶挑战",
+              "target_knowledge": "相机选型与光源布置",
+              "action_detail": "机械背景优势项：给出0.1mm最小缺陷×3-5倍分辨率的选型计算挑战题"
+            }
+          ],
+          "learning_feedback": "从你熟悉的产线侧切入，先跑通第一个检测Demo，代码细节我们逐步补",
+          "next_iteration_needed": true
+        }
+      },
+      "最终生成的个性化学习资源": {
+        "mindmap": "- 工业视觉质检·YOLO缺陷检测\n  - 基础概念\n    - 什么是指令集视觉检测\n    - 缺陷类型与判定标准\n  - 环境与工具\n    - Python最小集\n    - LabelImg标注工具\n    - Roboflow数据管理\n  - 标准流程\n    - 样本采集与标注\n    - YOLOv8训练\n    - mAP评估\n    - 产线部署\n  - 验收与规范\n    - 三档置信度判定\n    - 人机对拍流程\n    - ROI核算",
+        "document": "## 一、这是什么（10分钟版）\n用摄像头+AI模型代替人眼挑次品。你熟悉的'检具+目视'流程升级为：相机采集 → 模型判定 → MES联动打标。\n\n## 二、先跑通再深究：最小可用Demo\n1. 安装：pip install ultralytics（含CPU版，无需GPU）\n2. 下载10张脱敏缺陷图与标注文件\n3. 三行代码训练：from ultralytics import YOLO; model = YOLO('yolov8n.pt'); model.train(data='defect.yaml', epochs=5)\n4. 看结果：results目录下的混淆矩阵与mAP曲线\n\n## 三、必须懂的三个指标（人话版）\n- Precision：模型说'是缺陷'的里面，真缺陷占多少（类比：10次报警9次真）\n- Recall：真缺陷里被抓住多少（漏检是产线大忌）\n- mAP@0.5：两者的综合分，先认60分及格，调优后再谈80\n\n## 四、与你机械背景的衔接点\n- 相机选型 = 你熟悉的传感器选型：最小缺陷尺寸×3~5倍分辨率\n- 光源 = 你的公差概念：环形光看表面、背光看轮廓\n- 判定规则 = 检具的Go/NoGo：置信度>0.9自动判、0.5~0.9人工复检\n\n## 五、常见误区\n- 用学术集精度预估产线效果（光照/节拍差异）\n- 只看mAP不看漏检率（业务损失不对称）\n\n[来源:ai_industry_cases.md·制造业视觉质检落地]",
+        "code": "# ═══ 示例1：最小训练（CPU可跑，适合零基础转岗）\n# 运行环境：Python3.10+；pip install ultralytics\nfrom ultralytics import YOLO\nmodel = YOLO('yolov8n.pt')          # nano版，CPU友好\nmodel.train(data='defect.yaml',     # 数据配置\n            epochs=5, imgsz=640, device='cpu')\n# 预期输出：训练日志逐epoch打印，结束生成 results.png（含mAP曲线）\n# 关键知识点：epochs先小步快跑验证链路，调通后再加到50+\n\n# ═══ 示例2：单张图推理与判定三档规则\nimport cv2\nresults = model('sample.jpg', conf=0.5)\nfor r in results:\n    for box in r.boxes:\n        conf = float(box.conf)\n        if conf > 0.9:   action = '自动判定NG'\n        elif conf > 0.5: action = '转人工复检'\n        else:            action = '放行并记录'\n        print(f'缺陷置信度{conf:.2f} → {action}')\n# 预期输出：每个框的置信度与处置动作\n# 关键知识点：三档判定是产线落地的核心规则\n# 常见错误：conf阈值一刀切——应按缺陷代价不对称原则偏向低漏检",
+        "operation_guide": "## 一、适用岗位与前置能力\n目标岗位：AI视觉质检工程师（初级）｜前置：产线质量意识（已具备）+ Python最小集（本指南速成）\n\n## 二、环境与工具准备清单\n| 工具 | 用途 | 获取方式 |\n|---|---|---|\n| Python 3.10 | 运行环境 | python.org（勾选Add to PATH） |\n| ultralytics | YOLO训练/推理 | pip install ultralytics |\n| LabelImg | 缺陷标注 | pip install labelimg |\n| 100张脱敏样本 | 练习数据 | 内部数据平台申请 |\n\n## 三、标准操作流程（SOP）\n步骤1 数据标注（约2小时）\n- 操作：LabelImg打开样本目录 → YOLO模式 → 框选缺陷 → 保存\n- 预期结果：每图生成同名.txt标注（类别0=划痕,1=凹陷）\n- 常见报错：'No such file classes.txt' → 首次启动先创建类别文件\n\n步骤2 训练验证（约30分钟CPU）\n- 操作：python train.py（示例1脚本）\n- 预期结果：results/mAP@0.5 ≥ 0.6（练习集）\n- 常见报错：CUDA out of memory → device='cpu'或减小imgsz\n\n步骤3 报告解读（约20分钟）\n- 操作：打开results.png，记录P/R曲线拐点\n- 预期结果：能向主管说明当前漏检率与代价\n\n## 四、质量验收标准（量化）\n- 人机对拍：≥2万张；漏检率 ≤ 人工水平；过杀率 ≤ 3×人工水平\n- 单帧推理 < 30ms（满足产线节拍）\n- 误报率波动 < 20%（连续4周）\n\n## 五、行业规范与安全红线\n- 产线图像属企业资产，禁止外传；训练日志不得含原始图像\n- 模型上线必须走灰度：影子模式→5%→全量\n\n## 六、进阶路径\n标注质检Kappa≥0.7 → PatchCore无监督冷启动 → 主导对拍验收 → ROI核算立项\n\n[来源:ai_industry_cases.md·制造业视觉质检落地]",
+        "quiz": "【选择题】1. 产线上模型输出置信度0.72，按三档判定规则应如何处置？\nA. 自动判定NG B. 转人工复检 C. 直接放行 D. 停线检查\n答案：B\n解析：0.5~0.9区间为人工复检档——置信度不够高又不至放行。\n\n【判断题】2. 只要mAP达标，就可以跳过人机对拍直接全量上线。\n答案：错误\n解析：学术指标≠产线表现，光照/节拍/样本分布差异必须通过对拍验证；且上线须灰度。\n\n【填空题】3. 要检出0.1mm的最小缺陷，相机分辨率至少需能分辨____mm。\n答案：0.02\n解析：最小缺陷尺寸×3~5倍分辨率是工业相机选型经验公式。\n\n【简答题】4. 为什么质检系统的阈值设定通常偏向低漏检而不是低误杀？\n参考答案：两类错误的业务代价不对称——漏检导致流出损失与召回成本，误杀仅增加复检成本；因此阈值向低漏检偏移，再靠人工复检消化误杀。",
+        "video_script": "## 开场引入\n画面：产线传送带+人眼质检疲劳对比AI检测打标\n语音：质检岗位每天要看几万个零件，人眼会累，机器不会。今天我们用3小时搭出第一版AI质检。\n\n## 场景一：Demo先跑通\n画面：终端逐行显示 pip install → 三行训练代码 → results.png\n语音：先别管原理，把最小Demo跑通——这符合你动手型的学习习惯。\n\n## 场景二：三个指标的人话版\n画面：投篮动画演示Precision/Recall\n语音：记住一句话——10次报警9次真，真缺陷一个不漏。\n\n## 场景三：你的机械优势\n画面：相机选型计算器（0.1mm×5=0.02mm）\n语音：这部分你本来就懂，只是换了套术语。\n\n## 结尾小结\n画面：三档判定流程图\n语音：下次课我们做真实样本的标注实训。",
+        "reading": "## 延伸阅读（按你的转岗节奏排序）\n1. 天池《工业质检赛题集》——真实脱敏数据集，先看第一名方案的判定策略章节\n2. PatchCore论文导读（中文精读版）——只有良品数据时的冷启动方案，转岗进阶必读\n3. 行业白皮书《机器视觉在制造业的应用现状》——用于向管理层汇报时的口径素材\n4. 本系统知识库·ai_industry_cases.md·预测性维护章节——质检岗常与预测性维护联动，提前储备"
+      }
+    }
+  ]
+}

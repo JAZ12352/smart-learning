@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mindskip.xzs.repository.AttendanceRecordMapper">
+  <resultMap id="BaseResultMap" type="com.mindskip.xzs.domain.AttendanceRecord">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="attendance_date" jdbcType="DATE" property="attendanceDate" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="check_in_time" jdbcType="TIMESTAMP" property="checkInTime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="deleted" jdbcType="BIT" property="deleted" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, user_id, user_name, real_name, attendance_date, status, check_in_time, remark, create_time, deleted
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" /> from t_attendance_record where id = #{id}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    update t_attendance_record set deleted = 1 where id = #{id}
+  </delete>
+
+  <insert id="insert" parameterType="com.mindskip.xzs.domain.AttendanceRecord" useGeneratedKeys="true" keyProperty="id">
+    insert into t_attendance_record (user_id, user_name, real_name, attendance_date, status, check_in_time, remark, create_time)
+    values (#{userId}, #{userName}, #{realName}, #{attendanceDate}, #{status}, #{checkInTime}, #{remark}, #{createTime})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.mindskip.xzs.domain.AttendanceRecord" useGeneratedKeys="true" keyProperty="id">
+    insert into t_attendance_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">user_id,</if>
+      <if test="userName != null">user_name,</if>
+      <if test="realName != null">real_name,</if>
+      <if test="attendanceDate != null">attendance_date,</if>
+      <if test="status != null">status,</if>
+      <if test="checkInTime != null">check_in_time,</if>
+      <if test="remark != null">remark,</if>
+      <if test="createTime != null">create_time,</if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">#{userId},</if>
+      <if test="userName != null">#{userName},</if>
+      <if test="realName != null">#{realName},</if>
+      <if test="attendanceDate != null">#{attendanceDate},</if>
+      <if test="status != null">#{status},</if>
+      <if test="checkInTime != null">#{checkInTime},</if>
+      <if test="remark != null">#{remark},</if>
+      <if test="createTime != null">#{createTime},</if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.mindskip.xzs.domain.AttendanceRecord">
+    update t_attendance_record
+    <set>
+      <if test="status != null">status = #{status},</if>
+      <if test="checkInTime != null">check_in_time = #{checkInTime},</if>
+      <if test="remark != null">remark = #{remark},</if>
+    </set>
+    where id = #{id}
+  </update>
+
+  <update id="updateByPrimaryKey" parameterType="com.mindskip.xzs.domain.AttendanceRecord">
+    update t_attendance_record
+    set status = #{status}, check_in_time = #{checkInTime}, remark = #{remark}
+    where id = #{id}
+  </update>
+
+  <select id="page" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" /> from t_attendance_record
+    where deleted = 0
+    <if test="userName != null and userName != ''">
+      and user_name like concat('%', #{userName}, '%')
+    </if>
+    <if test="status != null and status != ''">
+      and status = #{status}
+    </if>
+    <if test="startDate != null and startDate != ''">
+      and attendance_date &gt;= #{startDate}
+    </if>
+    <if test="endDate != null and endDate != ''">
+      and attendance_date &lt;= #{endDate}
+    </if>
+    order by attendance_date desc, create_time desc
+  </select>
+
+  <select id="selectByUserIdAndDate" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" /> from t_attendance_record
+    where deleted = 0 and user_id = #{userId} and attendance_date = #{date}
+  </select>
+
+  <select id="statistics" resultType="java.util.HashMap">
+    select status, count(*) as cnt from t_attendance_record
+    where deleted = 0
+    <if test="startDate != null and startDate != ''">and attendance_date &gt;= #{startDate}</if>
+    <if test="endDate != null and endDate != ''">and attendance_date &lt;= #{endDate}</if>
+    group by status
+  </select>
+
+  <select id="warningList" resultType="java.util.HashMap">
+    select u.id as user_id, u.real_name, u.user_name, max(a.attendance_date) as last_attendance,
+           datediff(curdate(), max(a.attendance_date)) as gap_days
+    from t_user u
+    left join t_attendance_record a on u.id = a.user_id and a.deleted = 0
+    where u.role = 1 and u.deleted = 0
+    group by u.id, u.real_name, u.user_name
+    having gap_days &gt; #{days} or last_attendance is null
+  </select>
+</mapper>

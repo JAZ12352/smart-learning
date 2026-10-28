@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mindskip.xzs.repository.SubjectResourceMapper">
+  <resultMap id="BaseResultMap" type="com.mindskip.xzs.domain.SubjectResource">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="subject_id" jdbcType="INTEGER" property="subjectId" />
+    <result column="source_type" jdbcType="VARCHAR" property="sourceType" />
+    <result column="source_id" jdbcType="INTEGER" property="sourceId" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="source" jdbcType="VARCHAR" property="source" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="format" jdbcType="VARCHAR" property="format" />
+    <result column="click_count" jdbcType="INTEGER" property="clickCount" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="deleted" jdbcType="BIT" property="deleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, subject_id, source_type, source_id, title, summary, source,
+    content, format, click_count, create_time, deleted
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_subject_resource
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    update t_subject_resource set deleted=1
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mindskip.xzs.domain.SubjectResource" useGeneratedKeys="true" keyProperty="id">
+    insert into t_subject_resource (subject_id, source_type, source_id,
+      title, summary, source, content, format, click_count, deleted)
+    values (#{subjectId,jdbcType=INTEGER}, #{sourceType,jdbcType=VARCHAR}, #{sourceId,jdbcType=INTEGER},
+      #{title,jdbcType=VARCHAR}, #{summary,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR},
+      #{content,jdbcType=LONGVARCHAR}, #{format,jdbcType=VARCHAR},
+      #{clickCount,jdbcType=INTEGER}, 0)
+  </insert>
+  <insert id="insertSelective" parameterType="com.mindskip.xzs.domain.SubjectResource" useGeneratedKeys="true" keyProperty="id">
+    insert into t_subject_resource
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="subjectId != null">subject_id,</if>
+      <if test="sourceType != null">source_type,</if>
+      <if test="sourceId != null">source_id,</if>
+      <if test="title != null">title,</if>
+      <if test="summary != null">summary,</if>
+      <if test="source != null">source,</if>
+      <if test="content != null">content,</if>
+      <if test="format != null">format,</if>
+      <if test="clickCount != null">click_count,</if>
+      deleted
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="subjectId != null">#{subjectId,jdbcType=INTEGER},</if>
+      <if test="sourceType != null">#{sourceType,jdbcType=VARCHAR},</if>
+      <if test="sourceId != null">#{sourceId,jdbcType=INTEGER},</if>
+      <if test="title != null">#{title,jdbcType=VARCHAR},</if>
+      <if test="summary != null">#{summary,jdbcType=VARCHAR},</if>
+      <if test="source != null">#{source,jdbcType=VARCHAR},</if>
+      <if test="content != null">#{content,jdbcType=LONGVARCHAR},</if>
+      <if test="format != null">#{format,jdbcType=VARCHAR},</if>
+      <if test="clickCount != null">#{clickCount,jdbcType=INTEGER},</if>
+      0
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mindskip.xzs.domain.SubjectResource">
+    update t_subject_resource
+    <set>
+      <if test="title != null">title = #{title,jdbcType=VARCHAR},</if>
+      <if test="summary != null">summary = #{summary,jdbcType=VARCHAR},</if>
+      <if test="source != null">source = #{source,jdbcType=VARCHAR},</if>
+      <if test="content != null">content = #{content,jdbcType=LONGVARCHAR},</if>
+      <if test="format != null">format = #{format,jdbcType=VARCHAR},</if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectBySubjectId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_subject_resource
+    where deleted=0 and subject_id= #{subjectId,jdbcType=INTEGER}
+    order by create_time desc
+  </select>
+
+  <update id="incrementClickCount">
+    update t_subject_resource
+    set click_count = click_count + 1
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

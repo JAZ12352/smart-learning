@@ -1,0 +1,16 @@
+# ===========================================
+# PostgreSQL 数据库配置
+# 使用方式: java -jar xzs-3.9.0.jar --spring.profiles.active=pg
+# ===========================================
+logging:
+  path: ./log/
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/xzs?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8
+    username: postgres
+    password: ${PG_PASSWORD:123456}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      idle-timeout: 600000
+      max-lifetime: 1800000

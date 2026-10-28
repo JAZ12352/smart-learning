@@ -1,0 +1,104 @@
+llm_backends:
+  deepseek:
+    api_key: ${DEEPSEEK_API_KEY:YOUR_DEEPSEEK_API_KEY_HERE}
+    api_url: https://api.deepseek.com/chat/completions
+    models:
+      - deepseek-v4-pro
+
+agent_routing:
+  supervisor:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.3
+  paper:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.5
+  question:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.5
+  student:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.5
+  profile:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.5
+  resource:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.5
+  path:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.4
+  qa:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.7
+  teaching:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.7
+  # ── 协作工作流专用 Agent（深度协同 + 资源质量评估）──
+  mindmap:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.4
+  document:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.5
+  reading:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.6
+  code:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.3
+  quiz:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.4
+  video:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.6
+  review:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.2
+  # ── PDF 整改新增 Agent：学情诊断 / 辩论交叉验证 / 动态迭代决策 ──
+  diagnosis:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.3
+  debate:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.2
+  adapt:
+    backend: deepseek
+    model: deepseek-v4-pro
+    temperature: 0.4
+
+java_backend:
+  base_url: ${JAVA_BACKEND_URL:http://localhost:8001}
+
+mysql_readonly:
+  host: ${MYSQL_HOST:localhost}
+  port: ${MYSQL_PORT:3306}
+  user: ${MYSQL_USER:root}
+  password: ${MYSQL_PASSWORD:123456}
+  database: ${MYSQL_DATABASE:xzs}
+
+chromadb:
+  persist_dir: ./chroma_data
+  collection_name: xzs_knowledge
+
+server:
+  host: 0.0.0.0
+  port: 8100

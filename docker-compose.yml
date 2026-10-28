@@ -1,0 +1,78 @@
+# ===========================================
+# 智能教师管理系统 — Docker Compose 一键部署
+#
+# 启动: docker-compose up -d
+# 停止: docker-compose down
+# 日志: docker-compose logs -f
+#
+# 访问地址:
+#   管理端: http://localhost:8006
+#   学生端: http://localhost:8010
+#   后端API: http://localhost:8001
+#   Swagger: http://localhost:8001/swagger-ui/index.html
+# ===========================================
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: xzs-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-xzs}
+      TZ: Asia/Shanghai
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backend/xzs/src/main/resources/db/ai_schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --default-time-zone=+08:00
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${MYSQL_ROOT_PASSWORD:-123456}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  backend:
+    build:
+      context: ./backend/xzs
+      dockerfile: Dockerfile
+    image: xzs-backend:3.9.0
+    container_name: xzs-backend
+    restart: unless-stopped
+    ports:
+      - "${BACKEND_PORT:-8001}:8001"
+    environment:
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-prod}
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${MYSQL_DATABASE:-xzs}?useSSL=false&useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true&allowMultiQueries=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
+      TZ: Asia/Shanghai
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - backend_logs:/app/log
+      - backend_data:/app/data
+
+  admin:
+    build:
+      context: ./frontend/xzs-admin
+      dockerfile: Dockerfile
+    image: xzs-admin:3.9.0
+    container_name: xzs-admin
+    restart: unless-stopped
+    ports:
+      - "${ADMIN_PORT:-8006}:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
+  backend_logs:
+  backend_data:

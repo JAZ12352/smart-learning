@@ -1,0 +1,256 @@
+{
+  "generated_at": "2026-09-10 21:19:47",
+  "scale": {
+    "profiles": 12,
+    "topics": 14,
+    "cases": 61,
+    "kb_files": 12,
+    "kb_chunks": 134
+  },
+  "dataset_self_check": {
+    "consistent": 61,
+    "total": 61,
+    "consistency": 1.0
+  },
+  "kb_grounding": {
+    "total_queries": 58,
+    "hits": 57,
+    "support_rate": 0.9828,
+    "threshold": 0.5,
+    "method": "查询字符二元组覆盖率（全库穷举取最大值）",
+    "per_topic": {
+      "T1": {
+        "topic": "监督学习基础",
+        "queries": 6,
+        "hits": 6,
+        "hit_rate": 1.0,
+        "mean_containment": 0.6805,
+        "unmatched_queries": []
+      },
+      "T10": {
+        "topic": "模型部署与推理加速",
+        "queries": 4,
+        "hits": 4,
+        "hit_rate": 1.0,
+        "mean_containment": 0.8911,
+        "unmatched_queries": []
+      },
+      "T11": {
+        "topic": "训练调参与分布式训练",
+        "queries": 4,
+        "hits": 4,
+        "hit_rate": 1.0,
+        "mean_containment": 0.8403,
+        "unmatched_queries": []
+      },
+      "T12": {
+        "topic": "制造业视觉质检落地",
+        "queries": 4,
+        "hits": 4,
+        "hit_rate": 1.0,
+        "mean_containment": 0.8032,
+        "unmatched_queries": []
+      },
+      "T13": {
+        "topic": "预测性维护与时序分析",
+        "queries": 5,
+        "hits": 5,
+        "hit_rate": 1.0,
+        "mean_containment": 0.8282,
+        "unmatched_queries": []
+      },
+      "T14": {
+        "topic": "LLM应用评测与幻觉防控",
+        "queries": 4,
+        "hits": 3,
+        "hit_rate": 0.75,
+        "mean_containment": 0.6195,
+        "unmatched_queries": [
+          "拒答 兜底 人工接管"
+        ]
+      },
+      "T2": {
+        "topic": "无监督学习与聚类",
+        "queries": 4,
+        "hits": 4,
+        "hit_rate": 1.0,
+        "mean_containment": 0.8128,
+        "unmatched_queries": []
+      },
+      "T3": {
+        "topic": "深度学习基础与反向传播",
+        "queries": 4,
+        "hits": 4,
+        "hit_rate": 1.0,
+        "mean_containment": 0.7928,
+        "unmatched_queries": []
+      },
+      "T4": {
+        "topic": "卷积神经网络CNN",
+        "queries": 5,
+        "hits": 5,
+        "hit_rate": 1.0,
+        "mean_containment": 0.8482,
+        "unmatched_queries": []
+      },
+      "T5": {
+        "topic": "循环网络与序列建模",
+        "queries": 3,
+        "hits": 3,
+        "hit_rate": 1.0,
+        "mean_containment": 0.6746,
+        "unmatched_queries": []
+      },
+      "T6": {
+        "topic": "Transformer与注意力机制",
+        "queries": 4,
+        "hits": 4,
+        "hit_rate": 1.0,
+        "mean_containment": 0.95,
+        "unmatched_queries": []
+      },
+      "T7": {
+        "topic": "大语言模型与提示工程",
+        "queries": 4,
+        "hits": 4,
+        "hit_rate": 1.0,
+        "mean_containment": 0.8169,
+        "unmatched_queries": []
+      },
+      "T8": {
+        "topic": "RAG检索增强生成",
+        "queries": 4,
+        "hits": 4,
+        "hit_rate": 1.0,
+        "mean_containment": 0.7477,
+        "unmatched_queries": []
+      },
+      "T9": {
+        "topic": "多智能体系统开发",
+        "queries": 3,
+        "hits": 3,
+        "hit_rate": 1.0,
+        "mean_containment": 0.8236,
+        "unmatched_queries": []
+      }
+    }
+  },
+  "metrics": {
+    "adaptation": {
+      "accuracy": 0.3333,
+      "matched": 1,
+      "total": 3,
+      "confusion": {
+        "基础": {
+          "基础": 1
+        },
+        "进阶": {
+          "基础": 1
+        },
+        "高级": {
+          "进阶": 1
+        }
+      }
+    },
+    "coverage": {
+      "covered": 13,
+      "total": 18,
+      "overall_rate": 0.7222
+    },
+    "hallucination": {
+      "rate": 0.0,
+      "note": "各用例幻觉率的均值（Debate Agent 判定）"
+    }
+  },
+  "live_results": [
+    {
+      "case_id": "TC-002",
+      "profile_id": "LP-02",
+      "topic": "监督学习基础",
+      "expected_difficulty": "基础",
+      "system_difficulty": "基础",
+      "difficulty_match": true,
+      "coverage": {
+        "covered": 5,
+        "total": 6,
+        "rate": 0.8333,
+        "missed": [
+          "SVM最大间隔"
+        ]
+      },
+      "hallucination_rate": 0.0,
+      "debate_prevented": true,
+      "review_scores": {},
+      "agents_planned": [
+        "mindmap",
+        "document",
+        "reading",
+        "code",
+        "guide",
+        "quiz",
+        "video",
+        "review"
+      ]
+    },
+    {
+      "case_id": "TC-001",
+      "profile_id": "LP-01",
+      "topic": "监督学习基础",
+      "expected_difficulty": "进阶",
+      "system_difficulty": "基础",
+      "difficulty_match": false,
+      "coverage": {
+        "covered": 4,
+        "total": 6,
+        "rate": 0.6667,
+        "missed": [
+          "SVM最大间隔",
+          "随机森林Bagging"
+        ]
+      },
+      "hallucination_rate": 0.0,
+      "debate_prevented": true,
+      "review_scores": {},
+      "agents_planned": [
+        "mindmap",
+        "document",
+        "reading",
+        "code",
+        "guide",
+        "quiz",
+        "video",
+        "review"
+      ]
+    },
+    {
+      "case_id": "TC-005",
+      "profile_id": "LP-09",
+      "topic": "监督学习基础",
+      "expected_difficulty": "高级",
+      "system_difficulty": "进阶",
+      "difficulty_match": false,
+      "coverage": {
+        "covered": 4,
+        "total": 6,
+        "rate": 0.6667,
+        "missed": [
+          "SVM最大间隔",
+          "随机森林Bagging"
+        ]
+      },
+      "hallucination_rate": 0.0,
+      "debate_prevented": false,
+      "review_scores": {},
+      "agents_planned": [
+        "mindmap",
+        "document",
+        "reading",
+        "code",
+        "guide",
+        "quiz",
+        "video",
+        "review"
+      ]
+    }
+  ]
+}

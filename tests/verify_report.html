@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>可复现验证报告</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; max-width: 960px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
+        .header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 30px; border-radius: 12px; margin-bottom: 24px; }
+        .header h1 { margin: 0 0 8px; font-size: 28px; }
+        .stats { display: flex; gap: 16px; margin-bottom: 24px; }
+        .stat { flex: 1; background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .stat .num { font-size: 32px; font-weight: bold; }
+        .stat .label { font-size: 14px; color: #666; margin-top: 4px; }
+        .pass { color: #4CAF50; } .warn { color: #FF9800; } .fail { color: #F44336; }
+        table { width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-collapse: collapse; }
+        th { background: #f8f9fa; padding: 12px; text-align: left; font-weight: 600; border-bottom: 2px solid #dee2e6; }
+        td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+        .score-badge { display: inline-block; padding: 8px 24px; background: #4CAF50; color: white; border-radius: 20px; font-size: 24px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>可复现验证报告</h1>
+        <p>智慧乐学 · 领域知识个性化生成与多智能体协同决策平台</p>
+        <p>测试时间: 2026-07-06 18:26:04 | 总耗时: 192.2s | 版本快照</p>
+    </div>
+    <div class="stats">
+        <div class="stat"><div class="num">31</div><div class="label">验证项</div></div>
+        <div class="stat"><div class="num pass">25</div><div class="label">通过</div></div>
+        <div class="stat"><div class="num warn">5</div><div class="label">警告</div></div>
+        <div class="stat"><div class="num fail">1</div><div class="label">失败</div></div>
+        <div class="stat"><div class="score-badge">81%</div><div class="label">验证通过率</div></div>
+    </div>
+    <table>
+        <tr><th>状态</th><th>验证步骤</th><th>详情</th><th>耗时</th></tr>
+        <tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>Java 后端 (port 8001)</td>
+            <td>响应正常</td>
+            <td>141.0ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>Python 多智能体 (port 8100)</td>
+            <td>v2.1.0 | 6 agents | ChromaDB: collection not found</td>
+            <td>15.1ms</td>
+        </tr><tr>
+            <td style="color:#FF9800">⚠️</td>
+            <td>画像维度: 1/8 (要求 ≥6)</td>
+            <td>仅 1 维</td>
+            <td>18.1ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>画像版本: v1</td>
+            <td>已有版本号</td>
+            <td>0ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>  课程文档 (Doc Agent)</td>
+            <td>可生成 | 6 agents available</td>
+            <td>7.7ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>  思维导图 (MindMap Agent)</td>
+            <td>可生成 | 6 agents available</td>
+            <td>22.3ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>  练习题 (Quiz Agent)</td>
+            <td>可生成 | 6 agents available</td>
+            <td>7.2ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>  拓展阅读 (Reading Agent)</td>
+            <td>可生成 | 6 agents available</td>
+            <td>7.5ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>  视频脚本 (Video Agent)</td>
+            <td>可生成 | 6 agents available</td>
+            <td>32.0ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>  代码案例 (Code Agent)</td>
+            <td>可生成 | 6 agents available</td>
+            <td>32.2ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>资源类型: 6/6 (要求 ≥5)</td>
+            <td>已确认: 课程文档 (Doc Agent), 思维导图 (MindMap Agent), 练习题 (Quiz Agent)...</td>
+            <td>0ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>多智能体批量生成</td>
+            <td>端点响应正常</td>
+            <td>10585.2ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>资源质量评估</td>
+            <td>四维评估接口可用</td>
+            <td>2849.1ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>路径生成 API</td>
+            <td>流式生成响应正常</td>
+            <td>40353.3ms</td>
+        </tr><tr>
+            <td style="color:#FF9800">⚠️</td>
+            <td>已有路径</td>
+            <td>尚未生成路径, 需先构建画像</td>
+            <td>59.6ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>路径自动调整检测</td>
+            <td>存在需要调整的学习路径，建议启用自动调整功能</td>
+            <td>49.5ms</td>
+        </tr><tr>
+            <td style="color:#FF9800">⚠️</td>
+            <td>路径覆盖: 1/3 学科 (要求 ≥3)</td>
+            <td>仅 1 个学科</td>
+            <td>0ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>RAG 知识库问答</td>
+            <td>流式响应正常</td>
+            <td>26.2ms</td>
+        </tr><tr>
+            <td style="color:#FF9800">⚠️</td>
+            <td>Python QA Agent</td>
+            <td>Python 服务未启动</td>
+            <td>1410.5ms</td>
+        </tr><tr>
+            <td style="color:#FF9800">⚠️</td>
+            <td>向量语义检索（新增）</td>
+            <td>Python/ChromaDB 未启动, 使用关键词回退</td>
+            <td>6.9ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>AI 对话</td>
+            <td>响应正常</td>
+            <td>22.3ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>知识库数量: 8</td>
+            <td>已创建 8 个知识库</td>
+            <td>36.2ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>学习进度总览</td>
+            <td>平均进度: 0.0% | 路径数: 1</td>
+            <td>36.5ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>AI 评估报告 (OBE框架)</td>
+            <td>流式报告生成正常</td>
+            <td>60653.4ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>路径自动调整</td>
+            <td>调整流程正常</td>
+            <td>75499.8ms</td>
+        </tr><tr>
+            <td style="color:#F44336">❌</td>
+            <td>Agent 状态 API</td>
+            <td>端点不可用</td>
+            <td>13.3ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>  画像构建</td>
+            <td>✓</td>
+            <td>39.2ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>  路径生成</td>
+            <td>✓</td>
+            <td>42.6ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>  资源生成</td>
+            <td>✓</td>
+            <td>26.8ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>  评估报告</td>
+            <td>✓</td>
+            <td>38.6ms</td>
+        </tr><tr>
+            <td style="color:#4CAF50">✅</td>
+            <td>全流程串联: 4/4 通过</td>
+            <td>验证了画像→路径→资源→评估闭环</td>
+            <td>0ms</td>
+        </tr>
+    </table>
+    <p style="text-align:center;color:#999;margin-top:20px;font-size:12px;">
+        Generated by verify_scoring.py — 2026-07-06 18:26
+    </p>
+</body>
+</html>

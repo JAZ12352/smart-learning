@@ -1,0 +1,29 @@
+%=====================================================================
+%  7. Conclusion
+%=====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+We presented \sysname{}, a multi-agent framework for personalized domain
+knowledge generation in vertical skill training. Its distinctive feature is
+structural rather than algorithmic: verification is placed between generation
+and delivery, the difficulty rule is explicit and independently recomputable,
+and adaptation is expressed as a published decision table rather than left
+implicit in model weights. Across \todo{61} end-to-end cases spanning
+\todo{14} topics and \todo{12} learner profiles, the full configuration
+outperforms single-pass and ablated alternatives on adaptation accuracy,
+coverage, and hallucination rate, with the debate stage and retrieval
+grounding contributing the largest measurable shares.
+
+We are deliberately explicit about what this paper does \emph{not} establish:
+we demonstrate artifact-level quality and profile fit, not improved learning
+outcomes. Closing that gap requires a controlled human study, which is the
+central item on our agenda, together with replication on a second model family
+and a longitudinal deployment that tracks profile evolution.
+
+More broadly, the results suggest that for educational generation, the
+bottleneck is no longer whether a model can produce plausible material, but
+whether a system can demonstrate that the material is correct for \emph{this}
+learner. Architectures that make verification and adaptation inspectable
+appear better suited to that requirement than architectures that pursue
+quality purely through scale.

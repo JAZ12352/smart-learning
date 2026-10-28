@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mindskip.xzs.repository.LearningPathMapper">
+  <resultMap id="BaseResultMap" type="com.mindskip.xzs.domain.LearningPath">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="subject_id" jdbcType="INTEGER" property="subjectId" />
+    <result column="path_name" jdbcType="VARCHAR" property="pathName" />
+    <result column="nodes" jdbcType="VARCHAR" property="nodes" />
+    <result column="current_node_id" jdbcType="VARCHAR" property="currentNodeId" />
+    <result column="progress_percent" jdbcType="INTEGER" property="progressPercent" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="deleted" jdbcType="BIT" property="deleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, subject_id, path_name, nodes, current_node_id,
+    progress_percent, create_time, modify_time, deleted
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_learning_path
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_learning_path
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mindskip.xzs.domain.LearningPath" useGeneratedKeys="true" keyProperty="id">
+    insert into t_learning_path (id, user_id, subject_id,
+      path_name, nodes, current_node_id,
+      progress_percent, create_time, modify_time,
+      deleted
+      )
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{subjectId,jdbcType=INTEGER},
+      #{pathName,jdbcType=VARCHAR}, #{nodes,jdbcType=VARCHAR}, #{currentNodeId,jdbcType=VARCHAR},
+      #{progressPercent,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP},
+      #{deleted,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.mindskip.xzs.domain.LearningPath" useGeneratedKeys="true" keyProperty="id">
+    insert into t_learning_path
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="subjectId != null">
+        subject_id,
+      </if>
+      <if test="pathName != null">
+        path_name,
+      </if>
+      <if test="nodes != null">
+        nodes,
+      </if>
+      <if test="currentNodeId != null">
+        current_node_id,
+      </if>
+      <if test="progressPercent != null">
+        progress_percent,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="modifyTime != null">
+        modify_time,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="subjectId != null">
+        #{subjectId,jdbcType=INTEGER},
+      </if>
+      <if test="pathName != null">
+        #{pathName,jdbcType=VARCHAR},
+      </if>
+      <if test="nodes != null">
+        #{nodes,jdbcType=VARCHAR},
+      </if>
+      <if test="currentNodeId != null">
+        #{currentNodeId,jdbcType=VARCHAR},
+      </if>
+      <if test="progressPercent != null">
+        #{progressPercent,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null">
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mindskip.xzs.domain.LearningPath">
+    update t_learning_path
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="subjectId != null">
+        subject_id = #{subjectId,jdbcType=INTEGER},
+      </if>
+      <if test="pathName != null">
+        path_name = #{pathName,jdbcType=VARCHAR},
+      </if>
+      <if test="nodes != null">
+        nodes = #{nodes,jdbcType=VARCHAR},
+      </if>
+      <if test="currentNodeId != null">
+        current_node_id = #{currentNodeId,jdbcType=VARCHAR},
+      </if>
+      <if test="progressPercent != null">
+        progress_percent = #{progressPercent,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null">
+        modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mindskip.xzs.domain.LearningPath">
+    update t_learning_path
+    set user_id = #{userId,jdbcType=INTEGER},
+      subject_id = #{subjectId,jdbcType=INTEGER},
+      path_name = #{pathName,jdbcType=VARCHAR},
+      nodes = #{nodes,jdbcType=VARCHAR},
+      current_node_id = #{currentNodeId,jdbcType=VARCHAR},
+      progress_percent = #{progressPercent,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <select id="selectByUserId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_learning_path
+    where deleted=0 and user_id=#{userId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByUserAndSubject" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_learning_path
+    where deleted=0 and user_id=#{userId,jdbcType=INTEGER} and subject_id=#{subjectId,jdbcType=INTEGER}
+    limit 1
+  </select>
+
+</mapper>

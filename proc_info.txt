@@ -1,0 +1,2 @@
+﻿PID=12980 CMD=C:\Users\20873\AppData\Local\Microsoft\WindowsApps\python.exe -c "import uvicorn; uvicorn.run('main:app', host='0.0.0.0', port=8100, reload=False)"
+PID=34468 CMD="C:\Users\20873\AppData\Local\Python\pythoncore-3.14-64\python.exe" -c "import uvicorn; uvicorn.run('main:app', host='0.0.0.0', port=8100, reload=False)"

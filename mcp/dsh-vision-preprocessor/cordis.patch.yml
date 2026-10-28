@@ -1,0 +1,3 @@
+- id: vision-preprocessor
+  name: dsh-vision-preprocessor
+  config: {}

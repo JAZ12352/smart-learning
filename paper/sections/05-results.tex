@@ -1,0 +1,223 @@
+%=====================================================================
+%  5. Results
+%=====================================================================
+\section{Results}
+\label{sec:results}
+
+\subsection{Pilot Study: Three-Case Probe}
+
+Before committing to a full evaluation, we ran a three-case stratified probe
+(one case per difficulty level, all on the same topic) to verify that the
+pipeline could be measured end to end. The probe produced an informative
+negative result.
+
+\begin{table}[!t]
+\centering
+\caption{Pilot probe ($n=3$). Expected labels follow the public rule of
+Section~\ref{ssec:diagnosis}; ``planned'' is the supervisor's output.}
+\label{tab:pilot}
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+\textbf{Case} & \textbf{Profile} & \textbf{Expected} & \textbf{Planned} & \textbf{Match} & \textbf{Coverage} \\
+\midrule
+TC-002 & LP-02 & \textsc{basic}        & \textsc{basic}        & \checkmark & 5/6 \\
+TC-001 & LP-01 & \textsc{intermediate} & \textsc{basic}        & $\times$   & 4/6 \\
+TC-005 & LP-09 & \textsc{advanced}     & \textsc{intermediate} & $\times$   & 4/6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Adaptation accuracy was $1/3 = 33.3\%$, coverage $13/18 = 72.2\%$, and the
+internally reported hallucination rate $0.00\%$ ($n=3$, too small to support
+any reliability claim). Adaptation accuracy is far below the $85\%$ target,
+and---critically---the errors are not random. They form the pattern shown in
+Table~\ref{tab:pilot_confusion}: every case is either correct or planned
+\emph{one level too low}. A single-direction offset of this kind indicates a
+\emph{systematic calibration defect}, not sampling noise.
+
+\begin{table}[!t]
+\centering
+\caption{Pilot difficulty confusion matrix (expected $\rightarrow$ planned).
+The triangle structure reveals a systematic downward shift.}
+\label{tab:pilot_confusion}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Expected $\downarrow$ / Planned $\rightarrow$} & \textsc{basic} & \textsc{inter.} & \textsc{adv.} \\
+\midrule
+\textsc{basic}        & 1 & 0 & 0 \\
+\textsc{intermediate} & 1 & 0 & 0 \\
+\textsc{advanced}     & 0 & 1 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Diagnosis of the Calibration Defect}
+
+We traced the defect to three compounding causes, all confirmed by
+inspection of the running system.
+
+\emph{(i) The supervisor's instruction contained no thresholds.} Its prompt
+asked the model to ``comprehensively consider'' the learner's theory scores
+when planning difficulty. Comprehensiveness is not an executable
+specification: the model was not told which subjects matter for the topic, how
+to aggregate them, or where the boundaries between levels lie. Absent
+anchors, a language model regresses toward the conservative choice, which is
+exactly the observed behavior.
+
+\emph{(ii) The evaluation request omitted the modifier terms.} The public
+calibration rule is
+$d = \mathrm{clip}(b + \delta_g + \delta_r + \delta_j)$, yet the request
+payload carried only a subset of profile fields. The $\delta$ terms were never
+transmitted. Even a model that knew the rule could not have applied it. This
+is a defect in the \emph{evaluation harness}, not in the model.
+
+\emph{(iii) The system had no topic-to-subject mapping.} Nothing in the
+codebase related teaching topics to their prerequisite subjects, so the
+relevant subset of the learner's scores was undetermined.
+
+\subsection{Calibration Instruction Ablation}
+\label{ssec:calib_ablation}
+
+The diagnosis suggests a testable intervention. We compared two supervisor
+prompt conditions on the identical case set:
+
+\begin{itemize}
+\item[(a)] \textbf{Implicit} --- the original instruction, which merely asks
+the model to consider the profile.
+\item[(b)] \textbf{Explicit} --- the aggregation rule, the modifier terms, the
+level boundaries, and the intermediate quantities ($b$, $d$) are computed and
+injected into the prompt, with an escape hatch: the model may deviate from the
+computed level only if it states concrete evidence, which is logged.
+\end{itemize}
+
+Condition (a) yields $33.3\%$ adaptation accuracy with the systematic
+downward shift of Table~\ref{tab:pilot_confusion}. Condition (b) is expected
+to remove the shift; the full-set measurement is reported in
+Table~\ref{tab:calib}. \todo{Fill Table~\ref{tab:calib} after the
+post-intervention run. Report both the accuracy change and, importantly,
+whether the error direction is no longer one-sided.}
+
+\begin{table}[!t]
+\centering
+\caption{Calibration instruction ablation.}
+\label{tab:calib}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Condition} & \textbf{Acc.} & \textbf{Down-shifted errors} & \textbf{Over-shifted errors} \\
+\midrule
+(a) Implicit instruction & 33.3\% ($n$=3) & 2 & 0 \\
+(b) Explicit rule + escape hatch & \todo{XX\%} & \todo{XX} & \todo{XX} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We consider this ablation a contribution in its own right rather than a bug
+report. It isolates a general failure mode of LLM-based decision modules in
+educational systems: \textbf{when a decision must be reproducible, stating the
+criteria is not optional.} The escape hatch matters too---pure rule lookup
+would discard information the profile contains, while unconstrained judgment
+is unauditable; the hybrid keeps both the accuracy and the
+auditability.
+
+\subsection{RQ1--RQ3: Main Comparison}
+
+Table~\ref{tab:main} reports the primary comparison on the full case set.
+\todo{Replace every ``XX'' with values produced by
+\texttt{tests/run\_live\_parallel.py --all --concurrency 4}.}
+
+\begin{table*}[!t]
+\centering
+\caption{Main results over \todo{61} end-to-end cases. Best value per column
+in bold. $\uparrow$ higher is better, $\downarrow$ lower is better.
+$\Delta$ is the difference against the full configuration.}
+\label{tab:main}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Config} & \textbf{Adaptation acc.\ $\uparrow$} & \textbf{Coverage $\uparrow$} &
+\textbf{Halluc.\ rate $\downarrow$} & \textbf{Review overall $\uparrow$} & \textbf{$\Delta$ halluc.\ (pp)} \\
+\midrule
+B1 single LLM, no profile      & XX.X\% & XX.X\% & XX.X\% & X.X/10 & +XX.X \\
+B2 single LLM + profile        & XX.X\% & XX.X\% & XX.X\% & X.X/10 & +XX.X \\
+B3 multi-agent, no retrieval   & XX.X\% & XX.X\% & XX.X\% & X.X/10 & +XX.X \\
+B4 multi-agent, no debate      & XX.X\% & XX.X\% & XX.X\% & X.X/10 & +XX.X \\
+B5 self-refine instead         & XX.X\% & XX.X\% & XX.X\% & X.X/10 & +XX.X \\
+B6 no review-gated retry       & XX.X\% & XX.X\% & XX.X\% & X.X/10 & +XX.X \\
+\midrule
+\textbf{Full (\sysname{})}     & \textbf{XX.X\%} & \textbf{XX.X\%} & \textbf{X.X\%} & \textbf{X.X/10} & --- \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+A methodological note on B4: with debate disabled the system no longer
+\emph{self-reports} a hallucination rate. That rate must therefore be
+measured by the same external judge used for every other condition. Reporting
+a self-computed zero for an unverified configuration would be a measurement
+artifact of exactly the kind this paper argues against.
+
+\subsection{RQ4: Is the Internal Verifier Trustworthy?}
+
+This question must be answered before any other number is believed, because
+the verifier and the generator share a model family. Table~\ref{tab:agreement}
+cross-tabulates the internal verdict against human raters and against external
+model judges.
+
+\begin{table}[!t]
+\centering
+\caption{Agreement on hallucination judgments (per claim).}
+\label{tab:agreement}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Comparison} & \textbf{Agreement} \\
+\midrule
+Internal vs.\ human  & XX.X\% ($\kappa$ = 0.XX) \\
+External vs.\ human  & XX.X\% ($\kappa$ = 0.XX) \\
+Internal vs.\ external & XX.X\% ($\kappa$ = 0.XX) \\
+Human--human (rater pair) & XX.X\% ($\kappa$ = 0.XX) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\todo{Interpretation to be written once numbers exist. If internal--human
+agreement is materially lower than human--human agreement, the internal
+verifier over- or under-reports, and the headline hallucination rate must be
+restated using the human-anchored estimate. Do not suppress this case.}
+
+\subsection{RQ5: Human Evaluation}
+
+\begin{table}[!t]
+\centering
+\caption{Human ratings (5-point Likert, mean $\pm$ SD) on \todo{30} bundles.}
+\label{tab:human}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Dimension} & \textbf{\sysname{}} & \textbf{Best baseline} \\
+\midrule
+Factual correctness      & X.XX $\pm$ X.XX & X.XX $\pm$ X.XX \\
+Difficulty fit           & X.XX $\pm$ X.XX & X.XX $\pm$ X.XX \\
+Instructional usefulness & X.XX $\pm$ X.XX & X.XX $\pm$ X.XX \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Cost and Latency}
+
+\begin{table}[!t]
+\centering
+\caption{Computational cost per case (mean).}
+\label{tab:cost}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Wall-clock per case & \todo{XX.X s} \\
+LLM calls per case  & \todo{XX} \\
+Tokens per case     & \todo{XX,XXX} \\
+Retry rate          & \todo{XX.X\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The retry rate is worth noting: the bounded retry policy of
+Algorithm~\ref{alg:verify} is designed to trigger rarely, so verification
+overhead should stay far below a naive always-refine-twice design.
+\todo{Confirm against measured retry rate.}

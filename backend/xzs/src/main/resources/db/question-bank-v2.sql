@@ -1,0 +1,38 @@
+-- ═══════════════════════════════════════════════════════════════
+-- AI 垂直领域分阶题库种子 v2（对齐知识库切片，5 题型 × 3 难度档）
+-- 由 generate_exam_and_paths.py 自动生成
+-- question_type: 1单选 2多选 3判断 4填空 5简答；difficult: 1易 2中 3难
+-- ═══════════════════════════════════════════════════════════════
+
+-- 题干预置到 t_text_content（id 从 9101 起）
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9101, '{"titleContent": "卷积神经网络中，卷积层通过【参数共享】提取图像局部特征，这样做的主要优势是？", "analyze": "权值共享让同一组卷积核在整图滑动，参数量远小于全连接，且具备平移等变性，这是CNN处理图像的核心优势。", "questionItemObjects": [{"prefix": "A", "content": "大幅减少参数量并平移不变", "score": 0}, {"prefix": "B", "content": "使网络变成全连接结构", "score": 0}, {"prefix": "C", "content": "消除对激活函数的依赖", "score": 0}, {"prefix": "D", "content": "保证训练不出现过拟合", "score": 0}], "correct": "A"}', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9102, '{"titleContent": "RAG 系统中引入 Cross-Encoder 重排序器，其主要作用是？", "analyze": "重排序器对 Top-K 粗排结果逐一精细打分再取 Top-N，是性价比最高的检索质量优化手段。", "questionItemObjects": [{"prefix": "A", "content": "替代向量数据库存储文档", "score": 0}, {"prefix": "B", "content": "对粗排召回结果精排以提升相关性", "score": 0}, {"prefix": "C", "content": "把文本转换为图像特征", "score": 0}, {"prefix": "D", "content": "降低大模型推理温度", "score": 0}], "correct": "B"}', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9103, '{"titleContent": "LoRA 微调中，低秩增量 ΔW=BA 的秩 r 常用取值范围是？", "analyze": "r 取 8～64 已能在多数领域任务上逼近全参微调效果，同时 trainable 参数量极小；alpha 通常取 r 的两倍。", "questionItemObjects": [{"prefix": "A", "content": "1～4", "score": 0}, {"prefix": "B", "content": "8～64", "score": 0}, {"prefix": "C", "content": "512～1024", "score": 0}, {"prefix": "D", "content": "等于原权重维度", "score": 0}], "correct": "B"}', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9104, '{"titleContent": "vLLM 的 PagedAttention 相比原生 HuggingFace 推理，主要提升的是？", "analyze": "PagedAttention 以分页方式管理 KV Cache 显存，减少碎片，吞吐较原生实现可提升数倍，精度不受影响。", "questionItemObjects": [{"prefix": "A", "content": "模型精度", "score": 0}, {"prefix": "B", "content": "训练收敛速度", "score": 0}, {"prefix": "C", "content": "显存利用与服务吞吐", "score": 0}, {"prefix": "D", "content": "词表大小", "score": 0}], "correct": "C"}', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9105, '{"titleContent": "工业预测性维护系统将报警精确率置于首位（误报每周<1次），根本原因是？", "analyze": "产线运维对误报极其敏感，多传感器证据融合后再报警是控制误报的常见手段；漏检同样重要但需按业务损失权衡。", "questionItemObjects": [{"prefix": "A", "content": "精确率更容易计算", "score": 0}, {"prefix": "B", "content": "频繁误报会导致产线信任崩塌（狼来了效应）", "score": 0}, {"prefix": "C", "content": "漏检的代价可以忽略", "score": 0}, {"prefix": "D", "content": "法规强制要求精确率100%", "score": 0}], "correct": "B"}', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9106, '{"titleContent": "以下哪些手段可用于缓解神经网络过拟合？（多选）", "analyze": "数据增强、Dropout、L2、早停均为标准正则化手段；过大的学习率会导致发散而非缓解过拟合。", "questionItemObjects": [{"prefix": "A", "content": "数据增强", "score": 0}, {"prefix": "B", "content": "Dropout", "score": 0}, {"prefix": "C", "content": "L2 正则化", "score": 0}, {"prefix": "D", "content": "增大学习率到 1.0", "score": 0}, {"prefix": "E", "content": "早停 Early Stopping", "score": 0}], "correct": "ABCE"}', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9107, '{"titleContent": "Debate Agent 识别的大模型幻觉类型包括哪些？（多选）", "analyze": "本系统 Debate Agent 将幻觉划分为事实性、逻辑性、一致性、范围性四类，并分别给出裁决与修正建议。", "questionItemObjects": [{"prefix": "A", "content": "事实性幻觉：编造公式/文献", "score": 0}, {"prefix": "B", "content": "逻辑性幻觉：推导跳跃或循环论证", "score": 0}, {"prefix": "C", "content": "一致性幻觉：模块间产出矛盾", "score": 0}, {"prefix": "D", "content": "范围性幻觉：超纲作答", "score": 0}, {"prefix": "E", "content": "数值性幻觉：浮点精度不足", "score": 0}], "correct": "ABCD"}', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9108, '"{\"titleContent\": \"使用 XGBoost / 随机森林等树模型时，必须先对数值特征做标准化预处理。\", \"analyze\": \"树模型按阈值分裂，对特征单调变换不敏感，无需归一化；标准化主要服务于线性模型与神经网络。\"}"', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9109, '"{\"titleContent\": \"BF16 与 FP16 相比数值范围更大、更不易溢出，因此在 Ampere 及以上架构的训练中通常优先使用 BF16。\", \"analyze\": \"BF16 指数位更多、尾数位更少，动态范围大；配合梯度裁剪等手段是分布式大模型训练的默认选择。\"}"', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9110, '"{\"titleContent\": \"为控制线上风险，新模型的灰度发布应按 5%→20%→50%→100% 逐步放量并观察核心指标。\", \"analyze\": \"逐级放量+每档观察是标准发布规范；一次性全量上线属于高风险操作，必须保留影子模式与回滚预案。\"}"', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9111, '"{\"titleContent\": \"K-Means 聚类的优化目标是最小化簇内平方和，该指标的英文缩写是____。\", \"analyze\": \"SSE（Sum of Squared Errors）衡量样本到所属簇中心的距离平方之和，肘部法常据此选取 K 值。\"}"', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9112, '"{\"titleContent\": \"滚动轴承外圈故障的特征频率在工程界通常缩写为____，由转速与轴承几何参数推算得到。\", \"analyze\": \"BPFO（Ball Pass Frequency Outer race）与 BPFI、BSF、FTF 共同构成轴承故障诊断的特征频率族。\"}"', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9113, '"{\"titleContent\": \"请简述生产级 RAG 系统的五个标准阶段及每个阶段的关键要点。\", \"analyze\": \"五阶段环环相扣：切分质量决定召回上限，重排序决定精度，溯源与拒答决定可信度——这也是本系统 Debate/Review 环节的前置基础。\"}"', NOW());
+INSERT IGNORE INTO t_text_content (id, content, create_time) VALUES (9114, '"{\"titleContent\": \"论述多智能体『辩论与交叉验证』机制如何消除垂直领域生成中的幻觉，并说明其与单一模型自检相比的优势。\", \"analyze\": \"答题应体现『多样性去相关 + 外部证据锚定』两个核心思想，并结合本系统的 kb_evidence 溯源链说明可验证性。\"}"', NOW());
+
+-- 题目本体（subject_id 动态匹配『人工智能』学科，未建则 NULL）
+INSERT IGNORE INTO t_question (id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted) VALUES
+  (9001, 1, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 1, 3, 'A', 9101, 2, 1, NOW(), 0),
+  (9002, 1, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 2, 3, 'B', 9102, 2, 1, NOW(), 0),
+  (9003, 1, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 2, 3, 'B', 9103, 2, 1, NOW(), 0),
+  (9004, 1, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 3, 3, 'C', 9104, 2, 1, NOW(), 0),
+  (9005, 1, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 2, 3, 'B', 9105, 2, 1, NOW(), 0),
+  (9006, 2, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 1, 3, 'ABCE', 9106, 2, 1, NOW(), 0),
+  (9007, 2, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 2, 3, 'ABCD', 9107, 2, 1, NOW(), 0),
+  (9008, 3, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 1, 3, 'B', 9108, 2, 1, NOW(), 0),
+  (9009, 3, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 2, 3, 'A', 9109, 2, 1, NOW(), 0),
+  (9010, 3, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 1, 3, 'A', 9110, 2, 1, NOW(), 0),
+  (9011, 4, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 1, 3, 'SSE', 9111, 2, 1, NOW(), 0),
+  (9012, 4, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 2, 3, 'BPFO', 9112, 2, 1, NOW(), 0),
+  (9013, 5, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 2, 3, '①加载：多格式解析、扫描件OCR；②切分：300~800 token 语义边界+10%~15%重叠；③向量化：入库与查询使用同一 Embedding 模型；④检索：Top-K 召回+混合检索+Cross-Encoder 重排；⑤生成：带引用溯源、低温度、置信度不足时拒答。', 9113, 2, 1, NOW(), 0),
+  (9014, 5, (SELECT MIN(id) FROM t_subject WHERE deleted = 0 AND name LIKE '%人工智能%'), 3, 3, 3, '机制：①交叉比对各 Agent 产出找矛盾；②以 RAG 知识库为权威依据核验事实；③按四分类识别幻觉并评估严重度；④辩论裁决给出权威结论与修正建议，必要时触发重新生成。优势：单模型自检存在『自我确认偏误』，而独立生成的多份产出之间出现同一幻觉的概率低；裁判角色可结合知识库证据做出外部锚定的裁决，从而把幻觉率压到 5% 以下的赛题硬指标以内。', 9114, 2, 1, NOW(), 0);

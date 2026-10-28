@@ -1,0 +1,85 @@
+%=====================================================================
+%  2. Related Work
+%=====================================================================
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Intelligent Tutoring and Adaptive Learning}
+
+Decades of research on intelligent tutoring systems (ITS) established that
+adapting instruction to an explicit learner model produces reliable learning
+gains \cite{vanlehn2011relative,kulik2016effectiveness}, and adaptive
+hypermedia research formalized how content selection and sequencing should
+depend on that model \cite{brusilovsky2001adaptive}. The ITS tradition is
+methodologically strong on \emph{learner modeling} but weak on \emph{content
+production}: instructional material is authored by humans and therefore cannot
+scale to fast-moving technical domains or to long-tail learner profiles.
+
+\subsection{Generative LLMs in Education}
+
+The arrival of capable LLMs inverted this trade-off. Surveys document
+widespread use for content creation, feedback, and tutoring
+\cite{kasneci2023chatgpt,baidoo2023education}. Yet the dominant interaction
+pattern remains a single model answering a single prompt, and the resulting
+material tends to converge on one reading level and one rhetorical style
+regardless of who asked. Two failure modes are repeatedly reported: factual
+unreliability \cite{ji2023survey,huang2023survey} and the absence of any
+mechanism that revises material in light of learner performance
+\cite{doroudi2019instruction}. Retrieval-augmented generation
+\cite{lewis2020rag,gao2023retrieval} reduces but does not eliminate the
+former, because retrieval conditions the input without verifying the output.
+
+\subsection{Multi-Agent LLM Systems}
+
+Coordinating multiple LLM-driven agents has proved effective for complex
+decomposition in software engineering \cite{hong2023metagpt,qian2023chatdev}
+and general task solving \cite{wu2023autogen}. A parallel line of work shows
+that adversarial interaction between models improves factuality and reasoning:
+multi-agent debate \cite{du2023improving,liang2023encouraging}, self-refinement
+loops \cite{madaan2023selfrefine,shinn2023reflexion}, and self-consistency
+sampling \cite{wang2022selfconsistency}. Evaluation methodology has advanced
+in step, with atomic factual precision metrics \cite{min2023factscore},
+retrieval-aware scoring \cite{es2023ragas}, and model-based judging
+\cite{zheng2023judging,chiang2024chatbotarena} now standard.
+
+In education specifically, multi-agent work has concentrated on
+\emph{simulation}: agents role-play teacher, student, or peer to generate
+instructional dialogue \cite{zhang2024simulating}. These systems demonstrate
+that agent orchestration can produce pedagogically plausible interaction, but
+they are evaluated on interaction quality, not on the verifiable correctness
+and learner-fit of the artifacts delivered.
+
+\subsection{Positioning}
+
+Table~\ref{tab:positioning} summarizes the gap. Prior work optimizes one or
+two of the three properties that domain skill training requires
+simultaneously: a persistent, multi-dimensional learner model; multi-modal
+resource production; and pre-delivery verification. \sysname{} is designed to
+satisfy all three, and---unlike debate methods evaluated only on reasoning
+benchmarks---to measure the verification stage's contribution inside a
+working educational pipeline. We are explicit about scope: the system generates
+six resource modalities (document, mind map, graded quiz, extended reading,
+runnable code, video script) over eight specialist agents plus debate, review,
+and adaptation stages. The application layer additionally supports guided
+hands-on instructions and illustrative figures, which are outside the
+generation graph evaluated here.
+
+\begin{table*}[!t]
+\centering
+\caption{Positioning of \sysname{} relative to representative prior work.
+$\circ$ = partially addressed.}
+\label{tab:positioning}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Work} & \textbf{Learner model} & \textbf{Multi-modal output} & \textbf{Pre-delivery verification} \\
+\midrule
+Classical ITS \cite{vanlehn2011relative,brusilovsky2001adaptive} & \checkmark & $\circ$ (human-authored) & $\circ$ \\
+Single-LLM tutoring \cite{kasneci2023chatgpt,baidoo2023education} & $\circ$ & \checkmark & $\times$ \\
+RAG-based tutoring \cite{lewis2020rag,gao2023retrieval} & $\circ$ & \checkmark & $\circ$ (retrieval only) \\
+Multi-agent debate \cite{du2023improving,liang2023encouraging} & $\times$ & $\times$ & \checkmark \\
+LLM agent classroom \cite{zhang2024simulating} & $\circ$ & $\circ$ & $\times$ \\
+\midrule
+\textbf{\sysname{} (this work)} & \checkmark & \checkmark & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table*}

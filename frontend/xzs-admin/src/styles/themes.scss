@@ -1,0 +1,746 @@
+/* =============================================================================
+   POLYAGENT — MULTI THEME LAYER
+   -----------------------------------------------------------------------------
+   所有主题只改「设计令牌 + 特效层」，不碰任何业务组件结构与逻辑。
+   切换入口：模型配置 → 界面主题
+   切换方式：<html data-theme="acid|cyber|amber|ice">
+   加载顺序：必须位于 fui-theme.scss 之后
+   ============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   0 · 主题令牌
+   -------------------------------------------------------------------------- */
+
+/* 0.1 酸性青柠（默认，令牌已在 fui-theme.scss :root 中定义） */
+html[data-theme="acid"] {
+  --fx-grid: 0.06;
+  --panel-solid: #0A0D0A;
+}
+
+/* 0.2 赛博霓虹 —— 霓虹青 / 洋红 / 紫，全息玻璃 + CRT */
+html[data-theme="cyber"] {
+  --acid: #00F0FF;
+  --acid-rgb: 0, 240, 255;
+  --acid-dim: #00C2D4;
+  --acid-80: rgba(0, 240, 255, .8);
+  --acid-55: rgba(0, 240, 255, .55);
+  --acid-30: rgba(0, 240, 255, .3);
+  --acid-16: rgba(0, 240, 255, .16);
+  --acid-08: rgba(0, 240, 255, .08);
+  --acid-04: rgba(0, 240, 255, .04);
+
+  --ink: #05060E;
+  --ink-2: #080A18;
+  --ink-3: #0B0E20;
+  --ink-4: #1B2140;
+  --ink-5: #2A3160;
+  --ink-rgb: 10, 12, 28;
+  --grid-rgb: 120, 160, 220;
+  --panel: rgba(10, 14, 32, .55);
+  --panel-solid: #080B1C;
+
+  --paper: #E9F6FF;
+  --grey: #93A9C9;
+  --grey-2: #6E85A6;
+  --grey-3: #46597A;
+
+  --line: rgba(120, 160, 220, .20);
+  --line-soft: rgba(120, 160, 220, .10);
+  --line-hard: rgba(120, 160, 220, .38);
+
+  --alarm: #FF3355;
+  --alarm-2: #FF6680;
+  --ice: #FF2BD6;
+  --ice-rgb: 255, 43, 214;
+}
+
+/* 0.3 琥珀终端 —— 单色琥珀荧光 */
+html[data-theme="amber"] {
+  --acid: #FFB000;
+  --acid-rgb: 255, 176, 0;
+  --acid-dim: #D18E00;
+  --acid-80: rgba(255, 176, 0, .8);
+  --acid-55: rgba(255, 176, 0, .55);
+  --acid-30: rgba(255, 176, 0, .3);
+  --acid-16: rgba(255, 176, 0, .16);
+  --acid-08: rgba(255, 176, 0, .08);
+  --acid-04: rgba(255, 176, 0, .04);
+
+  --ink: #0B0904;
+  --ink-2: #12100A;
+  --ink-3: #1A1710;
+  --ink-4: #352C18;
+  --ink-5: #4A3D22;
+  --ink-rgb: 22, 18, 10;
+  --grid-rgb: 200, 160, 90;
+  --panel: rgba(22, 18, 10, .7);
+  --panel-solid: #12100A;
+
+  --paper: #FFE7BE;
+  --grey: #D3B681;
+  --grey-2: #9E855A;
+  --grey-3: #6A573A;
+
+  --line: rgba(200, 160, 90, .22);
+  --line-soft: rgba(200, 160, 90, .12);
+  --line-hard: rgba(200, 160, 90, .38);
+
+  --alarm: #FF6B35;
+  --alarm-2: #FF8C5A;
+  --ice: #FFD47A;
+  --ice-rgb: 255, 212, 122;
+}
+
+/* 0.4 深空冰蓝 —— 低饱和冷调 */
+html[data-theme="ice"] {
+  --acid: #7FD8F7;
+  --acid-rgb: 127, 216, 247;
+  --acid-dim: #57B8DD;
+  --acid-80: rgba(127, 216, 247, .8);
+  --acid-55: rgba(127, 216, 247, .55);
+  --acid-30: rgba(127, 216, 247, .3);
+  --acid-16: rgba(127, 216, 247, .16);
+  --acid-08: rgba(127, 216, 247, .08);
+  --acid-04: rgba(127, 216, 247, .04);
+
+  --ink: #060B14;
+  --ink-2: #0A121F;
+  --ink-3: #0E1827;
+  --ink-4: #1E2E44;
+  --ink-5: #2C4260;
+  --ink-rgb: 14, 24, 39;
+  --grid-rgb: 150, 190, 225;
+  --panel: rgba(14, 24, 39, .68);
+  --panel-solid: #0A121F;
+
+  --paper: #DCEEFB;
+  --grey: #9DB4CB;
+  --grey-2: #728CA6;
+  --grey-3: #4C6480;
+
+  --line: rgba(150, 190, 225, .22);
+  --line-soft: rgba(150, 190, 225, .12);
+  --line-hard: rgba(150, 190, 225, .38);
+
+  --alarm: #FF5E6E;
+  --alarm-2: #FF8391;
+  --ice: #D9F2FF;
+  --ice-rgb: 217, 242, 255;
+}
+
+/* 0.5 原野草绿 —— 低饱和草绿 + 墨绿底，柔和自然
+   与「酸性青柠」的区别：acid 是荧光高饱和的锐舞色，grass 刻意压低饱和、
+   往黄绿方向偏、底色加一点绿味，观感更接近晨雾里的草地，久看不累。 */
+html[data-theme="grass"] {
+  --acid: #8FD46B;
+  --acid-rgb: 143, 212, 107;
+  --acid-dim: #69A94A;
+  --acid-80: rgba(143, 212, 107, .8);
+  --acid-55: rgba(143, 212, 107, .55);
+  --acid-30: rgba(143, 212, 107, .3);
+  --acid-16: rgba(143, 212, 107, .16);
+  --acid-08: rgba(143, 212, 107, .08);
+  --acid-04: rgba(143, 212, 107, .04);
+
+  --ink: #070C08;
+  --ink-2: #0B110C;
+  --ink-3: #0F1710;
+  --ink-4: #1C2A1E;
+  --ink-5: #2B3C2D;
+  --ink-rgb: 12, 18, 13;
+  --grid-rgb: 150, 176, 145;
+  --panel: rgba(12, 18, 13, .6);
+  --panel-solid: #0B110C;
+
+  --paper: #E6F0DE;
+  --grey: #93A48C;
+  --grey-2: #728369;
+  --grey-3: #4E5C48;
+
+  --line: rgba(150, 176, 145, .20);
+  --line-soft: rgba(150, 176, 145, .10);
+  --line-hard: rgba(150, 176, 145, .36);
+
+  --alarm: #E8623F;
+  --alarm-2: #FF8C6B;
+  --ice: #C8E8A6;
+  --ice-rgb: 200, 232, 166;
+
+  --fx-grid: 0.05;
+}
+
+/* -----------------------------------------------------------------------------
+   1 · 主题特效层（固定全屏，pointer-events: none）
+   -------------------------------------------------------------------------- */
+.theme-fx {
+  position: fixed;
+  inset: 0;
+  z-index: 9997;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* --- 1.1 赛博霓虹 --------------------------------------------------------- */
+.theme-fx--cyber::before {
+  /* 顶部警示条纹 */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(45deg, #FFB000 0 6px, #0A0C18 6px 12px);
+  opacity: .5;
+}
+
+.theme-fx--cyber::after {
+  /* 全息光晕 + 像素噪点（静态层：不用 blend-mode / 不做持续动画） */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 60% 45% at 12% 0%, rgba(0, 240, 255, .10), transparent 62%),
+    radial-gradient(ellipse 55% 42% at 92% 8%, rgba(255, 43, 214, .09), transparent 62%),
+    radial-gradient(ellipse 70% 40% at 50% 104%, rgba(168, 85, 247, .08), transparent 62%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.045'/%3E%3C/svg%3E");
+}
+
+/* 数据流：竖向流动细线（transform 动画走合成线程，不触发重绘） */
+.theme-fx--cyber .fx-stream {
+  position: absolute;
+  top: -20%;
+  width: 1px;
+  height: 140%;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(0, 240, 255, 0) 30%,
+    rgba(0, 240, 255, .55) 50%,
+    rgba(0, 240, 255, 0) 70%,
+    transparent 100%);
+  animation: fx-stream 6.5s linear infinite;
+  opacity: .5;
+  will-change: transform;
+}
+
+.theme-fx--cyber .fx-stream:nth-child(2n) {
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(255, 43, 214, 0) 32%,
+    rgba(255, 43, 214, .45) 52%,
+    rgba(255, 43, 214, 0) 72%,
+    transparent 100%);
+  animation-duration: 9s;
+}
+
+@keyframes fx-stream {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* --- 1.2 琥珀终端：强扫描线 + 荧光余晖 -------------------------------- */
+.theme-fx--amber::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(180deg, rgba(0, 0, 0, .34) 0 1px, transparent 1px 4px),
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 176, 0, .10), transparent 65%);
+}
+
+/* --- 1.3 深空冰蓝：极简微光 ------------------------------------------- */
+.theme-fx--ice::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% -10%, rgba(127, 216, 247, .07), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 110%, rgba(120, 160, 240, .05), transparent 70%);
+}
+
+/* --- 1.4 原野草绿：晨光斜射 + 雾气（无扫描线、无霓虹） ---------------- */
+.theme-fx--grass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    /* 左上角斜射进来的晨光 */
+    radial-gradient(ellipse 80% 55% at 16% -8%, rgba(143, 212, 107, .11), transparent 64%),
+    /* 右下角叶隙透光的暖绿 */
+    radial-gradient(ellipse 65% 50% at 92% 96%, rgba(200, 232, 166, .07), transparent 66%),
+    /* 整体压一层极淡的雾气，避免纯黑的硬边 */
+    linear-gradient(180deg, rgba(143, 212, 107, .018) 0%, transparent 34%);
+}
+
+/* -----------------------------------------------------------------------------
+   2 · 赛博霓虹：玻璃拟态 / 霓虹描边 / 切角
+   -------------------------------------------------------------------------- */
+
+/* 2.1 网格改成坐标纸（青 + 洋红双色） */
+html[data-theme="cyber"] body::before {
+  background-image:
+    linear-gradient(90deg, rgba(0, 240, 255, .055) 1px, transparent 1px),
+    linear-gradient(rgba(255, 43, 214, .032) 1px, transparent 1px);
+  background-size: 40px 100%, 100% 40px;
+}
+
+/* 2.2 扫描线 + 电影感暗角 */
+html[data-theme="cyber"] body::after {
+  background:
+    repeating-linear-gradient(180deg, rgba(0, 0, 0, .30) 0 1px, rgba(0, 0, 0, 0) 1px 3px),
+    radial-gradient(ellipse at 50% 45%, transparent 48%, rgba(0, 0, 0, .68) 100%);
+  opacity: .62;
+}
+
+/* 2.3 玻璃卡片
+   ⚠ 性能：这里【不能】用 backdrop-filter。页面里卡片动辄几十个，
+     每个都是一次实时背景模糊采样，滚动时逐帧重算 → 直接卡死。
+     改用「多层半透明渐变」模拟玻璃透光感，静态绘制，零运行时开销。 */
+html[data-theme="cyber"] #app .app-main [class*="card"],
+html[data-theme="cyber"] #app .app-main [class*="panel"]:not(.float-panel),
+html[data-theme="cyber"] #app .app-main .settings-card,
+html[data-theme="cyber"] #app .app-main .history-item,
+html[data-theme="cyber"] #app .app-main .hub-card {
+  background:
+    linear-gradient(150deg, rgba(22, 28, 58, .92), rgba(9, 11, 28, .95)) !important;
+  border: 1px solid rgba(0, 240, 255, .22) !important;
+  box-shadow:
+    0 0 0 1px rgba(0, 240, 255, .06),
+    0 6px 18px rgba(0, 0, 0, .45) !important;
+}
+
+/* 2.4 切角
+   ⚠ 性能：clip-path 会让元素强制独立合成层且破坏文字次像素抗锯齿，
+     大面积铺给所有卡片代价很高。改为「角标 + 内描边」的轻量替代。 */
+html[data-theme="cyber"] #app .app-main [class*="card"],
+html[data-theme="cyber"] #app .app-main .settings-card,
+html[data-theme="cyber"] #app .app-main .hub-card {
+  position: relative;
+}
+html[data-theme="cyber"] #app .app-main [class*="card"]::after,
+html[data-theme="cyber"] #app .app-main .hub-card::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -1px !important;
+  right: -1px !important;
+  width: 13px !important;
+  height: 13px !important;
+  pointer-events: none !important;
+  background: linear-gradient(225deg, rgba(0, 240, 255, .55) 0 1.5px, transparent 1.5px) !important;
+}
+
+/* 2.5 侧边导航：全息玻璃 + 霓虹导轨 */
+html[data-theme="cyber"] #app .agent-sidebar,
+html[data-theme="cyber"] #app .sidebar-container,
+html[data-theme="cyber"] #app .el-menu {
+  background: linear-gradient(175deg, rgba(8, 10, 26, .94), rgba(12, 15, 36, .94)) !important;
+  background-image: linear-gradient(175deg, rgba(8, 10, 26, .94), rgba(12, 15, 36, .94)) !important;
+  border-right: 1px solid rgba(0, 240, 255, .20) !important;
+  box-shadow: inset -1px 0 0 rgba(255, 43, 214, .10), 14px 0 44px rgba(0, 0, 0, .58) !important;
+}
+
+html[data-theme="cyber"] #app .sb-agent-item.active,
+html[data-theme="cyber"] #app .el-menu-item.is-active {
+  background: linear-gradient(90deg, rgba(0, 240, 255, .22), rgba(0, 240, 255, .02) 78%) !important;
+  background-image: linear-gradient(90deg, rgba(0, 240, 255, .22), rgba(0, 240, 255, .02) 78%) !important;
+  border-left: 2px solid #00F0FF !important;
+  box-shadow: inset 22px 0 26px -22px rgba(0, 240, 255, .95) !important;
+}
+
+html[data-theme="cyber"] #app .sb-agent-item.active::before,
+html[data-theme="cyber"] #app .el-menu-item.is-active::before {
+  background: #FF2BD6 !important;
+  background-image: none !important;
+  box-shadow: 0 0 10px rgba(255, 43, 214, .9) !important;
+}
+
+/* 2.6 按钮：霓虹渐变 + 辉光 + 微交互 */
+html[data-theme="cyber"] #app .app-main button,
+html[data-theme="cyber"] #app .app-main .btn,
+html[data-theme="cyber"] #app .app-main .hub-btn {
+  transition: box-shadow .18s ease, transform .12s ease, border-color .18s ease !important;
+  border-radius: 0 !important;
+}
+
+html[data-theme="cyber"] #app .app-main .btn-primary,
+html[data-theme="cyber"] #app .app-main .hub-btn-primary,
+html[data-theme="cyber"] #app .app-main button.primary,
+html[data-theme="cyber"] #app .el-button--primary {
+  background: linear-gradient(135deg, #00F0FF 0%, #4D7CFF 100%) !important;
+  background-image: linear-gradient(135deg, #00F0FF 0%, #4D7CFF 100%) !important;
+  border: 1px solid #00F0FF !important;
+  color: #04060F !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 18px rgba(0, 240, 255, .48), 0 0 44px rgba(0, 240, 255, .16) !important;
+}
+
+html[data-theme="cyber"] #app .app-main .btn-primary:hover,
+html[data-theme="cyber"] #app .app-main .hub-btn-primary:hover,
+html[data-theme="cyber"] #app .el-button--primary:hover {
+  box-shadow: 0 0 26px rgba(0, 240, 255, .78), 0 0 70px rgba(255, 43, 214, .28) !important;
+  transform: translateY(-1px) !important;
+}
+
+html[data-theme="cyber"] #app .app-main .btn-primary:active,
+html[data-theme="cyber"] #app .el-button--primary:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 0 12px rgba(0, 240, 255, .9) !important;
+}
+
+/* 2.7 标题霓虹字 */
+html[data-theme="cyber"] #app .app-main h1,
+html[data-theme="cyber"] #app .app-main h2,
+html[data-theme="cyber"] #app .app-main h3 {
+  text-shadow: 0 0 12px rgba(0, 240, 255, .42) !important;
+  letter-spacing: .03em !important;
+}
+
+html[data-theme="cyber"] #app .app-main .hub-hero-title,
+html[data-theme="cyber"] #app .app-main .hero-title,
+html[data-theme="cyber"] #app .app-main .exp-hero-title,
+html[data-theme="cyber"] #app .app-main .eval-header h2,
+html[data-theme="cyber"] #app .app-main .collab-header h2,
+html[data-theme="cyber"] #app .app-main .path-header h2,
+html[data-theme="cyber"] #app .app-main .ring-header h3,
+html[data-theme="cyber"] #app .app-main .gradient-text {
+  background: linear-gradient(100deg, #00F0FF 0%, #A855F7 48%, #FF2BD6 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  text-shadow: 0 0 18px rgba(0, 240, 255, .40) !important;
+}
+
+/* 2.8 输入框：玻璃 + 青色聚焦辉光 */
+html[data-theme="cyber"] #app .app-main input,
+html[data-theme="cyber"] #app .app-main textarea,
+html[data-theme="cyber"] #app .app-main select,
+html[data-theme="cyber"] #app .el-input__inner,
+html[data-theme="cyber"] #app .el-textarea__inner {
+  background: rgba(8, 11, 26, .72) !important;
+  border: 1px solid rgba(0, 240, 255, .22) !important;
+  color: var(--paper) !important;
+  border-radius: 0 !important;
+  box-shadow: inset 0 0 18px rgba(0, 240, 255, .05) !important;
+}
+
+html[data-theme="cyber"] #app .app-main input:focus,
+html[data-theme="cyber"] #app .app-main textarea:focus,
+html[data-theme="cyber"] #app .app-main select:focus,
+html[data-theme="cyber"] #app .el-input__inner:focus,
+html[data-theme="cyber"] #app .el-textarea__inner:focus {
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 0 1px rgba(0, 240, 255, .55), 0 0 22px rgba(0, 240, 255, .28) !important;
+  outline: none !important;
+}
+
+/* 2.9 表格：青色细则线 + 悬停霓虹行 */
+html[data-theme="cyber"] #app .el-table,
+html[data-theme="cyber"] #app .el-table__body-wrapper,
+html[data-theme="cyber"] #app .el-table tr,
+html[data-theme="cyber"] #app .el-table th,
+html[data-theme="cyber"] #app .el-table td {
+  background: transparent !important;
+  border-color: rgba(0, 240, 255, .12) !important;
+}
+
+html[data-theme="cyber"] #app .el-table th {
+  background: rgba(0, 240, 255, .07) !important;
+  color: #9FE8F5 !important;
+  font-family: var(--f-mono) !important;
+  letter-spacing: .08em !important;
+}
+
+html[data-theme="cyber"] #app .el-table__row:hover > td,
+html[data-theme="cyber"] #app .el-table tr:hover > td {
+  background: rgba(0, 240, 255, .07) !important;
+  box-shadow: inset 2px 0 0 #00F0FF !important;
+}
+
+/* 2.10 悬浮老师面板：全息投影框 */
+html[data-theme="cyber"] body .floating-teacher .float-panel {
+  background: linear-gradient(160deg, rgba(10, 14, 34, .88), rgba(6, 8, 20, .92)) !important;
+  border: 1px solid rgba(0, 240, 255, .34) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 43, 214, .12),
+    0 0 34px rgba(0, 240, 255, .22),
+    0 18px 50px rgba(0, 0, 0, .7) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* 2.11 选中态 */
+html[data-theme="cyber"] ::selection {
+  background: #FF2BD6 !important;
+  color: #05060E !important;
+}
+
+html[data-theme="cyber"] ::-webkit-scrollbar-thumb {
+  background: #1D2748 !important;
+}
+
+html[data-theme="cyber"] ::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF !important;
+}
+
+/* -----------------------------------------------------------------------------
+   3 · 琥珀终端：CRT 圆角余晖
+   -------------------------------------------------------------------------- */
+html[data-theme="amber"] body::before {
+  background-image:
+    linear-gradient(90deg, rgba(255, 176, 0, .05) 1px, transparent 1px),
+    linear-gradient(rgba(255, 176, 0, .028) 1px, transparent 1px);
+  background-size: 8.33333% 100%, 100% 34px;
+}
+
+html[data-theme="amber"] body::after {
+  background:
+    repeating-linear-gradient(180deg, rgba(0, 0, 0, .34) 0 1px, rgba(0, 0, 0, 0) 1px 4px),
+    radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(10, 6, 0, .72) 100%);
+  opacity: .7;
+}
+
+html[data-theme="amber"] #app .app-main h1,
+html[data-theme="amber"] #app .app-main h2 {
+  text-shadow: 0 0 12px rgba(255, 176, 0, .42) !important;
+}
+
+/* -----------------------------------------------------------------------------
+   4 · 深空冰蓝
+   -------------------------------------------------------------------------- */
+html[data-theme="ice"] body::before {
+  background-image:
+    linear-gradient(90deg, rgba(127, 216, 247, .05) 1px, transparent 1px),
+    linear-gradient(rgba(127, 216, 247, .026) 1px, transparent 1px);
+  background-size: 8.33333% 100%, 100% 34px;
+}
+
+html[data-theme="ice"] #app .app-main h1,
+html[data-theme="ice"] #app .app-main h2 {
+  text-shadow: 0 0 14px rgba(127, 216, 247, .28) !important;
+}
+
+/* -----------------------------------------------------------------------------
+   4.5 · 原野草绿
+   -------------------------------------------------------------------------- */
+/* 网格换成「草地垄沟」的观感：竖细线略强于横线，横线间距放宽 */
+html[data-theme="grass"] body::before {
+  background-image:
+    linear-gradient(90deg, rgba(150, 176, 145, .045) 1px, transparent 1px),
+    linear-gradient(rgba(143, 212, 107, .022) 1px, transparent 1px);
+  background-size: 8.33333% 100%, 100% 36px;
+}
+
+/* 极淡的暖顶光，让顶栏和页面之间有「户外」的分层感 */
+html[data-theme="grass"] body::after {
+  background:
+    radial-gradient(ellipse 120% 45% at 50% -14%, rgba(143, 212, 107, .07), transparent 70%),
+    radial-gradient(ellipse at 50% 50%, transparent 56%, rgba(3, 7, 4, .62) 100%);
+  opacity: .8;
+}
+
+/* 标题辉光刻意压得比其他主题更弱 —— 柔和绿一旦发光过强就显得廉价 */
+html[data-theme="grass"] #app .app-main h1,
+html[data-theme="grass"] #app .app-main h2 {
+  text-shadow: 0 0 13px rgba(143, 212, 107, .26) !important;
+}
+
+/* -----------------------------------------------------------------------------
+   5 · 主题切换时的过渡（只在切换瞬间生效，避免影响日常交互）
+   -------------------------------------------------------------------------- */
+html.theme-transition,
+html.theme-transition body,
+html.theme-transition #app,
+html.theme-transition #app * {
+  transition: background-color .28s ease, color .28s ease,
+              border-color .28s ease, box-shadow .28s ease !important;
+}
+
+/* -----------------------------------------------------------------------------
+   6 · 赛博霓虹：跨页面细部（图表以外的 SVG / 数字 / 面板）
+   -------------------------------------------------------------------------- */
+
+/* 6.1 仪表盘标题：霓虹渐变 + 色散 */
+html[data-theme="cyber"] #app .dashboard h1,
+html[data-theme="cyber"] #app .dashboard .gl {
+  background: linear-gradient(96deg, #00F0FF 0%, #A855F7 52%, #FF2BD6 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  text-shadow: 0 0 20px rgba(0, 240, 255, .45) !important;
+}
+
+/* 6.2 Sparkline 折线（模板里写死的 stroke 只能用 CSS 覆盖） */
+html[data-theme="cyber"] #app .spark polyline,
+html[data-theme="cyber"] #app svg polyline[stroke] {
+  stroke: #00F0FF !important;
+}
+
+/* 6.3 KPI 大数字：青色发光 */
+html[data-theme="cyber"] #app .kpi-cell .v,
+html[data-theme="cyber"] #app .dash-kpi .v {
+  color: #7CF9FF !important;
+  text-shadow: 0 0 18px rgba(0, 240, 255, .55), 0 0 46px rgba(0, 240, 255, .18) !important;
+}
+
+/* 6.4 卡片 / 面板：霓虹描边 + 悬停洋红辉光 */
+html[data-theme="cyber"] #app .app-main .panel,
+html[data-theme="cyber"] #app .app-main .agent-card,
+html[data-theme="cyber"] #app .app-main .kpi-cell {
+  border-color: rgba(0, 240, 255, .20) !important;
+  box-shadow: inset 0 0 40px rgba(0, 240, 255, .035) !important;
+}
+
+html[data-theme="cyber"] #app .app-main .agent-card:hover,
+html[data-theme="cyber"] #app .app-main [class*="card"]:hover {
+  border-color: rgba(255, 43, 214, .55) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 43, 214, .45),
+    0 0 34px rgba(255, 43, 214, .22),
+    inset 0 0 40px rgba(0, 240, 255, .06) !important;
+}
+
+/* 6.5 分节标题：洋红短标 */
+html[data-theme="cyber"] #app .app-main .sec-head .no,
+html[data-theme="cyber"] #app .app-main .panel-hd .tag {
+  color: #FF2BD6 !important;
+  text-shadow: 0 0 12px rgba(255, 43, 214, .55) !important;
+}
+
+/* 6.6 琥珀 / 冰蓝 / 草绿：Sparkline 跟着走 */
+html[data-theme="amber"] #app .spark polyline { stroke: #FFB000 !important; }
+html[data-theme="ice"] #app .spark polyline { stroke: #7FD8F7 !important; }
+html[data-theme="grass"] #app .spark polyline { stroke: #8FD46B !important; }
+
+html[data-theme="amber"] #app .kpi-cell .v { text-shadow: 0 0 16px rgba(255, 176, 0, .45) !important; }
+html[data-theme="ice"] #app .kpi-cell .v { text-shadow: 0 0 16px rgba(127, 216, 247, .38) !important; }
+html[data-theme="grass"] #app .kpi-cell .v { text-shadow: 0 0 15px rgba(143, 212, 107, .34) !important; }
+
+/* -----------------------------------------------------------------------------
+   7 · 轻量模式（html[data-fx="lite"]）
+   —— 一键关掉所有「持续绘制」类开销：全屏网格 / 扫描线 / 数据流 /
+      玻璃模糊 / 文字辉光。视觉上退化为「干净的纯色暗界面」，操作立即跟手。
+   -------------------------------------------------------------------------- */
+html[data-fx="lite"] .theme-fx {
+  display: none !important;
+}
+
+html[data-fx="lite"] body::before {
+  display: none !important;
+}
+
+html[data-fx="lite"] body::after {
+  display: none !important;
+}
+
+html[data-fx="lite"] #app .app-main h1,
+html[data-fx="lite"] #app .app-main h2,
+html[data-fx="lite"] #app .app-main h3,
+html[data-fx="lite"] #app .app-main .kpi-cell .v,
+html[data-fx="lite"] #app .app-main .sec-head .no,
+html[data-fx="lite"] #app .app-main .panel-hd .tag {
+  text-shadow: none !important;
+}
+
+html[data-fx="lite"] body .floating-teacher .float-panel {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: #0B0E20 !important;
+}
+
+html[data-fx="lite"] #app .app-main [class*="card"],
+html[data-fx="lite"] #app .app-main [class*="panel"]:not(.float-panel),
+html[data-fx="lite"] #app .app-main .settings-card {
+  box-shadow: none !important;
+}
+
+/* 系统级「减少动效」偏好也照做 */
+@media (prefers-reduced-motion: reduce) {
+  .theme-fx .fx-stream,
+  .theme-fx--cyber::after {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 轻量模式：停掉角色身上的循环关键帧动画 */
+html[data-fx="lite"] .floating-teacher *,
+html[data-fx="lite"] .floating-teacher *::before,
+html[data-fx="lite"] .floating-teacher *::after {
+  animation: none !important;
+}
+
+/* -----------------------------------------------------------------------------
+   8 · 性能收口层（全局，最后加载）
+   -----------------------------------------------------------------------------
+   诊断方法：遍历全部 DOM，把每个带 backdrop-filter 的元素的
+   width × height 累加，得到「模糊覆盖面积」。实测（1600×1000 视口）：
+
+     /evaluation-agent/report     13 处 → 1,883,177 px   ← 约 1.9 屏
+     /tutoring-agent/chat          5 处 → 1,106,208 px   ← 约 1.1 屏
+     /learning-path-agent/index    4 处 →   250,877 px
+     /knowledge-base/index        31 处 →   237,581 px
+     /dashboard                    3 处 →   119,152 px
+
+   结论：卡顿与「模糊面积」几乎成正比，跟 DOM 数量关系不大。
+   这些卡片底色本来只有 55%~72% 不透明度，模糊一开，GPU 每帧都要对背后
+   整块区域做两次降采样 + 高斯，滚动时逐帧重算 —— 这才是「界面好卡」的根因。
+
+   处理：面积 > 1 万 px 的模糊全部去掉，同时把底色抬到 0.9 以上。
+   层次感改由「半透明分层 + 1px 描边 + 角标」承担，肉眼几乎无差别，
+   但合成开销从「每帧 N 次大图采样」降到 0。
+   唯一保留：右下角悬浮老师面板（面积小，且是设计签名）。
+   -------------------------------------------------------------------------- */
+
+/* 8.1 通栏固定栏 —— 滚动时每帧都要重算，最贵的三块 */
+html body #app .navbar,
+html body #app .tags-view-container,
+html body #app [class*="topbar"] {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background-color: var(--panel-solid) !important;
+}
+
+/* 8.2a 大面积具名区块 —— 单个就顶半屏以上，去掉模糊并抬实底色 */
+html body #app .report-section,
+html body #app .progress-ring-card,
+html body #app .chart-card,
+html body #app .tutor-card,
+html body #app .history-sidebar,
+html body #app .path-controls,
+html body #app .dialogue-container,
+html body #app .eval-container {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  /* 用实色令牌兜底；各主题自己的渐变仍会叠在上面，主题色不受影响 */
+  background-color: var(--panel-solid) !important;
+}
+
+/* 8.2b 重复网格单元（stat-card / kpi / 各类 panel）
+        单张只有 3 万 px，但一屏十几张，且每张单独提一层。
+        底色本就 0.9 以上，模糊肉眼不可见 → 只去模糊，不动底色，
+        这样各主题原本的透光感（背景网格隐约透出）仍保留。 */
+html body #app .app-main [class*="card"],
+html body #app .app-main [class*="panel"]:not(.float-panel) {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* 8.3 小徽章 / 胶囊 —— 单个才 67×19，模糊完全看不出来，
+        但每一个都会让元素单独提层，几十个叠加起来很浪费 */
+html body #app [class*="badge"],
+html body #app [class*="chip"],
+html body #app [class*="pill"],
+html body #app .el-tag {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* 8.4 把剩下的 filter 也收一收 —— 大面积灰度/亮度滤镜同样要重采样 */
+html body #app .hub-hero-shape {
+  filter: none !important;
+  opacity: .5 !important;
+}
+

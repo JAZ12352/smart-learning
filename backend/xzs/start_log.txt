@@ -1,0 +1,28 @@
+﻿
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.6.RELEASE)
+
+java : WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+At C:\Users\20873\AppData\Local\Temp\trae-agent-toolhost\jobs\job-433ec1f8412141bf8a7e91a3b892f4fb\command.ps1:15 
+char:9487
++ ... pgrep\bin'; java --add-opens java.base/java.lang=ALL-UNNAMED --add-op ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: A term...has been called:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by io.undertow.util.FastConcurrentDirectDeque$Node (jar:fil
+e:/C:/Users/20873/Downloads/���Ƚ���һ��-A3-84015876-����ֱǰ-������ѧԺ/84015876Դ��/backend/xzs/target/xzs-3.9.0.jar!/BOOT-I
+NF/lib/undertow-core-2.0.21.Final.jar!/)
+WARNING: Please consider reporting this to the maintainers of class io.undertow.util.FastConcurrentDirectDeque$Node
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Security ignore URLs: [/api/wx/**, /api/admin/upload/configAndUpload, /api/admin/upload/auth, /api/student/user/register, /api/user/register, /api/admin/deepSeek/api/chat, /api/admin/deepSeek/api/stream-chat, /api/admin/deepSeek/api/page, /api/admin/teaching-intent/analyze, /api/admin/knowledge-base/list, /api/admin/knowledge-base/upload, /api/admin/knowledge-base/document/**, /api/admin/knowledge-base/search, /api/admin/knowledge-base/create, /api/admin/model-config, /api/admin/model-config/test, /api/admin/student-profile/**, /api/admin/learning-path/**, /api/admin/evaluation/**, /api/admin/resource/**, /api/admin/agent-log/**, /api/admin/agent/**, /api/admin/major/**, /api/admin/courses/**, /api/admin/bilibili/**, /api/admin/attendance/**, /swagger-ui/**, /swagger-ui.html, /v3/api-docs/**, /swagger-resources/**, /webjars/**]
+____ ____    ___ ____ _  _ ____ _  _ 
+[__  |__| __  |  |  | |_/  |___ |\ | 
+___] |  |     |  |__| | \_ |___ | \| 
+DevDoc��http://sa-token.dev33.cn (v1.28.0)
+GitHub��https://github.com/dromara/sa-token

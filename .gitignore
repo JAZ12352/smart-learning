@@ -1,0 +1,109 @@
+# === 敏感文件 ===
+*.env
+.env
+.my.cnf
+*.key
+*.pem
+*.p12
+*.jks
+
+# === IDE / 编辑器 ===
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# === 运行时环境 / 系统缓存（绝不提交）===
+Python/
+%SystemDrive%/
+*.db
+
+# === 工具生成 ===
+.qoder/
+.qoder/**
+
+# === Java ===
+backend/xzs/target/
+backend/**/target/
+*.class
+backend/xzs/log/
+backend/xzs/data/
+
+# === Python ===
+multi-agent/__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+multi-agent/chroma_data/
+**/chroma_data/
+
+# === Node ===
+node_modules/
+**/node_modules/
+
+# === 前端构建 ===
+frontend/xzs-admin/dist/
+**/dist/
+
+# === 日志 ===
+*.log
+backend.log
+python_run*.log
+java_*.log
+log/
+**/log/
+
+# === 重复副本目录（不应存在）===
+xzs (1)/
+xzs-admin (1)/
+**/xzs (1)/
+**/xzs-admin (1)/
+
+# === 数据集 / 大体积数据 ===
+数据集/
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# === 系统文件 ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === PDF / 临时文件 ===
+extract_pdf*.py
+*.pdf
+get-pip.py
+
+# === 数据库文件 ===
+*.sqlite
+*.sqlite3
+*.mv.db
+
+# === 密钥 / 运行时配置（绝不入库）===
+# 由后台「模型配置」页写入，含明文 API Key；仓库只保留 *.example.json
+model-config.json
+agnes-config.json
+**/model-config.json
+**/agnes-config.json
+!**/*.example.json
+
+# === 本地运维脚本与临时产物（根目录下划线前缀）===
+/_*.py
+/_*.out
+/_*.err
+/_*.txt
+/_*.md
+/_*.json
+/_*.log
+/_*.cmd
+/_*.tar.gz
+
+# === 本地临时文件 ===
+backend/xzs/_*
+**/*.bak-*
+*.orig
+*.rej
+.workbuddy/

@@ -1,0 +1,33 @@
+# DSH (DeepSeek Harness) MCP 配置：智谱视觉模型识图
+#
+# 用法一：临时启动（在仓库根目录执行）
+#   dsh web --patch mcp/dsh.cordis.patch.yml
+#
+# 用法二：永久生效，把下面的整段追加到
+#   $DSH_HOME\profiles\<profile>\cordis.patch.yml
+# 默认 DSH_HOME 可能是 %USERPROFILE%\.dsh 或你自定义的路径（用 `echo $env:DSH_HOME` 查看）
+#
+# 注意：
+#   - 只有需要识图时模型才会调用 mcp__zhipu_vision__recognize_image
+#   - 普通文本对话仍全部由 DeepSeek 处理
+#   - 启动前先设置 ZHIPU_API_KEY（可放在项目 .env 或系统环境变量）
+
+- insert:
+    - id: mcp-zhipu-vision
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: zhipu_vision
+        transport: stdio
+        command: python
+        # 如果用 uv，可改成:
+        # command: uv
+        # args: ['run', 'mcp/zhipu_vision_mcp.py']
+        args: ['mcp/zhipu_vision_mcp.py']
+        # 替换成这个仓库的绝对路径；如果临时 --patch 且当前就在仓库根目录，也可用 '.'
+        cwd: 'C:/Users/20873/Downloads/84015876yuanma'
+        env:
+          ZHIPU_API_KEY: !!js process.env.ZHIPU_API_KEY || ''
+          ZHIPU_VISION_MODEL: !!js process.env.ZHIPU_VISION_MODEL || 'glm-4.6v-flash'
+          ZHIPU_VISION_BASE_URL: !!js process.env.ZHIPU_VISION_BASE_URL || 'https://open.bigmodel.cn/api/paas/v4/chat/completions'
+        toolCallTimeoutMs: 120000
+        failOnStartupError: false

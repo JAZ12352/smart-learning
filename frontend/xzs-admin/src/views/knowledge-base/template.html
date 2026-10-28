@@ -1,0 +1,99 @@
+﻿<template>
+  <div class="kb-home">
+    <header class="kb-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge"><span class="badge-dot"></span><span>Knowledge Library</span></div>
+        <h1 class="hero-title">知识库</h1>
+        <p class="hero-subtitle">探索教学资源，发现优质内容，助力智慧教学</p>
+        <div class="hero-search">
+          <el-input v-model="searchKeyword" size="large" placeholder="搜索知识库、文档或知识点..." prefix-icon="el-icon-search" clearable @keyup.enter.native="doSearch">
+            <el-button slot="append" icon="el-icon-search" @click="doSearch">搜索</el-button>
+          </el-input>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item"><span class="stat-num">{{ knowledgeBases.length }}</span><span class="stat-label">知识库</span></div>
+          <div class="stat-item"><span class="stat-num">{{ totalDocs }}</span><span class="stat-label">文档</span></div>
+          <div class="stat-item"><span class="stat-num">{{ categories.length }}</span><span class="stat-label">学科分类</span></div>
+        </div>
+      </div>
+    </header>
+    <section class="kb-actions-bar">
+      <div class="actions-left">
+        <el-button type="primary" size="medium" icon="el-icon-plus" @click="showCreateDialog = true">新建知识库</el-button>
+        <el-button size="medium" icon="el-icon-upload2" @click="showImportDialog = true">导入知识库</el-button>
+      </div>
+      <div class="actions-right">
+        <el-radio-group v-model="viewMode" size="small">
+          <el-radio-button label="grid"><i class="el-icon-s-grid"></i></el-radio-button>
+          <el-radio-button label="list"><i class="el-icon-s-unfold"></i></el-radio-button>
+        </el-radio-group>
+      </div>
+    </section>
+    <section class="kb-categories">
+      <span :class="['cat-chip',{active:activeCategory===''}]" @click="activeCategory=''">全部</span>
+      <span v-for="cat in categories" :key="cat" :class="['cat-chip',{active:activeCategory===cat}]" @click="activeCategory=cat">{{ cat }}</span>
+    </section>
+    <section v-if="viewMode==='grid'" class="kb-grid">
+      <div v-for="kb in filteredList" :key="kb.id" class="kb-card" @click="selectKB(kb)">
+        <div class="card-banner" :style="{background:bannerColor(kb)}">
+          <span class="card-subject">{{ kb.subject||'通用' }}</span>
+          <span class="card-icon">📚</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">{{ kb.name }}</h3>
+          <p class="card-desc">{{ kb.description||'暂无描述' }}</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-docs"><i class="el-icon-document"></i> {{ kb.documentCount||0 }} 文档</span>
+          <span class="card-date">{{ kb.updateTime||kb.createTime||'' }}</span>
+        </div>
+      </div>
+      <div v-if="filteredList.length===0" class="kb-empty"><span class="empty-icon">📭</span><p>暂无知识库</p></div>
+    </section>
+    <section v-else class="kb-list-section">
+      <el-table :data="filteredList" style="width:100%" @row-click="selectKB" stripe>
+        <el-table-column label="知识库名称" min-width="200"><template slot-scope="scope"><div class="table-kb-name"><span class="kb-color-dot" :style="{background:bannerColor(scope.row)}"></span><strong>{{ scope.row.name }}</strong></div></template></el-table-column>
+        <el-table-column prop="subject" label="学科" width="120"></el-table-column>
+        <el-table-column prop="documentCount" label="文档数" width="100" sortable></el-table-column>
+        <el-table-column prop="description" label="描述" min-width="200" show-overflow-tooltip></el-table-column>
+        <el-table-column label="更新时间" width="160" sortable prop="updateTime"><template slot-scope="scope">{{ scope.row.updateTime||scope.row.createTime||'-' }}</template></el-table-column>
+        <el-table-column label="操作" width="160"><template slot-scope="scope"><el-button size="mini" type="text" @click.stop="selectKB(scope.row)">查看</el-button><el-button size="mini" type="text" @click.stop="deleteKB(scope.row)" style="color:#f56c6c">删除</el-button></template></el-table-column>
+      </el-table>
+    </section>
+    <el-dialog :title="currentKB?currentKB.name:''" :visible.sync="showDetailDialog" width="800px" top="5vh">
+      <div v-if="currentKB" class="detail-container">
+        <div class="detail-header"><p class="detail-desc">{{ currentKB.description||'暂无描述' }}</p><div class="detail-meta"><el-tag size="small">{{ currentKB.subject||'通用' }}</el-tag><span>{{ currentKB.documentCount||0 }} 个文档</span></div></div>
+        <div class="detail-actions"><el-button type="primary" size="small" icon="el-icon-upload" @click="showUploadDialog=true">上传文档</el-button><el-button size="small" icon="el-icon-search" @click="showRAGDialog=true">RAG 问答</el-button></div>
+        <el-table :data="documents" style="width:100%" v-loading="loading" max-height="350">
+          <el-table-column prop="name" label="文档名称" min-width="200"><template slot-scope="scope"><i :class="getFileIcon(scope.row.type)" style="margin-right:6px"></i>{{ scope.row.name }}</template></el-table-column>
+          <el-table-column prop="type" label="类型" width="100"></el-table-column>
+          <el-table-column prop="size" label="大小" width="100"><template slot-scope="scope">{{ formatSize(scope.row.size) }}</template></el-table-column>
+          <el-table-column prop="status" label="状态" width="100"><template slot-scope="scope"><el-tag :type="statusType(scope.row.status)" size="mini">{{ scope.row.status }}</el-tag></template></el-table-column>
+        </el-table>
+      </div>
+    </el-dialog>
+    <el-dialog title="新建知识库" :visible.sync="showCreateDialog" width="500px">
+      <el-form label-width="80px" size="medium">
+        <el-form-item label="名称"><el-input v-model="createForm.name" placeholder="知识库名称"></el-input></el-form-item>
+        <el-form-item label="描述"><el-input v-model="createForm.description" type="textarea" :rows="2" placeholder="简要描述"></el-input></el-form-item>
+        <el-form-item label="学科"><el-input v-model="createForm.subject" placeholder="如：数学、语文"></el-input></el-form-item>
+      </el-form>
+      <span slot="footer"><el-button @click="showCreateDialog=false">取消</el-button><el-button type="primary" :loading="creating" @click="createKB">创建</el-button></span>
+    </el-dialog>
+    <el-dialog title="导入知识库" :visible.sync="showImportDialog" width="500px">
+      <el-upload drag action="/api/admin/knowledge-base/upload" accept=".json,.zip" :on-success="onImportSuccess" :on-error="onImportError"><i class="el-icon-upload"></i><div class="el-upload__text">拖拽文件或<em>点击上传</em></div></el-upload>
+    </el-dialog>
+    <el-dialog title="上传文档" :visible.sync="showUploadDialog" width="500px">
+      <el-upload drag :action="'/api/admin/knowledge-base/document/'+(currentKB?currentKB.id:'')+'/upload'" accept=".pdf,.doc,.docx,.txt,.md,.jpg,.png,.pptx" :before-upload="beforeUpload" :on-success="onDocUploadSuccess"><i class="el-icon-upload"></i><div class="el-upload__text">拖拽文件或<em>点击上传</em></div><div slot="tip" class="el-upload__tip">支持 PDF、Word、TXT、Markdown 等，50MB 以内</div></el-upload>
+    </el-dialog>
+    <el-dialog title="RAG 智能问答" :visible.sync="showRAGDialog" width="700px" top="5vh">
+      <div class="rag-container">
+        <div class="rag-messages" ref="ragMessages">
+          <div v-for="(msg,idx) in ragMessages" :key="idx" :class="['rag-msg',msg.role]"><div class="rag-avatar">{{ msg.role==='user'?'我':'AI' }}</div><div class="rag-content"><div class="rag-text" v-html="renderMsg(msg.content)"></div><div v-if="msg.references&&msg.references.length" class="rag-refs"><div class="refs-title">参考文档：</div><div v-for="(ref,ri) in msg.references" :key="ri" class="ref-item">{{ ref.name||ref.title||'文档'+(ri+1) }}</div></div></div></div>
+        </div>
+        <div class="rag-input-box"><el-input v-model="ragInput" @keyup.enter.native="sendRAG" placeholder="基于知识库提问..." size="medium"></el-input><el-button type="primary" size="medium" @click="sendRAG" :loading="ragLoading">发送</el-button></div>
+      </div>
+    </el-dialog>
+  </div>
+</template>

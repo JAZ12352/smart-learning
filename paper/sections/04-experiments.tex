@@ -1,0 +1,141 @@
+%=====================================================================
+%  4. Experimental Design
+%=====================================================================
+\section{Experimental Design}
+\label{sec:exp}
+
+\subsection{Research Questions}
+
+\begin{itemize}
+\item[\textbf{RQ1 (adaptation).}] Does the multi-agent pipeline match
+resources to learner profiles more accurately than single-pass generation?
+\item[\textbf{RQ2 (coverage).}] What is the contribution of retrieval
+grounding to core knowledge-point coverage?
+\item[\textbf{RQ3 (reliability).}] How much does debate-based verification
+reduce the hallucination rate, relative to no verification and to
+self-refinement?
+\item[\textbf{RQ4 (verification validity).}] Does the system's internal
+hallucination estimate agree with independent human and external-model
+judgments? \emph{This question exists because an internal judge is not, by
+itself, sufficient evidence.}
+\item[\textbf{RQ5 (perceived quality).}] How do human raters score the
+generated bundles on correctness, fit, and usefulness?
+\end{itemize}
+
+\subsection{Materials}
+\label{ssec:materials}
+
+\emph{Topics.} We use \todo{14} topics drawn from an AI-for-industry
+curriculum, ordered along a difficulty and application axis: supervised and
+unsupervised learning foundations, deep learning and backpropagation, CNNs,
+sequence modeling, Transformers and attention, LLMs and prompt engineering,
+RAG, training and distributed tuning, model deployment and inference
+acceleration, LLM evaluation and hallucination control, multi-agent system
+development, manufacturing visual inspection, and predictive maintenance with
+time-series analysis. Each topic carries a set of core knowledge points
+$\mathcal{P}(t)$ used for coverage scoring, and a set of evidence queries used
+for retrieval support measurement.
+
+\emph{Learner profiles.} We construct \todo{12} profiles spanning vocational
+diploma, BSc, MSc, and PhD students, zero-basis career changers, in-service
+engineers, and corporate trainees. Each profile specifies educational
+background, job target, per-subject theory scores, cognitive style, identified
+weaknesses, learning goal, and preferred pace.
+
+\emph{Cases.} Crossing profiles with topics under a stratified design yields
+\todo{61} end-to-end cases. Each case records the profile, the topic, and the
+difficulty label implied by the public rule of Section~\ref{ssec:diagnosis}.
+A deterministic self-check confirms that the recorded labels agree with the
+rule on \todo{100\%} of cases.
+
+\emph{Knowledge base.} The domain corpus comprises \todo{4} source documents
+segmented into \todo{56} retrieval chunks. Retrieval support is measured
+separately from generation quality: for each evidence query we compute
+bigram containment against all chunks and count support when containment
+reaches $0.5$. Observed support is \todo{98.3\%} overall, indicating that low
+coverage in generation cannot be attributed to missing evidence.
+
+\subsection{Metrics}
+
+\begin{description}
+\item[Adaptation accuracy] the proportion of cases where the supervisor's
+planned difficulty label equals the label implied by the public rule. Because
+the rule is deterministic, this metric is externally checkable.
+\item[Core knowledge-point coverage] $\frac{1}{|\mathcal{P}(t)|}\sum_{k \in
+\mathcal{P}(t)} \mathbb{1}[k \text{ appears in the bundle}]$, measured by
+keyword matching over the union of generated resources.
+\item[Hallucination rate] the fraction of checked claims flagged as
+unsupported, computed internally (debate agent), by external model judges, and
+by human raters; we report all three and their agreement.
+\item[Quality scores] reviewer ratings on accuracy, difficulty fit,
+completeness, and cross-modal consistency (10-point scales).
+\end{description}
+
+\subsection{Baselines and Ablations}
+\label{ssec:baselines}
+
+To attribute effects to components rather than to the ensemble as a whole, we
+compare against progressively weakened configurations
+(Table~\ref{tab:baselines}). B1--B2 test whether orchestration is needed at
+all; B3--B5 isolate the contribution of each verification mechanism.
+
+\begin{table}[!t]
+\centering
+\caption{Evaluation configurations. All share the same LLM backend and
+knowledge base; only the orchestration differs.}
+\label{tab:baselines}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{ID} & \textbf{Configuration} \\
+\midrule
+B1 & Single LLM call, no profile, no retrieval \\
+B2 & Single LLM call, profile in prompt, no retrieval \\
+B3 & Full multi-agent, retrieval removed \\
+B4 & Full multi-agent, debate stage removed \\
+B5 & Full multi-agent, self-refinement replaces debate \\
+B6 & Full multi-agent, review-gated retry disabled \\
+\midrule
+\textbf{Full} & \sysname{} with all components \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Human Evaluation Protocol}
+\label{ssec:human}
+
+We recruit \todo{three} raters with \todo{graduate-level training in the
+target domains}. Raters assess \todo{30} randomly sampled bundles, blind to
+configuration, on three 5-point Likert items: factual correctness, difficulty
+fit given the stated profile, and instructional usefulness. Each bundle is
+rated by \todo{two} raters to permit agreement estimation. We report
+percent agreement, Cohen's $\kappa$ \cite{cohen1960kappa}, and
+Krippendorff's $\alpha$ \cite{krippendorff2011computing}. Raters additionally
+mark any claim they judge factually wrong, which yields an independent
+human hallucination count for RQ4.
+
+\subsection{External Model Judgment}
+
+To avoid the circularity inherent in having a system grade its own output with
+the same underlying model, we re-judge all bundles with \todo{two} models from
+a different family than the generating model, using a fixed rubric and no
+access to the system's own verdicts. Agreement between internal, external, and
+human judgments is reported as the primary validity evidence for RQ4.
+
+\subsection{Statistical Analysis}
+
+Because configurations are evaluated on the same cases, comparisons are
+paired. We report mean differences with 95\% confidence intervals obtained by
+\todo{10{,}000}-sample bootstrap, use the Wilcoxon signed-rank test when
+normality is rejected by Shapiro--Wilk, and report Wilcoxon effect sizes
+alongside Cohen's $d$ \cite{cohen2013statistical}. We apply Holm correction
+for the family of comparisons in Table~\ref{tab:main}. All scripts are
+released.
+
+\subsection{Implementation Details}
+
+All agents call \todo{the same commercial LLM endpoint} with per-agent
+temperature settings in $[0.2,0.7]$; the verifier and reviewer use the lowest
+temperatures. Orchestration is implemented as an explicit state graph over
+HTTP; retrieval uses a persistent vector store with \todo{offline
+deterministic embeddings}. Per-case wall-clock time and token cost are
+reported in Table~\ref{tab:cost}.

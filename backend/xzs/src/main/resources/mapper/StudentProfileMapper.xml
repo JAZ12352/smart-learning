@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mindskip.xzs.repository.StudentProfileMapper">
+  <resultMap id="BaseResultMap" type="com.mindskip.xzs.domain.StudentProfile">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="knowledge_level" jdbcType="VARCHAR" property="knowledgeLevel" />
+    <result column="cognitive_style" jdbcType="VARCHAR" property="cognitiveStyle" />
+    <result column="weak_points" jdbcType="VARCHAR" property="weakPoints" />
+    <result column="learning_goals" jdbcType="VARCHAR" property="learningGoals" />
+    <result column="learning_pace" jdbcType="VARCHAR" property="learningPace" />
+    <result column="interests" jdbcType="VARCHAR" property="interests" />
+    <result column="learning_style" jdbcType="VARCHAR" property="learningStyle" />
+    <result column="motivation_level" jdbcType="VARCHAR" property="motivationLevel" />
+    <result column="education_background" jdbcType="VARCHAR" property="educationBackground" />
+    <result column="occupation_target" jdbcType="VARCHAR" property="occupationTarget" />
+    <result column="theory_test_result" jdbcType="VARCHAR" property="theoryTestResult" />
+    <result column="profile_summary" jdbcType="VARCHAR" property="profileSummary" />
+    <result column="profile_version" jdbcType="INTEGER" property="profileVersion" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="deleted" jdbcType="BIT" property="deleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, knowledge_level, cognitive_style, weak_points, learning_goals,
+    learning_pace, interests, learning_style, motivation_level,
+    education_background, occupation_target, theory_test_result, profile_summary,
+    profile_version, create_time, modify_time, deleted
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_student_profile
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_student_profile
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mindskip.xzs.domain.StudentProfile" useGeneratedKeys="true" keyProperty="id">
+    insert into t_student_profile (id, user_id, knowledge_level,
+      cognitive_style, weak_points, learning_goals,
+      learning_pace, interests, learning_style,
+      motivation_level, education_background, occupation_target,
+      theory_test_result, profile_summary, profile_version,
+      create_time, modify_time, deleted
+      )
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{knowledgeLevel,jdbcType=VARCHAR},
+      #{cognitiveStyle,jdbcType=VARCHAR}, #{weakPoints,jdbcType=VARCHAR}, #{learningGoals,jdbcType=VARCHAR},
+      #{learningPace,jdbcType=VARCHAR}, #{interests,jdbcType=VARCHAR}, #{learningStyle,jdbcType=VARCHAR},
+      #{motivationLevel,jdbcType=VARCHAR}, #{educationBackground,jdbcType=VARCHAR}, #{occupationTarget,jdbcType=VARCHAR},
+      #{theoryTestResult,jdbcType=VARCHAR}, #{profileSummary,jdbcType=VARCHAR}, #{profileVersion,jdbcType=INTEGER},
+      #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.mindskip.xzs.domain.StudentProfile" useGeneratedKeys="true" keyProperty="id">
+    insert into t_student_profile
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="knowledgeLevel != null">
+        knowledge_level,
+      </if>
+      <if test="cognitiveStyle != null">
+        cognitive_style,
+      </if>
+      <if test="weakPoints != null">
+        weak_points,
+      </if>
+      <if test="learningGoals != null">
+        learning_goals,
+      </if>
+      <if test="learningPace != null">
+        learning_pace,
+      </if>
+      <if test="interests != null">
+        interests,
+      </if>
+      <if test="learningStyle != null">
+        learning_style,
+      </if>
+      <if test="motivationLevel != null">
+        motivation_level,
+      </if>
+      <if test="educationBackground != null">
+        education_background,
+      </if>
+      <if test="occupationTarget != null">
+        occupation_target,
+      </if>
+      <if test="theoryTestResult != null">
+        theory_test_result,
+      </if>
+      <if test="profileSummary != null">
+        profile_summary,
+      </if>
+      <if test="profileVersion != null">
+        profile_version,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="modifyTime != null">
+        modify_time,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="knowledgeLevel != null">
+        #{knowledgeLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="cognitiveStyle != null">
+        #{cognitiveStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="weakPoints != null">
+        #{weakPoints,jdbcType=VARCHAR},
+      </if>
+      <if test="learningGoals != null">
+        #{learningGoals,jdbcType=VARCHAR},
+      </if>
+      <if test="learningPace != null">
+        #{learningPace,jdbcType=VARCHAR},
+      </if>
+      <if test="interests != null">
+        #{interests,jdbcType=VARCHAR},
+      </if>
+      <if test="learningStyle != null">
+        #{learningStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="motivationLevel != null">
+        #{motivationLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="educationBackground != null">
+        #{educationBackground,jdbcType=VARCHAR},
+      </if>
+      <if test="occupationTarget != null">
+        #{occupationTarget,jdbcType=VARCHAR},
+      </if>
+      <if test="theoryTestResult != null">
+        #{theoryTestResult,jdbcType=VARCHAR},
+      </if>
+      <if test="profileSummary != null">
+        #{profileSummary,jdbcType=VARCHAR},
+      </if>
+      <if test="profileVersion != null">
+        #{profileVersion,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null">
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mindskip.xzs.domain.StudentProfile">
+    update t_student_profile
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="knowledgeLevel != null">
+        knowledge_level = #{knowledgeLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="cognitiveStyle != null">
+        cognitive_style = #{cognitiveStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="weakPoints != null">
+        weak_points = #{weakPoints,jdbcType=VARCHAR},
+      </if>
+      <if test="learningGoals != null">
+        learning_goals = #{learningGoals,jdbcType=VARCHAR},
+      </if>
+      <if test="learningPace != null">
+        learning_pace = #{learningPace,jdbcType=VARCHAR},
+      </if>
+      <if test="interests != null">
+        interests = #{interests,jdbcType=VARCHAR},
+      </if>
+      <if test="learningStyle != null">
+        learning_style = #{learningStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="motivationLevel != null">
+        motivation_level = #{motivationLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="educationBackground != null">
+        education_background = #{educationBackground,jdbcType=VARCHAR},
+      </if>
+      <if test="occupationTarget != null">
+        occupation_target = #{occupationTarget,jdbcType=VARCHAR},
+      </if>
+      <if test="theoryTestResult != null">
+        theory_test_result = #{theoryTestResult,jdbcType=VARCHAR},
+      </if>
+      <if test="profileSummary != null">
+        profile_summary = #{profileSummary,jdbcType=VARCHAR},
+      </if>
+      <if test="profileVersion != null">
+        profile_version = #{profileVersion,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null">
+        modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mindskip.xzs.domain.StudentProfile">
+    update t_student_profile
+    set user_id = #{userId,jdbcType=INTEGER},
+      knowledge_level = #{knowledgeLevel,jdbcType=VARCHAR},
+      cognitive_style = #{cognitiveStyle,jdbcType=VARCHAR},
+      weak_points = #{weakPoints,jdbcType=VARCHAR},
+      learning_goals = #{learningGoals,jdbcType=VARCHAR},
+      learning_pace = #{learningPace,jdbcType=VARCHAR},
+      interests = #{interests,jdbcType=VARCHAR},
+      learning_style = #{learningStyle,jdbcType=VARCHAR},
+      motivation_level = #{motivationLevel,jdbcType=VARCHAR},
+      education_background = #{educationBackground,jdbcType=VARCHAR},
+      occupation_target = #{occupationTarget,jdbcType=VARCHAR},
+      theory_test_result = #{theoryTestResult,jdbcType=VARCHAR},
+      profile_summary = #{profileSummary,jdbcType=VARCHAR},
+      profile_version = #{profileVersion,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <select id="selectByUserId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_student_profile
+    where deleted=0 and user_id=#{userId,jdbcType=INTEGER}
+    limit 1
+  </select>
+
+</mapper>

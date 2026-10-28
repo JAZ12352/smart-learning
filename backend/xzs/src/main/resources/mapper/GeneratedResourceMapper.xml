@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mindskip.xzs.repository.GeneratedResourceMapper">
+  <resultMap id="BaseResultMap" type="com.mindskip.xzs.domain.GeneratedResource">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="subject_id" jdbcType="INTEGER" property="subjectId" />
+    <result column="resource_type" jdbcType="VARCHAR" property="resourceType" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="content_format" jdbcType="VARCHAR" property="contentFormat" />
+    <result column="metadata" jdbcType="VARCHAR" property="metadata" />
+    <result column="source_agent" jdbcType="VARCHAR" property="sourceAgent" />
+    <result column="quality_score" jdbcType="DECIMAL" property="qualityScore" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="deleted" jdbcType="BIT" property="deleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, subject_id, resource_type, title, content, content_format,
+    metadata, source_agent, quality_score, create_time, deleted
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_generated_resource
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_generated_resource
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mindskip.xzs.domain.GeneratedResource" useGeneratedKeys="true" keyProperty="id">
+    insert into t_generated_resource (id, user_id, subject_id,
+      resource_type, title, content,
+      content_format, metadata, source_agent,
+      quality_score, create_time, deleted
+      )
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{subjectId,jdbcType=INTEGER},
+      #{resourceType,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR},
+      #{contentFormat,jdbcType=VARCHAR}, #{metadata,jdbcType=VARCHAR}, #{sourceAgent,jdbcType=VARCHAR},
+      #{qualityScore,jdbcType=DECIMAL}, #{createTime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.mindskip.xzs.domain.GeneratedResource" useGeneratedKeys="true" keyProperty="id">
+    insert into t_generated_resource
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="subjectId != null">
+        subject_id,
+      </if>
+      <if test="resourceType != null">
+        resource_type,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="contentFormat != null">
+        content_format,
+      </if>
+      <if test="metadata != null">
+        metadata,
+      </if>
+      <if test="sourceAgent != null">
+        source_agent,
+      </if>
+      <if test="qualityScore != null">
+        quality_score,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="subjectId != null">
+        #{subjectId,jdbcType=INTEGER},
+      </if>
+      <if test="resourceType != null">
+        #{resourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="contentFormat != null">
+        #{contentFormat,jdbcType=VARCHAR},
+      </if>
+      <if test="metadata != null">
+        #{metadata,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceAgent != null">
+        #{sourceAgent,jdbcType=VARCHAR},
+      </if>
+      <if test="qualityScore != null">
+        #{qualityScore,jdbcType=DECIMAL},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mindskip.xzs.domain.GeneratedResource">
+    update t_generated_resource
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="subjectId != null">
+        subject_id = #{subjectId,jdbcType=INTEGER},
+      </if>
+      <if test="resourceType != null">
+        resource_type = #{resourceType,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="contentFormat != null">
+        content_format = #{contentFormat,jdbcType=VARCHAR},
+      </if>
+      <if test="metadata != null">
+        metadata = #{metadata,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceAgent != null">
+        source_agent = #{sourceAgent,jdbcType=VARCHAR},
+      </if>
+      <if test="qualityScore != null">
+        quality_score = #{qualityScore,jdbcType=DECIMAL},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mindskip.xzs.domain.GeneratedResource">
+    update t_generated_resource
+    set user_id = #{userId,jdbcType=INTEGER},
+      subject_id = #{subjectId,jdbcType=INTEGER},
+      resource_type = #{resourceType,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      content_format = #{contentFormat,jdbcType=VARCHAR},
+      metadata = #{metadata,jdbcType=VARCHAR},
+      source_agent = #{sourceAgent,jdbcType=VARCHAR},
+      quality_score = #{qualityScore,jdbcType=DECIMAL},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <delete id="deleteByUserId" parameterType="java.lang.Integer">
+    delete from t_generated_resource
+    where user_id=#{userId,jdbcType=INTEGER}
+  </delete>
+
+  <select id="selectByUserId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_generated_resource
+    where deleted=0 and user_id=#{userId,jdbcType=INTEGER}
+    order by id desc
+  </select>
+
+  <select id="selectByUserAndType" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_generated_resource
+    where deleted=0 and user_id=#{userId,jdbcType=INTEGER} and resource_type=#{resourceType,jdbcType=VARCHAR}
+    order by id desc
+  </select>
+
+  <select id="selectBySubjectId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_generated_resource
+    where deleted=0 and subject_id=#{subjectId,jdbcType=INTEGER}
+    order by id desc
+  </select>
+
+</mapper>

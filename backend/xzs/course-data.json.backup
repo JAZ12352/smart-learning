@@ -1,0 +1,3797 @@
+[
+  {
+    "id": "mooc-dsa-001",
+    "name": "数据结构与算法",
+    "school": "浙江大学",
+    "instructor": "陈越",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "国家精品课程·MOOC首批上线课程。系统学习线性表、栈队列、树、图等核心数据结构及经典查找排序算法，掌握复杂度分析方法与编程实现。配套PTA在线判题平台。",
+    "richDesc": "<h3>课程概述</h3><p>《数据结构与算法》是浙江大学陈越教授主讲的MOOC课程，在中国大学MOOC平台累计选课超50万人次。课程以C语言为描述工具，强调理论联系实际，通过大量编程实践培养计算思维。</p><h3>先修知识</h3><p>C语言程序设计、离散数学基础</p><h3>教材</h3><p>《数据结构（第2版）》陈越主编，高等教育出版社</p><h3>参考教材</h3><p>《数据结构与算法分析：C语言描述》Mark Allen Weiss</p><h3>考核方式</h3><p>单元测验30% + 编程作业40% + 期末考试30%</p>",
+    "studentCount": 186500,
+    "rating": 4.9,
+    "resourceCount": 128,
+    "status": "ongoing",
+    "textbook": "数据结构（第2版）·高教社",
+    "period": 72,
+    "chapterCount": 10,
+    "chapterTitles": [
+      "绪论",
+      "线性表",
+      "栈和队列",
+      "串与数组",
+      "树与二叉树",
+      "图",
+      "查找",
+      "排序",
+      "动态存储管理",
+      "文件"
+    ],
+    "chapters": {
+      "绪论": {
+        "points": [
+          "数据结构的基本概念与术语",
+          "算法定义与五大特性",
+          "时间复杂度与空间复杂度分析",
+          "抽象数据类型ADT",
+          "最大子列和问题"
+        ],
+        "lessons": [
+          {
+            "name": "1-1 什么是数据结构",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "15:23",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "1-2 算法复杂度分析",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "22:10",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第1章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "38页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "线性表": {
+        "points": [
+          "顺序表与链式存储",
+          "单链表与双向链表",
+          "循环链表",
+          "一元多项式加法",
+          "线性表的应用"
+        ],
+        "lessons": [
+          {
+            "name": "2-1 顺序表实现",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "18:45",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "2-2 链表操作",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "25:30",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "2-3 多项式加法实现",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "12:08",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第2章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "45页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "栈和队列": {
+        "points": [
+          "栈的LIFO特性",
+          "顺序栈与链栈",
+          "队列的FIFO特性",
+          "循环队列",
+          "表达式求值"
+        ],
+        "lessons": [
+          {
+            "name": "3-1 栈的实现与应用",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "20:15",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "3-2 队列实现",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "16:40",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "3-3 中缀转后缀",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "19:55",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第3章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "42页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "树与二叉树": {
+        "points": [
+          "树的概念与遍历",
+          "二叉树性质与存储",
+          "二叉搜索树BST",
+          "平衡二叉树AVL",
+          "Huffman树"
+        ],
+        "lessons": [
+          {
+            "name": "4-1 二叉树遍历",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "28:30",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "4-2 BST操作",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "24:10",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "4-3 AVL旋转调整",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "32:25",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第4章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "56页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "图": {
+        "points": [
+          "图的存储结构",
+          "DFS和BFS遍历",
+          "最小生成树",
+          "最短路径",
+          "拓扑排序"
+        ],
+        "lessons": [
+          {
+            "name": "5-1 图的邻接矩阵",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "22:18",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "5-2 图遍历算法",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "26:45",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "5-3 Dijkstra算法",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "34:20",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第5章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "62页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "查找": {
+        "points": [
+          "二分查找",
+          "二叉排序树查找",
+          "AVL查找分析",
+          "B树与B+树",
+          "哈希查找"
+        ],
+        "lessons": [
+          {
+            "name": "6-1 查找算法",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "20:30",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "6-2 哈希表",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "27:15",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第6章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "50页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "排序": {
+        "points": [
+          "插入排序与希尔排序",
+          "交换排序与快速排序",
+          "选择排序与堆排序",
+          "归并排序",
+          "基数排序与复杂度对比"
+        ],
+        "lessons": [
+          {
+            "name": "7-1 插入与希尔排序",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "23:40",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "7-2 快排与归并",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "31:20",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "7-3 堆排序",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "28:10",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第7章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "58页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      }
+    },
+    "pptList": [
+      {
+        "name": "第1章 绪论课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://view.officeapps.live.com/op/embed.aspx?src=https://www.icourse163.org/course/ZJU-93001",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第2章 线性表课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://view.officeapps.live.com/op/embed.aspx?src=https://www.icourse163.org/course/ZJU-93001",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第3章 栈和队列课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://view.officeapps.live.com/op/embed.aspx?src=https://www.icourse163.org/course/ZJU-93001",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第4章 树课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://view.officeapps.live.com/op/embed.aspx?src=https://www.icourse163.org/course/ZJU-93001",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第5章 图课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://view.officeapps.live.com/op/embed.aspx?src=https://www.icourse163.org/course/ZJU-93001",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第6章 查找课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://view.officeapps.live.com/op/embed.aspx?src=https://www.icourse163.org/course/ZJU-93001",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第7章 排序课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://view.officeapps.live.com/op/embed.aspx?src=https://www.icourse163.org/course/ZJU-93001",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "算法代码实现",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://view.officeapps.live.com/op/embed.aspx?src=https://www.icourse163.org/course/ZJU-93001",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1讲 基本概念",
+        "duration": "18:30",
+        "views": "186万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第2讲 线性结构",
+        "duration": "32:15",
+        "views": "152万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=12",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第3讲 树(上)",
+        "duration": "45:20",
+        "views": "128万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=32",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第4讲 树(中)",
+        "duration": "38:40",
+        "views": "115万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=48",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第5讲 树(下)",
+        "duration": "42:10",
+        "views": "98万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=62",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第6讲 图(上)",
+        "duration": "36:25",
+        "views": "92万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=78",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第7讲 图(中)-最短路径",
+        "duration": "44:30",
+        "views": "105万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=92",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第8讲 图(下)-最小生成树",
+        "duration": "40:15",
+        "views": "88万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=105",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第9讲 排序(上)",
+        "duration": "48:20",
+        "views": "96万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=118",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第10讲 排序(下)",
+        "duration": "35:10",
+        "views": "82万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=132",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第11讲 散列查找",
+        "duration": "28:45",
+        "views": "78万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=140",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第12讲 KMP算法",
+        "duration": "22:30",
+        "views": "65万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=145",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      }
+    ],
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "在长度为n的顺序表中插入一个元素的时间复杂度是？",
+        "options": [
+          "O(1)",
+          "O(logn)",
+          "O(n)",
+          "O(n²)"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "栈和队列的共同特点是？",
+        "options": [
+          "都是先进先出",
+          "都是先进后出",
+          "只允许在端点处插入和删除元素",
+          "没有共同点"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "在一棵深度为5的完全二叉树中最多有多少个结点？",
+        "options": [
+          "15",
+          "31",
+          "32",
+          "63"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "下列排序算法中，最坏情况下时间复杂度最低的是？",
+        "options": [
+          "冒泡排序",
+          "快速排序",
+          "归并排序",
+          "插入排序"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "哈希表解决冲突的方法不包括？",
+        "options": [
+          "链地址法",
+          "开放地址法",
+          "再哈希法",
+          "二分查找法"
+        ],
+        "answer": "D"
+      }
+    ],
+    "source": "mooc_seed",
+    "sourceUrl": "https://www.icourse163.org/course/ZJU-93001",
+    "bilibili_url": "https://www.bilibili.com/video/av55114968/"
+  },
+  {
+    "id": "mooc-os-002",
+    "name": "操作系统",
+    "school": "北京大学",
+    "instructor": "陈向群",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "国家精品课程·深入理解进程管理、内存管理、文件系统、I/O设备管理等操作系统核心原理与实现技术。结合Linux和Windows实例讲解内核工作机制。",
+    "richDesc": "<h3>课程概述</h3><p>北京大学操作系统MOOC课程，在中国大学MOOC平台已开设12轮，累计选课超30万人次。课程以进程管理、存储器管理、文件管理和设备管理四大模块为主线。</p><h3>教材</h3><p>《计算机操作系统（第4版）》汤小丹·西安电子科技大学出版社</p>",
+    "studentCount": 125600,
+    "rating": 4.7,
+    "resourceCount": 96,
+    "status": "ongoing",
+    "textbook": "计算机操作系统（第4版）",
+    "period": 64,
+    "chapterCount": 9,
+    "chapterTitles": [
+      "操作系统引论",
+      "进程描述与控制",
+      "处理机调度与死锁",
+      "存储器管理",
+      "虚拟存储器",
+      "输入输出系统",
+      "文件管理",
+      "磁盘存储器管理",
+      "操作系统接口"
+    ],
+    "chapters": {
+      "操作系统引论": {
+        "points": [
+          "操作系统的定义与目标",
+          "OS发展历程",
+          "基本特征：并发/共享/虚拟/异步",
+          "五大功能",
+          "内核架构：宏内核vs微内核"
+        ],
+        "lessons": []
+      },
+      "进程描述与控制": {
+        "points": [
+          "PCB进程控制块",
+          "进程三态模型",
+          "进程创建fork",
+          "线程的引入",
+          "内核线程vs用户线程"
+        ],
+        "lessons": []
+      },
+      "处理机调度与死锁": {
+        "points": [
+          "三级调度体系",
+          "FCFS/SJF/优先级/RR算法",
+          "死锁必要条件",
+          "银行家算法",
+          "死锁检测与恢复"
+        ],
+        "lessons": []
+      },
+      "存储器管理": {
+        "points": [
+          "程序的装入与链接",
+          "连续分配方式",
+          "分页存储管理",
+          "快表TLB与多级页表",
+          "分段与段页式"
+        ],
+        "lessons": []
+      },
+      "虚拟存储器": {
+        "points": [
+          "虚拟存储概念与局部性原理",
+          "请求分页系统",
+          "页面置换算法OPT/FIFO/LRU/CLOCK",
+          "Belady异常",
+          "请求分段系统"
+        ],
+        "lessons": []
+      }
+    },
+    "pptList": [
+      {
+        "name": "华文慕课课件下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "http://www.chinesemooc.org/mooc/4747",
+        "platform": "web",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "操作系统原理课件PDF",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://linux.do/t/topic/2068844",
+        "platform": "web",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 操作系统概述",
+        "duration": "25:10",
+        "views": "68万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第2章 操作系统运行环境",
+        "duration": "32:20",
+        "views": "55万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=8",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第3章 进程线程模型",
+        "duration": "42:30",
+        "views": "72万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=16",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第4章 处理器调度",
+        "duration": "35:15",
+        "views": "48万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=24",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第5章 同步互斥",
+        "duration": "48:40",
+        "views": "85万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=30",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第6章 信号量与管程",
+        "duration": "52:20",
+        "views": "62万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=38",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第7章 存储管理",
+        "duration": "38:10",
+        "views": "56万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=46",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第8章 虚拟内存",
+        "duration": "44:25",
+        "views": "78万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=54",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第9章 文件系统",
+        "duration": "36:30",
+        "views": "42万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=60",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第10章 I/O系统",
+        "duration": "28:15",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=66",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第11章 死锁",
+        "duration": "32:40",
+        "views": "52万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=70",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      }
+    ],
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "进程三种基本状态不包括？",
+        "options": [
+          "就绪",
+          "执行",
+          "阻塞",
+          "等待"
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "哪种页面置换算法可能产生Belady异常？",
+        "options": [
+          "OPT",
+          "LRU",
+          "FIFO",
+          "CLOCK"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "死锁四个必要条件中可被破坏来预防的是？",
+        "options": [
+          "互斥条件",
+          "请求和保持",
+          "不可剥夺",
+          "循环等待"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "sourceUrl": "http://www.chinesemooc.org/mooc/4747",
+    "bilibili_url": "https://www.bilibili.com/video/av20528688/"
+  },
+  {
+    "id": "mooc-cn-003",
+    "name": "计算机网络",
+    "school": "哈尔滨工业大学",
+    "instructor": "李全龙",
+    "category": "计算机科学",
+    "credit": 3,
+    "term": "2026春",
+    "description": "国家精品在线开放课程。系统掌握TCP/IP协议栈、网络体系结构、路由算法、传输控制与网络安全等核心技术。配套Cisco Packet Tracer实验。",
+    "richDesc": "<h3>课程概述</h3><p>哈工大计算机网络MOOC课程，以TCP/IP体系结构为主线，涵盖物理层到应用层的完整协议栈。配套思科模拟器实验环境。</p>",
+    "studentCount": 98000,
+    "rating": 4.6,
+    "resourceCount": 85,
+    "status": "ongoing",
+    "textbook": "计算机网络（第8版）·谢希仁",
+    "period": 56,
+    "chapterCount": 9,
+    "chapterTitles": [
+      "概述",
+      "物理层",
+      "数据链路层",
+      "网络层",
+      "运输层",
+      "应用层",
+      "网络安全",
+      "无线网络",
+      "下一代互联网"
+    ],
+    "chapters": {
+      "概述": {
+        "points": [
+          "计算机网络定义与分类",
+          "性能指标",
+          "OSI与TCP/IP体系结构",
+          "协议与服务"
+        ],
+        "lessons": []
+      },
+      "网络层": {
+        "points": [
+          "虚电路与数据报",
+          "IPv4编址与CIDR",
+          "ARP与ICMP",
+          "RIP/OSPF/BGP路由协议",
+          "IPv6"
+        ],
+        "lessons": []
+      },
+      "运输层": {
+        "points": [
+          "TCP/UDP协议",
+          "滑动窗口与流量控制",
+          "拥塞控制算法",
+          "三次握手与四次挥手"
+        ],
+        "lessons": []
+      },
+      "应用层": {
+        "points": [
+          "DNS域名系统",
+          "HTTP协议",
+          "SMTP与POP3",
+          "FTP与P2P"
+        ],
+        "lessons": []
+      }
+    },
+    "pptList": [
+      {
+        "name": "课件下载_MOOC平台",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://www.icourse163.org/course/HIT-1002532006",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 计算机网络概述",
+        "duration": "28:30",
+        "views": "42万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      },
+      {
+        "name": "第2章 物理层",
+        "duration": "35:20",
+        "views": "35万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=12",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      },
+      {
+        "name": "第3章 数据链路层",
+        "duration": "42:15",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=22",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      },
+      {
+        "name": "第4章 网络层",
+        "duration": "55:30",
+        "views": "56万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=35",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      },
+      {
+        "name": "第5章 运输层",
+        "duration": "48:20",
+        "views": "62万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=48",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      },
+      {
+        "name": "第6章 应用层",
+        "duration": "32:10",
+        "views": "28万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=58",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      }
+    ],
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "TCP通过什么机制实现可靠传输？",
+        "options": [
+          "滑动窗口",
+          "CSMA/CD",
+          "ARP",
+          "ICMP"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "/24网络中可用主机地址数量是？",
+        "options": [
+          "256",
+          "254",
+          "128",
+          "512"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      }
+    ],
+    "source": "mooc_seed",
+    "sourceUrl": "https://www.icourse163.org/course/HIT-1002532006",
+    "bilibili_url": "https://www.bilibili.com/video/BV1BU4y1k7CV/"
+  },
+  {
+    "id": "mooc-db-004",
+    "name": "数据库系统概论",
+    "school": "中国人民大学",
+    "instructor": "王珊",
+    "category": "计算机科学",
+    "credit": 3,
+    "term": "2026春",
+    "description": "国家精品课程·国家级教学名师王珊教授主讲。全面学习关系模型、SQL语言、数据库设计方法、事务管理与查询优化技术。",
+    "sourceUrl": "https://www.icourse163.org/course/RUC-488001",
+    "studentCount": 112000,
+    "rating": 4.5,
+    "resourceCount": 78,
+    "status": "ongoing",
+    "textbook": "数据库系统概论（第5版）",
+    "period": 56,
+    "chapterCount": 11,
+    "chapterTitles": [
+      "绪论",
+      "关系数据库",
+      "SQL语言",
+      "数据库安全性",
+      "完整性",
+      "关系数据理论",
+      "数据库设计",
+      "嵌入式SQL",
+      "查询处理与优化",
+      "数据库恢复技术",
+      "并发控制"
+    ],
+    "pptList": [
+      {
+        "name": "MOOC官方课件下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://www.icourse163.org/course/RUC-488001",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "课件+习题(64讲)",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://www.mofile.net/item/9d8e19e96bbe40a8a577a299463ab9df.html",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 数据库系统概述",
+        "duration": "30:20",
+        "views": "28万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第2章 关系数据库",
+        "duration": "42:30",
+        "views": "25万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=8",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第3章 SQL语言(上)",
+        "duration": "52:10",
+        "views": "42万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=16",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第4章 SQL语言(下)",
+        "duration": "45:20",
+        "views": "35万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=24",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第5章 数据库安全性",
+        "duration": "28:15",
+        "views": "18万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=32",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第6章 数据库完整性",
+        "duration": "32:40",
+        "views": "22万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=36",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第7章 关系数据理论",
+        "duration": "48:30",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=42",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第8章 数据库设计",
+        "duration": "55:10",
+        "views": "32万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=50",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第9章 查询处理优化",
+        "duration": "38:25",
+        "views": "20万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=58",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "关系模型的完整性约束不包括？",
+        "options": [
+          "实体完整性",
+          "参照完整性",
+          "用户定义完整性",
+          "事务完整性"
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "bilibili_url": "https://www.bilibili.com/video/BV1p1NoeTE89/"
+  },
+  {
+    "id": "mooc-co-005",
+    "name": "计算机组成原理",
+    "school": "清华大学",
+    "instructor": "王诚",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026秋",
+    "description": "学习计算机硬件系统组成与工作原理，包括运算器、存储器、控制器和I/O系统。配套Logisim数字电路仿真实验。",
+    "sourceUrl": "https://www.xuetangx.com/course/THU08091000267",
+    "studentCount": 89000,
+    "rating": 4.5,
+    "resourceCount": 72,
+    "status": "ongoing",
+    "textbook": "计算机组成原理（第3版）",
+    "period": 64,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "计算机系统概论",
+      "数据表示与运算",
+      "存储器层次",
+      "指令系统",
+      "中央处理器",
+      "总线",
+      "输入输出系统",
+      "并行体系结构"
+    ],
+    "pptList": [
+      {
+        "name": "清华课件+习题下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://eol.nwafu.edu.cn/meol/homepage/course/listview.jsp?lid=28206&folderid=126513",
+        "platform": "web",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "在线播放50讲",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://www.waitang.com/play/7149.html",
+        "platform": "web",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1讲 计算机系统概论",
+        "duration": "22:10",
+        "views": "35万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第2讲 数据表示",
+        "duration": "38:20",
+        "views": "32万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=8",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第3讲 运算方法与运算器",
+        "duration": "45:30",
+        "views": "28万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=16",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第4讲 存储系统",
+        "duration": "42:15",
+        "views": "30万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=24",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第5讲 指令系统",
+        "duration": "35:40",
+        "views": "25万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=32",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第6讲 CPU设计",
+        "duration": "52:20",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=40",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第7讲 总线",
+        "duration": "18:30",
+        "views": "15万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=46",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第8讲 I/O系统",
+        "duration": "28:45",
+        "views": "22万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=50",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "Cache的主要作用是？",
+        "options": [
+          "扩大存储容量",
+          "解决CPU与主存速度差异",
+          "永久存储数据",
+          "增加I/O接口"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "bilibili_url": "https://www.bilibili.com/video/BV13t411C7gN/"
+  },
+  {
+    "id": "mooc-am1-006",
+    "name": "高等数学（上）",
+    "school": "同济大学",
+    "instructor": "李教授",
+    "category": "数学",
+    "credit": 5,
+    "term": "2026春",
+    "description": "国家级精品课程·同济大学数学系出品。系统学习函数极限、导数与微分、不定积分与定积分，建立微积分基本思想与方法。配套同济《高等数学》第七版教材。",
+    "sourceUrl": "https://www.icourse163.org/course/TONGJI-53004",
+    "studentCount": 125800,
+    "rating": 4.8,
+    "resourceCount": 142,
+    "status": "ongoing",
+    "textbook": "高等数学（第7版）上册",
+    "period": 96,
+    "chapterCount": 7,
+    "chapterTitles": [
+      "函数与极限",
+      "导数与微分",
+      "微分中值定理与导数应用",
+      "不定积分",
+      "定积分",
+      "定积分的应用",
+      "微分方程"
+    ],
+    "chapters": {
+      "函数与极限": {
+        "points": [
+          "映射与函数",
+          "数列极限的ε-N定义",
+          "函数极限的ε-δ定义",
+          "两个重要极限",
+          "无穷小与无穷大",
+          "函数的连续性与间断点"
+        ],
+        "lessons": []
+      },
+      "导数与微分": {
+        "points": [
+          "导数定义与几何意义",
+          "基本求导公式",
+          "四则运算与链式法则",
+          "隐函数与参数方程求导",
+          "微分的定义与应用",
+          "高阶导数"
+        ],
+        "lessons": []
+      },
+      "微分中值定理与导数应用": {
+        "points": [
+          "Rolle定理",
+          "Lagrange中值定理",
+          "Cauchy中值定理",
+          "L'Hôpital法则",
+          "函数单调性与极值",
+          "曲线的凹凸性与拐点"
+        ],
+        "lessons": []
+      },
+      "不定积分": {
+        "points": [
+          "原函数与不定积分",
+          "基本积分公式",
+          "第一类换元积分法",
+          "第二类换元积分法",
+          "分部积分法",
+          "有理函数的积分"
+        ],
+        "lessons": []
+      },
+      "定积分": {
+        "points": [
+          "定积分的定义与几何意义",
+          "Newton-Leibniz公式",
+          "定积分的换元与分部",
+          "广义积分的收敛性"
+        ],
+        "lessons": []
+      },
+      "定积分的应用": {
+        "points": [
+          "平面图形面积",
+          "旋转体体积",
+          "平面曲线弧长",
+          "变力做功",
+          "液体压力与质心"
+        ],
+        "lessons": []
+      }
+    },
+    "pptList": [
+      {
+        "name": "超星学习通PPT下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://mooc1.chaoxing.com/course/246399340.html",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "MOOC课件下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://www.icourse163.org/course/TONGJI-53004",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 函数与极限",
+        "duration": "45:20",
+        "views": "65万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=HHFS8NCI4",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第2章 导数与微分",
+        "duration": "52:10",
+        "views": "58万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=ZHGLDTAJD",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第3章 微分中值定理",
+        "duration": "48:30",
+        "views": "52万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=YHFS8NEFD",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第4章 不定积分",
+        "duration": "55:40",
+        "views": "48万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=QHFS8NFJA",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第5章 定积分",
+        "duration": "50:20",
+        "views": "45万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=THFS8NI1A",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第6章 定积分应用",
+        "duration": "38:15",
+        "views": "38万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=WHFS8NKBA",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第7章 微分方程",
+        "duration": "42:30",
+        "views": "35万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=RHFS8NMKA",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      }
+    ],
+    "textbookResources": [
+      {
+        "name": "高等数学（第7版）上册",
+        "author": "同济大学数学系",
+        "publisher": "高等教育出版社",
+        "edition": "十二五规划教材",
+        "chapters": 7,
+        "pages": 422,
+        "url": "https://book.yunzhan365.com/ghlf/wmvs/mobile/index.html"
+      },
+      {
+        "name": "OpenStax Calculus Volume 1",
+        "author": "Strang & Herman",
+        "publisher": "OpenStax",
+        "edition": "Free Open Textbook",
+        "chapters": 6,
+        "pages": 873,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "lim[x→0](sin3x)/x = ?",
+        "options": [
+          "0",
+          "1",
+          "3",
+          "不存在"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "f(x)=x³-3x的单调递增区间是？",
+        "options": [
+          "(-∞,-1)∪(1,+∞)",
+          "(-1,1)",
+          "(-∞,+∞)",
+          "(0,+∞)"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "∫₀¹x²dx = ?",
+        "options": [
+          "1/4",
+          "1/3",
+          "1/2",
+          "1"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "d/dx(ln x) = ?",
+        "options": [
+          "1/x",
+          "x",
+          "e^x",
+          "ln x"
+        ],
+        "answer": "A"
+      }
+    ],
+    "source": "mooc_seed",
+    "bilibili_url": "https://open.163.com/newview/movie/courseintro?newurl=KHFS8NBB2"
+  },
+  {
+    "id": "mooc-am2-007",
+    "name": "高等数学（下）",
+    "school": "同济大学",
+    "instructor": "张教授",
+    "category": "数学",
+    "credit": 5,
+    "term": "2026春",
+    "description": "多元函数微积分、曲线曲面积分及无穷级数理论。将一元微积分思想推广到多元，学习大学物理、工程力学必备数学基础。",
+    "sourceUrl": "https://www.icourse163.org/course/TONGJI-53004",
+    "studentCount": 102300,
+    "rating": 4.7,
+    "resourceCount": 118,
+    "status": "ongoing",
+    "textbook": "高等数学（第7版）下册",
+    "period": 80,
+    "chapterCount": 6,
+    "chapterTitles": [
+      "空间解析几何与向量代数",
+      "多元函数微分学",
+      "重积分",
+      "曲线积分与曲面积分",
+      "无穷级数",
+      "微分方程进阶"
+    ],
+    "chapters": {
+      "空间解析几何与向量代数": {
+        "points": [
+          "空间直角坐标系",
+          "向量运算",
+          "平面与直线方程",
+          "二次曲面"
+        ],
+        "lessons": []
+      },
+      "多元函数微分学": {
+        "points": [
+          "多元函数极限与连续",
+          "偏导数与全微分",
+          "方向导数与梯度",
+          "多元函数极值",
+          "Lagrange乘数法"
+        ],
+        "lessons": []
+      },
+      "重积分": {
+        "points": [
+          "二重积分计算",
+          "极坐标变换",
+          "三重积分",
+          "柱坐标与球坐标",
+          "重积分的应用"
+        ],
+        "lessons": []
+      },
+      "曲线积分与曲面积分": {
+        "points": [
+          "第一类曲线积分",
+          "第二类曲线积分",
+          "Green公式",
+          "Gauss公式",
+          "Stokes公式"
+        ],
+        "lessons": []
+      },
+      "无穷级数": {
+        "points": [
+          "数项级数",
+          "幂级数",
+          "Fourier级数",
+          "函数展开成幂级数"
+        ],
+        "lessons": []
+      }
+    },
+    "pptList": [
+      {
+        "name": "超星PPT下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://mooc1.chaoxing.com/course/246399340.html",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第8章 空间解析几何",
+        "duration": "42:10",
+        "views": "32万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=HHFS8NCI5",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第9章 多元函数微分",
+        "duration": "48:30",
+        "views": "30万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=ZHGLDTAJ6",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第10章 重积分",
+        "duration": "52:20",
+        "views": "28万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=YHFS8NEF7",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第11章 曲线曲面积分",
+        "duration": "55:40",
+        "views": "25万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=QHFS8NFJ8",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第12章 无穷级数",
+        "duration": "50:15",
+        "views": "35万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=THFS8NIJ9",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "二元函数极值的充分判别条件中，AC-B²>0且A>0时是？",
+        "options": [
+          "极小值点",
+          "极大值点",
+          "鞍点",
+          "无法判断"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "函数f(x)在x=a处可导的充要条件是？",
+        "options": [
+          "左右导数存在且相等",
+          "函数在a处连续",
+          "函数在a处有定义",
+          "极限存在"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "下列哪个级数一定收敛？",
+        "options": [
+          "调和级数",
+          "p>1的p级数",
+          "几何级数|r|>=1",
+          "交错级数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "矩阵A可逆的充要条件是？",
+        "options": [
+          "det(A)=0",
+          "det(A)≠0",
+          "A是方阵",
+          "A的秩小于n"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "高等数学（第7版）上册",
+        "author": "同济大学数学系",
+        "publisher": "高等教育出版社",
+        "edition": "十二五规划教材",
+        "chapters": 7,
+        "pages": 422,
+        "url": "https://book.yunzhan365.com/ghlf/wmvs/mobile/index.html"
+      },
+      {
+        "name": "OpenStax Calculus Volume 1",
+        "author": "Strang & Herman",
+        "publisher": "OpenStax",
+        "edition": "Free Open Textbook",
+        "chapters": 6,
+        "pages": 873,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf"
+      }
+    ],
+    "bilibili_url": "https://open.163.com/newview/movie/courseintro?newurl=KHFS8NBB2"
+  },
+  {
+    "id": "mooc-la-008",
+    "name": "线性代数",
+    "school": "清华大学",
+    "instructor": "杨教授",
+    "category": "数学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "国家精品课程。系统学习行列式、矩阵理论、向量空间、特征值与二次型等核心代数内容。配套MIT线性代数公开课风格教学。",
+    "sourceUrl": "https://www.icourse163.org/course/THU-1002018015",
+    "studentCount": 153200,
+    "rating": 4.9,
+    "resourceCount": 105,
+    "status": "ongoing",
+    "textbook": "线性代数（第6版）",
+    "period": 64,
+    "chapterCount": 6,
+    "chapterTitles": [
+      "行列式",
+      "矩阵及其运算",
+      "向量组的线性相关性",
+      "线性方程组",
+      "相似矩阵与二次型",
+      "线性空间与线性变换"
+    ],
+    "pptList": [
+      {
+        "name": "李思老师开源讲义",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://www.bananaspace.org/wiki/讲稿:线性代数",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "讲义PDF下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://sili-math.github.io/notes/LinearAlgebra.pdf",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 行列式",
+        "duration": "35:20",
+        "views": "42万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "第2章 矩阵",
+        "duration": "42:30",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=12",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "第3章 向量组",
+        "duration": "38:15",
+        "views": "32万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=22",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "第4章 线性方程组",
+        "duration": "45:40",
+        "views": "35万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=32",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "第5章 特征值与二次型",
+        "duration": "50:10",
+        "views": "45万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=42",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "第6章 线性空间",
+        "duration": "32:25",
+        "views": "22万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=52",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "n阶行列式的定义中，逆序数为奇数的排列项取什么符号？",
+        "options": [
+          "正号",
+          "负号",
+          "零",
+          "不确定"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "函数f(x)在x=a处可导的充要条件是？",
+        "options": [
+          "左右导数存在且相等",
+          "函数在a处连续",
+          "函数在a处有定义",
+          "极限存在"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "下列哪个级数一定收敛？",
+        "options": [
+          "调和级数",
+          "p>1的p级数",
+          "几何级数|r|>=1",
+          "交错级数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "矩阵A可逆的充要条件是？",
+        "options": [
+          "det(A)=0",
+          "det(A)≠0",
+          "A是方阵",
+          "A的秩小于n"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "高等数学（第7版）上册",
+        "author": "同济大学数学系",
+        "publisher": "高等教育出版社",
+        "edition": "十二五规划教材",
+        "chapters": 7,
+        "pages": 422,
+        "url": "https://book.yunzhan365.com/ghlf/wmvs/mobile/index.html"
+      },
+      {
+        "name": "OpenStax Calculus Volume 1",
+        "author": "Strang & Herman",
+        "publisher": "OpenStax",
+        "edition": "Free Open Textbook",
+        "chapters": 6,
+        "pages": 873,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf"
+      }
+    ],
+    "bilibili_url": "https://www.bilibili.com/video/BV11z4y1f7ym"
+  },
+  {
+    "id": "mooc-ps-009",
+    "name": "概率论与数理统计",
+    "school": "北京大学",
+    "instructor": "刘教授",
+    "category": "数学",
+    "credit": 4,
+    "term": "2026秋",
+    "description": "学习概率空间、随机变量分布、数字特征、大数定律与中心极限定理、参数估计与假设检验。理论与实践紧密结合，含Python统计实验。",
+    "sourceUrl": "https://www.icourse163.org/course/PKU-1002514003",
+    "studentCount": 89300,
+    "rating": 4.6,
+    "resourceCount": 88,
+    "status": "upcoming",
+    "textbook": "概率论与数理统计（第4版）",
+    "period": 64,
+    "chapterCount": 9,
+    "chapterTitles": [
+      "概率论基本概念",
+      "随机变量及其分布",
+      "多维随机变量",
+      "数字特征",
+      "大数定律与中心极限定理",
+      "样本及抽样分布",
+      "参数估计",
+      "假设检验",
+      "回归分析"
+    ],
+    "pptList": [
+      {
+        "name": "第1章·概率论基础",
+        "size": "3.0MB",
+        "pages": 42,
+        "url": "/ppt/ps/ch01.pdf"
+      },
+      {
+        "name": "第2章·随机变量",
+        "size": "3.6MB",
+        "pages": 50,
+        "url": "/ppt/ps/ch02.pdf"
+      },
+      {
+        "name": "第7章·参数估计",
+        "size": "4.0MB",
+        "pages": 55,
+        "url": "/ppt/ps/ch07.pdf"
+      },
+      {
+        "name": "第8章·假设检验",
+        "size": "3.8MB",
+        "pages": 52,
+        "url": "/ppt/ps/ch08.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "1-1 概率空间",
+        "duration": "30:20",
+        "views": "8.5万",
+        "url": "/video/ps/1-1.mp4"
+      },
+      {
+        "name": "2-1 常见分布",
+        "duration": "35:40",
+        "views": "7.2万",
+        "url": "/video/ps/2-1.mp4"
+      },
+      {
+        "name": "7-1 极大似然估计",
+        "duration": "28:50",
+        "views": "6.8万",
+        "url": "/video/ps/7-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "对于正态分布N(μ,σ²)，参数μ的极大似然估计是？",
+        "options": [
+          "样本均值",
+          "样本方差",
+          "样本中位数",
+          "样本标准差"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "函数f(x)在x=a处可导的充要条件是？",
+        "options": [
+          "左右导数存在且相等",
+          "函数在a处连续",
+          "函数在a处有定义",
+          "极限存在"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "下列哪个级数一定收敛？",
+        "options": [
+          "调和级数",
+          "p>1的p级数",
+          "几何级数|r|>=1",
+          "交错级数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "矩阵A可逆的充要条件是？",
+        "options": [
+          "det(A)=0",
+          "det(A)≠0",
+          "A是方阵",
+          "A的秩小于n"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "高等数学（第7版）上册",
+        "author": "同济大学数学系",
+        "publisher": "高等教育出版社",
+        "edition": "十二五规划教材",
+        "chapters": 7,
+        "pages": 422,
+        "url": "https://book.yunzhan365.com/ghlf/wmvs/mobile/index.html"
+      },
+      {
+        "name": "OpenStax Calculus Volume 1",
+        "author": "Strang & Herman",
+        "publisher": "OpenStax",
+        "edition": "Free Open Textbook",
+        "chapters": 6,
+        "pages": 873,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-ph1-010",
+    "name": "大学物理（上）",
+    "school": "中国科学技术大学",
+    "instructor": "钱教授",
+    "category": "物理",
+    "credit": 4,
+    "term": "2026春",
+    "description": "国家精品课程。系统学习经典力学、热学和电磁学基础理论与实验方法。采用研究型教学模式，结合PhET互动仿真实验。",
+    "sourceUrl": "https://www.icourse163.org/course/USTC-1001814002",
+    "studentCount": 92000,
+    "rating": 4.8,
+    "resourceCount": 110,
+    "status": "ongoing",
+    "textbook": "大学物理学（第3版）上册",
+    "period": 64,
+    "chapterCount": 10,
+    "chapterTitles": [
+      "质点运动学",
+      "牛顿运动定律",
+      "动量与能量",
+      "刚体转动",
+      "流体力学",
+      "机械振动",
+      "机械波",
+      "热力学基础",
+      "静电场",
+      "恒定磁场"
+    ],
+    "pptList": [
+      {
+        "name": "第1章·质点运动学",
+        "size": "3.5MB",
+        "pages": 48,
+        "url": "/ppt/ph/ch01.pdf"
+      },
+      {
+        "name": "第2章·牛顿定律",
+        "size": "4.0MB",
+        "pages": 52,
+        "url": "/ppt/ph/ch02.pdf"
+      },
+      {
+        "name": "第9章·静电场",
+        "size": "4.5MB",
+        "pages": 58,
+        "url": "/ppt/ph/ch09.pdf"
+      },
+      {
+        "name": "第10章·磁场",
+        "size": "4.2MB",
+        "pages": 55,
+        "url": "/ppt/ph/ch10.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "1-1 质点运动描述",
+        "duration": "28:30",
+        "views": "10.2万",
+        "url": "/video/ph/1-1.mp4"
+      },
+      {
+        "name": "2-1 牛顿三定律",
+        "duration": "35:20",
+        "views": "9.5万",
+        "url": "/video/ph/2-1.mp4"
+      },
+      {
+        "name": "3-1 功能原理",
+        "duration": "32:10",
+        "views": "8.2万",
+        "url": "/video/ph/3-1.mp4"
+      },
+      {
+        "name": "9-1 高斯定理",
+        "duration": "38:45",
+        "views": "7.8万",
+        "url": "/video/ph/9-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "动量守恒定律的适用条件是？",
+        "options": [
+          "合外力为零",
+          "合外力矩为零",
+          "机械能守恒",
+          "角动量守恒"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "牛顿第一定律又称为什么定律？",
+        "options": [
+          "惯性定律",
+          "加速度定律",
+          "作用与反作用定律",
+          "万有引力定律"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "光的干涉现象证明了光的什么性质？",
+        "options": [
+          "粒子性",
+          "波动性",
+          "量子性",
+          "电磁性"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "OpenStax University Physics Vol 1",
+        "author": "Ling, Sanny & Moebs",
+        "publisher": "OpenStax",
+        "edition": "Free Open Textbook",
+        "chapters": 17,
+        "pages": 1018,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/UniversityPhysicsVolume1-LR.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-cs-013",
+    "name": "离散数学",
+    "school": "电子科技大学",
+    "instructor": "王教授",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "学习数理逻辑、集合论、图论、代数系统四大核心理论。计算机科学的重要数学基础，培养抽象思维和逻辑推理能力。",
+    "sourceUrl": "https://www.icourse163.org/course/UESTC-1002263009",
+    "studentCount": 45600,
+    "rating": 4.5,
+    "resourceCount": 68,
+    "status": "ongoing",
+    "textbook": "离散数学（第2版）",
+    "period": 64,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "数理逻辑",
+      "集合论",
+      "关系与函数",
+      "图论基础",
+      "树与平面图",
+      "代数系统",
+      "格与布尔代数",
+      "形式语言与自动机"
+    ],
+    "pptList": [
+      {
+        "name": "第1章·命题逻辑",
+        "size": "3.8MB",
+        "pages": 50,
+        "url": "/ppt/dm/ch01.pdf"
+      },
+      {
+        "name": "第4章·图论",
+        "size": "4.5MB",
+        "pages": 58,
+        "url": "/ppt/dm/ch04.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "1-1 命题与联结词",
+        "duration": "25:30",
+        "views": "4.8万",
+        "url": "/video/dm/1-1.mp4"
+      },
+      {
+        "name": "4-1 图的基本概念",
+        "duration": "32:15",
+        "views": "4.2万",
+        "url": "/video/dm/4-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "命题公式(p→q)∧p→q是？",
+        "options": [
+          "重言式",
+          "矛盾式",
+          "可满足式",
+          "永假式"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-ml-014",
+    "name": "机器学习",
+    "school": "清华大学",
+    "instructor": "张教授",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026秋",
+    "description": "MOOC明星课程。系统学习监督学习、无监督学习、强化学习等核心机器学习理论与算法，基于Python和Scikit-learn实现。",
+    "sourceUrl": "https://www.icourse163.org/course/WZU-1464096179",
+    "studentCount": 125000,
+    "rating": 4.8,
+    "resourceCount": 95,
+    "status": "upcoming",
+    "textbook": "机器学习（西瓜书）",
+    "period": 72,
+    "chapterCount": 10,
+    "chapterTitles": [
+      "绪论",
+      "模型评估与选择",
+      "线性模型",
+      "决策树",
+      "神经网络",
+      "支持向量机SVM",
+      "贝叶斯分类器",
+      "集成学习",
+      "聚类",
+      "降维与度量学习"
+    ],
+    "pptList": [
+      {
+        "name": "846页PPT课件下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://view.officeapps.live.com/op/embed.aspx?src=https://www.icourse163.org/course/WZU-1464096179",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "课程代码与资源",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "https://view.officeapps.live.com/op/embed.aspx?src=https://www.icourse163.org/course/WZU-1464096179",
+        "platform": "web",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 机器学习概述",
+        "duration": "28:10",
+        "views": "52万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第2章 回归",
+        "duration": "45:30",
+        "views": "48万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=10",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第3章 逻辑回归",
+        "duration": "38:20",
+        "views": "42万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=20",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第4章 朴素贝叶斯",
+        "duration": "32:15",
+        "views": "35万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=28",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第5章 KNN",
+        "duration": "25:40",
+        "views": "30万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=34",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第6章 决策树",
+        "duration": "42:10",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=42",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第7章 集成学习",
+        "duration": "48:30",
+        "views": "32万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=52",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第8章 神经网络",
+        "duration": "55:20",
+        "views": "55万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=62",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第9章 SVM",
+        "duration": "46:40",
+        "views": "45万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=72",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第10章 聚类",
+        "duration": "36:15",
+        "views": "28万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=80",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第11章 降维",
+        "duration": "28:30",
+        "views": "22万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=88",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      }
+    ],
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "SVM中核函数的作用是？",
+        "options": [
+          "特征降维",
+          "将数据映射到高维空间",
+          "加速训练",
+          "防止过拟合"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "bilibili_url": "https://www.bilibili.com/video/BV1gP4y177cf"
+  },
+  {
+    "id": "mooc-en-015",
+    "name": "大学英语（一）",
+    "school": "北京外国语大学",
+    "instructor": "周教授",
+    "category": "英语",
+    "credit": 4,
+    "term": "2026春",
+    "description": "综合提升英语听、说、读、写能力，夯实语言基础与跨文化交际意识。配套新视野大学英语读写教程。",
+    "sourceUrl": "https://www.icourse163.org/course/BFSU-1001561001",
+    "studentCount": 201500,
+    "rating": 4.7,
+    "resourceCount": 65,
+    "status": "ongoing",
+    "textbook": "新视野大学英语读写1",
+    "period": 64,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "Fresh Start",
+      "Loving Parents",
+      "Digital Campus",
+      "Heroes of Our Time",
+      "Winning Is Not Everything",
+      "Less Is More",
+      "Women: Making a Difference",
+      "Human Rights vs Animal Rights"
+    ],
+    "pptList": [
+      {
+        "name": "Unit 1·Fresh Start",
+        "size": "4.5MB",
+        "pages": 60,
+        "url": "/ppt/en/u01.pdf"
+      },
+      {
+        "name": "Unit 3·Digital Campus",
+        "size": "4.0MB",
+        "pages": 55,
+        "url": "/ppt/en/u03.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "U1-1 精读讲解",
+        "duration": "35:20",
+        "views": "18.5万",
+        "url": "/video/en/u1-1.mp4"
+      },
+      {
+        "name": "U3-1 听力训练",
+        "duration": "28:40",
+        "views": "15.2万",
+        "url": "/video/en/u3-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "The word 'diverse' most closely means?",
+        "options": [
+          "相似的",
+          "多样的",
+          "相反的",
+          "极端的"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "The word \"significant\" most nearly means?",
+        "options": [
+          "小的",
+          "重要的",
+          "明显的",
+          "大量的"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "Which tense is used to describe an action that happened before another past action?",
+        "options": [
+          "Past Simple",
+          "Past Perfect",
+          "Present Perfect",
+          "Past Continuous"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "新视野大学英语读写1",
+        "author": "周教授",
+        "publisher": "北京外国语大学出版社",
+        "chapters": 8,
+        "pages": 300,
+        "url": "https://book.yunzhan365.com/search?keyword=新视野大学英语读写1"
+      }
+    ]
+  },
+  {
+    "id": "mooc-se-016",
+    "name": "软件工程",
+    "school": "复旦大学",
+    "instructor": "赵文耘",
+    "category": "计算机科学",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "国家精品课程。学习软件生命周期全过程：需求分析、系统设计、编码实现、测试与维护管理。配套UML建模工具实践。",
+    "sourceUrl": "https://www.icourse163.org/course/FUDAN-1001832012",
+    "studentCount": 76500,
+    "rating": 4.4,
+    "resourceCount": 72,
+    "status": "upcoming",
+    "textbook": "软件工程导论（第6版）",
+    "period": 48,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "软件工程概述",
+      "可行性分析",
+      "需求分析",
+      "总体设计",
+      "详细设计",
+      "编码实现",
+      "软件测试",
+      "软件维护"
+    ],
+    "pptList": [
+      {
+        "name": "第3章·需求分析",
+        "size": "4.2MB",
+        "pages": 56,
+        "url": "/ppt/se/ch03.pdf"
+      },
+      {
+        "name": "第4章·总体设计",
+        "size": "3.8MB",
+        "pages": 52,
+        "url": "/ppt/se/ch04.pdf"
+      },
+      {
+        "name": "第7章·软件测试",
+        "size": "4.5MB",
+        "pages": 60,
+        "url": "/ppt/se/ch07.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "3-1 需求获取技术",
+        "duration": "32:10",
+        "views": "5.8万",
+        "url": "/video/se/3-1.mp4"
+      },
+      {
+        "name": "4-1 架构设计",
+        "duration": "38:25",
+        "views": "5.2万",
+        "url": "/video/se/4-1.mp4"
+      },
+      {
+        "name": "7-1 白盒测试",
+        "duration": "28:40",
+        "views": "6.5万",
+        "url": "/video/se/7-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "软件生命周期模型中，哪个模型强调风险驱动？",
+        "options": [
+          "瀑布模型",
+          "螺旋模型",
+          "增量模型",
+          "敏捷开发"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-mic-017",
+    "name": "微观经济学",
+    "school": "北京大学",
+    "instructor": "周其仁",
+    "category": "经济学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "中国大学MOOC经济学类标杆课程。学习供求理论、消费者行为、厂商理论及不同市场结构的均衡分析方法。",
+    "sourceUrl": "https://www.icourse163.org/course/PKU-1002164003",
+    "studentCount": 85000,
+    "rating": 4.8,
+    "resourceCount": 82,
+    "status": "ongoing",
+    "textbook": "微观经济学（第9版）",
+    "period": 64,
+    "chapterCount": 11,
+    "chapterTitles": [
+      "绪论",
+      "供求理论",
+      "弹性理论",
+      "消费者选择",
+      "生产理论",
+      "成本理论",
+      "完全竞争市场",
+      "不完全竞争市场",
+      "生产要素市场",
+      "一般均衡与福利经济学",
+      "市场失灵与微观经济政策"
+    ],
+    "pptList": [
+      {
+        "name": "第2章·供求理论",
+        "size": "3.2MB",
+        "pages": 45,
+        "url": "/ppt/mic/ch02.pdf"
+      },
+      {
+        "name": "第7章·完全竞争",
+        "size": "3.8MB",
+        "pages": 50,
+        "url": "/ppt/mic/ch07.pdf"
+      },
+      {
+        "name": "第8章·不完全竞争",
+        "size": "4.0MB",
+        "pages": 52,
+        "url": "/ppt/mic/ch08.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "2-1 需求与供给曲线",
+        "duration": "30:20",
+        "views": "8.2万",
+        "url": "/video/mic/2-1.mp4"
+      },
+      {
+        "name": "7-1 利润最大化",
+        "duration": "35:10",
+        "views": "6.8万",
+        "url": "/video/mic/7-1.mp4"
+      },
+      {
+        "name": "8-1 垄断分析",
+        "duration": "32:40",
+        "views": "5.9万",
+        "url": "/video/mic/8-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "需求价格弹性等于1时，降价会使总收益？",
+        "options": [
+          "增加",
+          "减少",
+          "不变",
+          "不确定"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "机会成本的定义是？",
+        "options": [
+          "放弃的最高代价",
+          "会计成本",
+          "直接成本",
+          "沉没成本"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "GDP的全称是？",
+        "options": [
+          "国民生产总值",
+          "国内生产总值",
+          "国民生产净值",
+          "国内生产净值"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "Principles of Microeconomics 2e",
+        "author": "Greenlaw & Shapiro",
+        "publisher": "OpenStax",
+        "edition": "2nd Edition",
+        "chapters": 20,
+        "pages": 571,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/PrinciplesofMicroeconomics2e-OP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-eco-018",
+    "name": "宏观经济学",
+    "school": "中国人民大学",
+    "instructor": "高鸿业",
+    "category": "经济学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "经典宏观经济学教材配套MOOC。学习国民收入核算、IS-LM模型、AD-AS模型及宏观经济政策分析。",
+    "sourceUrl": "https://www.icourse163.org/course/RUC-1002410003",
+    "studentCount": 72000,
+    "rating": 4.7,
+    "resourceCount": 75,
+    "status": "ongoing",
+    "textbook": "宏观经济学（第8版）",
+    "period": 64,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "宏观经济基本指标",
+      "国民收入决定理论",
+      "IS-LM模型",
+      "AD-AS模型",
+      "失业与通货膨胀",
+      "宏观经济政策",
+      "开放宏观经济",
+      "经济增长理论"
+    ],
+    "pptList": [
+      {
+        "name": "第3章·IS-LM模型",
+        "size": "4.5MB",
+        "pages": 58,
+        "url": "/ppt/eco/ch03.pdf"
+      },
+      {
+        "name": "第4章·AD-AS模型",
+        "size": "4.0MB",
+        "pages": 52,
+        "url": "/ppt/eco/ch04.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "3-1 IS曲线推导",
+        "duration": "35:20",
+        "views": "6.5万",
+        "url": "/video/eco/3-1.mp4"
+      },
+      {
+        "name": "4-1 总供给曲线",
+        "duration": "32:10",
+        "views": "5.8万",
+        "url": "/video/eco/4-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "IS-LM模型中，财政政策的效果主要取决于？",
+        "options": [
+          "LM曲线斜率",
+          "IS曲线斜率",
+          "货币供给量",
+          "税率"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "机会成本的定义是？",
+        "options": [
+          "放弃的最高代价",
+          "会计成本",
+          "直接成本",
+          "沉没成本"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "GDP的全称是？",
+        "options": [
+          "国民生产总值",
+          "国内生产总值",
+          "国民生产净值",
+          "国内生产净值"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "Principles of Microeconomics 2e",
+        "author": "Greenlaw & Shapiro",
+        "publisher": "OpenStax",
+        "edition": "2nd Edition",
+        "chapters": 20,
+        "pages": 571,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/PrinciplesofMicroeconomics2e-OP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-c-019",
+    "name": "程序设计基础（C语言）",
+    "school": "浙江大学",
+    "instructor": "翁恺",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "中国大学MOOC零基础学编程第一课。从零开始学习C语言程序设计，掌握结构化编程思想，配套PTA在线判题系统。累计选课超200万人次。",
+    "sourceUrl": "https://www.icourse163.org/course/ZJU-1001615004",
+    "studentCount": 235000,
+    "rating": 4.9,
+    "resourceCount": 88,
+    "status": "ongoing",
+    "textbook": "C语言程序设计（第3版）",
+    "period": 72,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "程序设计入门",
+      "分支与循环",
+      "数组与函数",
+      "指针",
+      "字符串",
+      "结构体与链表",
+      "文件操作",
+      "综合项目"
+    ],
+    "pptList": [
+      {
+        "name": "第1章·入门",
+        "size": "3.0MB",
+        "pages": 42,
+        "url": "/ppt/c/ch01.pdf"
+      },
+      {
+        "name": "第3章·数组与函数",
+        "size": "4.2MB",
+        "pages": 55,
+        "url": "/ppt/c/ch03.pdf"
+      },
+      {
+        "name": "第4章·指针",
+        "size": "4.5MB",
+        "pages": 58,
+        "url": "/ppt/c/ch04.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "1-1 Hello World",
+        "duration": "12:30",
+        "views": "52.3万",
+        "url": "/video/c/1-1.mp4"
+      },
+      {
+        "name": "3-1 数组",
+        "duration": "28:20",
+        "views": "35.8万",
+        "url": "/video/c/3-1.mp4"
+      },
+      {
+        "name": "4-1 指针入门",
+        "duration": "35:40",
+        "views": "42.5万",
+        "url": "/video/c/4-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "C语言中，数组名作为函数参数传递的是？",
+        "options": [
+          "数组首地址",
+          "整个数组",
+          "数组长度",
+          "数组类型"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-ai-020",
+    "name": "人工智能导论",
+    "school": "北京大学",
+    "instructor": "李文新",
+    "category": "计算机科学",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "学习AI基本概念与方法：搜索策略、知识表示、机器学习、深度学习基础等。配套Python/AI平台实验。",
+    "sourceUrl": "https://www.icourse163.org/course/PKU-1002537008",
+    "studentCount": 68500,
+    "rating": 4.6,
+    "resourceCount": 58,
+    "status": "upcoming",
+    "textbook": "人工智能：一种现代方法（第3版）",
+    "period": 48,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "AI概述",
+      "问题求解与搜索",
+      "知识表示与推理",
+      "机器学习基础",
+      "神经网络与深度学习",
+      "自然语言处理",
+      "计算机视觉",
+      "AI伦理与安全"
+    ],
+    "pptList": [
+      {
+        "name": "第2章·搜索策略",
+        "size": "4.0MB",
+        "pages": 52,
+        "url": "/ppt/ai/ch02.pdf"
+      },
+      {
+        "name": "第5章·深度学习",
+        "size": "5.5MB",
+        "pages": 68,
+        "url": "/ppt/ai/ch05.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "2-1 盲目搜索",
+        "duration": "32:10",
+        "views": "4.8万",
+        "url": "/video/ai/2-1.mp4"
+      },
+      {
+        "name": "5-1 CNN原理",
+        "duration": "42:30",
+        "views": "6.2万",
+        "url": "/video/ai/5-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "A*搜索算法中，启发式函数h(n)需满足什么条件才能保证最优解？",
+        "options": [
+          "可采纳性",
+          "一致性",
+          "单调性",
+          "对称性"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-se-021",
+    "name": "Python网络爬虫与信息提取",
+    "school": "中国农业大学",
+    "instructor": "嵩天",
+    "category": "计算机科学",
+    "credit": 2,
+    "term": "2026春",
+    "description": "中国大学MOOC Python系列课程。学习Requests/Scrapy框架、BeautifulSoup解析、动态网页爬取与反爬策略。",
+    "sourceUrl": "https://www.icourse163.org/course/CAU-1002472003",
+    "studentCount": 152000,
+    "rating": 4.7,
+    "resourceCount": 42,
+    "status": "ongoing",
+    "textbook": "Python网络爬虫与信息提取",
+    "period": 32,
+    "chapterCount": 6,
+    "chapterTitles": [
+      "爬虫入门与Requests",
+      "信息提取与BeautifulSoup",
+      "动态网页与Selenium",
+      "Scrapy框架",
+      "反爬与策略",
+      "数据存储与可视化"
+    ],
+    "pptList": [
+      {
+        "name": "第1章·Requests库",
+        "size": "2.8MB",
+        "pages": 38,
+        "url": "/ppt/pc/ch01.pdf"
+      },
+      {
+        "name": "第4章·Scrapy",
+        "size": "3.5MB",
+        "pages": 48,
+        "url": "/ppt/pc/ch04.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "1-1 Requests入门",
+        "duration": "22:10",
+        "views": "18.5万",
+        "url": "/video/pc/1-1.mp4"
+      },
+      {
+        "name": "4-1 Scrapy架构",
+        "duration": "35:20",
+        "views": "12.8万",
+        "url": "/video/pc/4-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "Requests库中，获取网页内容的方法是？",
+        "options": [
+          "request.get()",
+          "requests.get()",
+          "request.post()",
+          "requests.post()"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-bio-022",
+    "name": "生命科学导论",
+    "school": "北京大学",
+    "instructor": "顾孝诚",
+    "category": "生物",
+    "credit": 3,
+    "term": "2026春",
+    "description": "面向非生物专业的通识课。系统介绍生命科学的基本概念、原理与前沿进展，涵盖分子生物学、细胞生物学、遗传学、进化论等内容。",
+    "sourceUrl": "https://www.icourse163.org/course/PKU-1001563006",
+    "studentCount": 52000,
+    "rating": 4.5,
+    "resourceCount": 48,
+    "status": "ongoing",
+    "textbook": "生命科学导论（第3版）",
+    "period": 48,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "生命的化学基础",
+      "细胞的结构与功能",
+      "能量与代谢",
+      "遗传与基因",
+      "分子生物学中心法则",
+      "生物技术",
+      "进化与多样性",
+      "生态与环境"
+    ],
+    "pptList": [
+      {
+        "name": "第1章·化学基础",
+        "size": "3.2MB",
+        "pages": 44,
+        "url": "/ppt/bio/ch01.pdf"
+      },
+      {
+        "name": "第4章·遗传学",
+        "size": "4.0MB",
+        "pages": 52,
+        "url": "/ppt/bio/ch04.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "1-1 生物大分子",
+        "duration": "28:30",
+        "views": "3.8万",
+        "url": "/video/bio/1-1.mp4"
+      },
+      {
+        "name": "4-1 孟德尔遗传",
+        "duration": "35:20",
+        "views": "3.2万",
+        "url": "/video/bio/4-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "DNA双螺旋结构中，碱基配对规则是？",
+        "options": [
+          "A-T, G-C",
+          "A-C, G-T",
+          "A-G, C-T",
+          "A-U, G-C"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "DNA复制的方式是？",
+        "options": [
+          "半保留复制",
+          "全保留复制",
+          "分散复制",
+          "随机复制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "有氧呼吸的主要场所是？",
+        "options": [
+          "细胞核",
+          "线粒体",
+          "叶绿体",
+          "内质网"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "生命科学导论（第3版）",
+        "author": "顾孝诚",
+        "publisher": "北京大学出版社",
+        "chapters": 8,
+        "pages": 300,
+        "url": "https://book.yunzhan365.com/search?keyword=生命科学导论（第3版）"
+      }
+    ]
+  },
+  {
+    "id": "mooc-cn-023",
+    "name": "深入理解计算机系统",
+    "school": "北京大学",
+    "instructor": "陆俊林",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "CMU经典教材CS:APP中文配套MOOC。从程序员视角理解计算机系统，掌握内存层次、链接、异常控制流、虚拟内存等核心概念。",
+    "sourceUrl": "https://www.icourse163.org/course/PKU-1002536012",
+    "studentCount": 38000,
+    "rating": 4.9,
+    "resourceCount": 56,
+    "status": "ongoing",
+    "textbook": "深入理解计算机系统（第3版）",
+    "period": 72,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "计算机系统漫游",
+      "信息的表示与处理",
+      "程序的机器级表示",
+      "处理器体系结构",
+      "优化程序性能",
+      "存储器层次结构",
+      "链接",
+      "异常控制流"
+    ],
+    "pptList": [
+      {
+        "name": "第2章·信息表示",
+        "size": "3.8MB",
+        "pages": 50,
+        "url": "/ppt/csapp/ch02.pdf"
+      },
+      {
+        "name": "第6章·存储器层次",
+        "size": "4.5MB",
+        "pages": 58,
+        "url": "/ppt/csapp/ch06.pdf"
+      },
+      {
+        "name": "第7章·链接",
+        "size": "3.5MB",
+        "pages": 46,
+        "url": "/ppt/csapp/ch07.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "2-1 信息存储",
+        "duration": "32:10",
+        "views": "4.2万",
+        "url": "/video/csapp/2-1.mp4"
+      },
+      {
+        "name": "6-1 局部性原理",
+        "duration": "38:20",
+        "views": "3.8万",
+        "url": "/video/csapp/6-1.mp4"
+      },
+      {
+        "name": "7-1 链接过程",
+        "duration": "42:15",
+        "views": "3.5万",
+        "url": "/video/csapp/7-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "虚拟内存的主要作用是？",
+        "options": [
+          "扩大物理内存",
+          "提供进程隔离",
+          "提高CPU速度",
+          "减少磁盘I/O"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-java-024",
+    "name": "Java程序设计",
+    "school": "北京大学",
+    "instructor": "唐大仕",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "零基础学习Java面向对象编程。涵盖基础语法、面向对象、异常处理、集合框架、IO流、多线程、网络编程等核心内容。",
+    "sourceUrl": "https://www.icourse163.org/course/PKU-1001942002",
+    "studentCount": 168000,
+    "rating": 4.6,
+    "resourceCount": 76,
+    "status": "ongoing",
+    "textbook": "Java核心技术（第10版）",
+    "period": 64,
+    "chapterCount": 9,
+    "chapterTitles": [
+      "Java入门",
+      "面向对象基础",
+      "继承与多态",
+      "异常处理",
+      "集合与泛型",
+      "IO流",
+      "多线程",
+      "网络编程",
+      "Java新特性"
+    ],
+    "pptList": [
+      {
+        "name": "第2章·面向对象",
+        "size": "4.2MB",
+        "pages": 55,
+        "url": "/ppt/java/ch02.pdf"
+      },
+      {
+        "name": "第7章·多线程",
+        "size": "3.8MB",
+        "pages": 50,
+        "url": "/ppt/java/ch07.pdf"
+      }
+    ],
+    "videoList": [
+      {
+        "name": "2-1 类与对象",
+        "duration": "32:20",
+        "views": "22.5万",
+        "url": "/video/java/2-1.mp4"
+      },
+      {
+        "name": "7-1 线程创建",
+        "duration": "28:40",
+        "views": "15.8万",
+        "url": "/video/java/7-1.mp4"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "Java中final关键字不能用来修饰？",
+        "options": [
+          "类",
+          "方法",
+          "变量",
+          "接口"
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  }
+]

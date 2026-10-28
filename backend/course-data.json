@@ -1,0 +1,5818 @@
+[
+  {
+    "id": "mooc-dsa-001",
+    "name": "数据结构与算法",
+    "school": "浙江大学",
+    "instructor": "陈越",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "国家精品课程·MOOC首批上线课程。系统学习线性表、栈队列、树、图等核心数据结构及经典查找排序算法，掌握复杂度分析方法与编程实现。配套PTA在线判题平台。",
+    "richDesc": "<h3>课程概述</h3><p>《数据结构与算法》是浙江大学陈越教授主讲的MOOC课程，在中国大学MOOC平台累计选课超50万人次。课程以C语言为描述工具，强调理论联系实际，通过大量编程实践培养计算思维。</p><h3>先修知识</h3><p>C语言程序设计、离散数学基础</p><h3>教材</h3><p>《数据结构（第2版）》陈越主编，高等教育出版社</p><h3>参考教材</h3><p>《数据结构与算法分析：C语言描述》Mark Allen Weiss</p><h3>考核方式</h3><p>单元测验30% + 编程作业40% + 期末考试30%</p>",
+    "studentCount": 186500,
+    "rating": 4.9,
+    "resourceCount": 128,
+    "status": "ongoing",
+    "textbook": "数据结构（第2版）·高教社",
+    "period": 72,
+    "chapterCount": 10,
+    "chapterTitles": [
+      "绪论",
+      "线性表",
+      "栈和队列",
+      "串与数组",
+      "树与二叉树",
+      "图",
+      "查找",
+      "排序",
+      "动态存储管理",
+      "文件"
+    ],
+    "chapters": {
+      "绪论": {
+        "points": [
+          "数据结构的基本概念与术语",
+          "算法定义与五大特性",
+          "时间复杂度与空间复杂度分析",
+          "抽象数据类型ADT",
+          "最大子列和问题"
+        ],
+        "lessons": [
+          {
+            "name": "1-1 什么是数据结构",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "15:23",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "1-2 算法复杂度分析",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "22:10",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第1章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "38页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "线性表": {
+        "points": [
+          "顺序表与链式存储",
+          "单链表与双向链表",
+          "循环链表",
+          "一元多项式加法",
+          "线性表的应用"
+        ],
+        "lessons": [
+          {
+            "name": "2-1 顺序表实现",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "18:45",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "2-2 链表操作",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "25:30",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "2-3 多项式加法实现",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "12:08",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第2章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "45页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "栈和队列": {
+        "points": [
+          "栈的LIFO特性",
+          "顺序栈与链栈",
+          "队列的FIFO特性",
+          "循环队列",
+          "表达式求值"
+        ],
+        "lessons": [
+          {
+            "name": "3-1 栈的实现与应用",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "20:15",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "3-2 队列实现",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "16:40",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "3-3 中缀转后缀",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "19:55",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第3章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "42页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "树与二叉树": {
+        "points": [
+          "树的概念与遍历",
+          "二叉树性质与存储",
+          "二叉搜索树BST",
+          "平衡二叉树AVL",
+          "Huffman树"
+        ],
+        "lessons": [
+          {
+            "name": "4-1 二叉树遍历",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "28:30",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "4-2 BST操作",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "24:10",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "4-3 AVL旋转调整",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "32:25",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第4章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "56页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "图": {
+        "points": [
+          "图的存储结构",
+          "DFS和BFS遍历",
+          "最小生成树",
+          "最短路径",
+          "拓扑排序"
+        ],
+        "lessons": [
+          {
+            "name": "5-1 图的邻接矩阵",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "22:18",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "5-2 图遍历算法",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "26:45",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "5-3 Dijkstra算法",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "34:20",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第5章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "62页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "查找": {
+        "points": [
+          "二分查找",
+          "二叉排序树查找",
+          "AVL查找分析",
+          "B树与B+树",
+          "哈希查找"
+        ],
+        "lessons": [
+          {
+            "name": "6-1 查找算法",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "20:30",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "6-2 哈希表",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "27:15",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第6章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "50页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      },
+      "排序": {
+        "points": [
+          "插入排序与希尔排序",
+          "交换排序与快速排序",
+          "选择排序与堆排序",
+          "归并排序",
+          "基数排序与复杂度对比"
+        ],
+        "lessons": [
+          {
+            "name": "7-1 插入与希尔排序",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "23:40",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "7-2 快排与归并",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "31:20",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "7-3 堆排序",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "28:10",
+            "btnIcon": "el-icon-view",
+            "btnText": "观看"
+          },
+          {
+            "name": "第7章课件PPT",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "58页",
+            "btnIcon": "el-icon-view",
+            "btnText": "预览"
+          }
+        ]
+      }
+    },
+    "pptList": [
+      {
+        "name": "第1章 绪论课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第2章 线性表课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第3章 栈和队列课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第4章 树课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第5章 图课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第6章 查找课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第7章 排序课件",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "算法代码实现",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1讲 基本概念",
+        "duration": "18:30",
+        "views": "186万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第2讲 线性结构",
+        "duration": "32:15",
+        "views": "152万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=12",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第3讲 树(上)",
+        "duration": "45:20",
+        "views": "128万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=32",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第4讲 树(中)",
+        "duration": "38:40",
+        "views": "115万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=48",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第5讲 树(下)",
+        "duration": "42:10",
+        "views": "98万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=62",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第6讲 图(上)",
+        "duration": "36:25",
+        "views": "92万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=78",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第7讲 图(中)-最短路径",
+        "duration": "44:30",
+        "views": "105万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=92",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第8讲 图(下)-最小生成树",
+        "duration": "40:15",
+        "views": "88万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=105",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第9讲 排序(上)",
+        "duration": "48:20",
+        "views": "96万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=118",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第10讲 排序(下)",
+        "duration": "35:10",
+        "views": "82万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=132",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第11讲 散列查找",
+        "duration": "28:45",
+        "views": "78万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=140",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      },
+      {
+        "name": "第12讲 KMP算法",
+        "duration": "22:30",
+        "views": "65万",
+        "url": "https://www.bilibili.com/video/av55114968/?p=145",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/ZJU-93001"
+      }
+    ],
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "在长度为n的顺序表中插入一个元素的时间复杂度是？",
+        "options": [
+          "O(1)",
+          "O(logn)",
+          "O(n)",
+          "O(n²)"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "栈和队列的共同特点是？",
+        "options": [
+          "都是先进先出",
+          "都是先进后出",
+          "只允许在端点处插入和删除元素",
+          "没有共同点"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "在一棵深度为5的完全二叉树中最多有多少个结点？",
+        "options": [
+          "15",
+          "31",
+          "32",
+          "63"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "下列排序算法中，最坏情况下时间复杂度最低的是？",
+        "options": [
+          "冒泡排序",
+          "快速排序",
+          "归并排序",
+          "插入排序"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "哈希表解决冲突的方法不包括？",
+        "options": [
+          "链地址法",
+          "开放地址法",
+          "再哈希法",
+          "二分查找法"
+        ],
+        "answer": "D"
+      }
+    ],
+    "source": "mooc_seed",
+    "sourceUrl": "https://www.icourse163.org/course/ZJU-93001",
+    "bilibili_url": "https://www.bilibili.com/video/av55114968/"
+  },
+  {
+    "id": "mooc-os-002",
+    "name": "操作系统",
+    "school": "北京大学",
+    "instructor": "陈向群",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "国家精品课程·深入理解进程管理、内存管理、文件系统、I/O设备管理等操作系统核心原理与实现技术。结合Linux和Windows实例讲解内核工作机制。",
+    "richDesc": "<h3>课程概述</h3><p>北京大学操作系统MOOC课程，在中国大学MOOC平台已开设12轮，累计选课超30万人次。课程以进程管理、存储器管理、文件管理和设备管理四大模块为主线。</p><h3>教材</h3><p>《计算机操作系统（第4版）》汤小丹·西安电子科技大学出版社</p>",
+    "studentCount": 125600,
+    "rating": 4.7,
+    "resourceCount": 96,
+    "status": "ongoing",
+    "textbook": "计算机操作系统（第4版）",
+    "period": 64,
+    "chapterCount": 9,
+    "chapterTitles": [
+      "操作系统引论",
+      "进程描述与控制",
+      "处理机调度与死锁",
+      "存储器管理",
+      "虚拟存储器",
+      "输入输出系统",
+      "文件管理",
+      "磁盘存储器管理",
+      "操作系统接口"
+    ],
+    "chapters": {
+      "操作系统引论": {
+        "points": [
+          "操作系统的定义与目标",
+          "OS发展历程",
+          "基本特征：并发/共享/虚拟/异步",
+          "五大功能",
+          "内核架构：宏内核vs微内核"
+        ],
+        "lessons": []
+      },
+      "进程描述与控制": {
+        "points": [
+          "PCB进程控制块",
+          "进程三态模型",
+          "进程创建fork",
+          "线程的引入",
+          "内核线程vs用户线程"
+        ],
+        "lessons": []
+      },
+      "处理机调度与死锁": {
+        "points": [
+          "三级调度体系",
+          "FCFS/SJF/优先级/RR算法",
+          "死锁必要条件",
+          "银行家算法",
+          "死锁检测与恢复"
+        ],
+        "lessons": []
+      },
+      "存储器管理": {
+        "points": [
+          "程序的装入与链接",
+          "连续分配方式",
+          "分页存储管理",
+          "快表TLB与多级页表",
+          "分段与段页式"
+        ],
+        "lessons": []
+      },
+      "虚拟存储器": {
+        "points": [
+          "虚拟存储概念与局部性原理",
+          "请求分页系统",
+          "页面置换算法OPT/FIFO/LRU/CLOCK",
+          "Belady异常",
+          "请求分段系统"
+        ],
+        "lessons": []
+      }
+    },
+    "pptList": [
+      {
+        "name": "华文慕课课件下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "操作系统原理课件PDF",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 操作系统概述",
+        "duration": "25:10",
+        "views": "68万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第2章 操作系统运行环境",
+        "duration": "32:20",
+        "views": "55万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=8",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第3章 进程线程模型",
+        "duration": "42:30",
+        "views": "72万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=16",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第4章 处理器调度",
+        "duration": "35:15",
+        "views": "48万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=24",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第5章 同步互斥",
+        "duration": "48:40",
+        "views": "85万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=30",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第6章 信号量与管程",
+        "duration": "52:20",
+        "views": "62万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=38",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第7章 存储管理",
+        "duration": "38:10",
+        "views": "56万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=46",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第8章 虚拟内存",
+        "duration": "44:25",
+        "views": "78万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=54",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第9章 文件系统",
+        "duration": "36:30",
+        "views": "42万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=60",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第10章 I/O系统",
+        "duration": "28:15",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=66",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      },
+      {
+        "name": "第11章 死锁",
+        "duration": "32:40",
+        "views": "52万",
+        "url": "https://www.bilibili.com/video/av20528688/?p=70",
+        "platform": "bilibili",
+        "_sourceUrl": "http://www.chinesemooc.org/mooc/4747"
+      }
+    ],
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "进程三种基本状态不包括？",
+        "options": [
+          "就绪",
+          "执行",
+          "阻塞",
+          "等待"
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "哪种页面置换算法可能产生Belady异常？",
+        "options": [
+          "OPT",
+          "LRU",
+          "FIFO",
+          "CLOCK"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "死锁四个必要条件中可被破坏来预防的是？",
+        "options": [
+          "互斥条件",
+          "请求和保持",
+          "不可剥夺",
+          "循环等待"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "sourceUrl": "http://www.chinesemooc.org/mooc/4747",
+    "bilibili_url": "https://www.bilibili.com/video/av20528688/"
+  },
+  {
+    "id": "mooc-cn-003",
+    "name": "计算机网络",
+    "school": "哈尔滨工业大学",
+    "instructor": "李全龙",
+    "category": "计算机科学",
+    "credit": 3,
+    "term": "2026春",
+    "description": "国家精品在线开放课程。系统掌握TCP/IP协议栈、网络体系结构、路由算法、传输控制与网络安全等核心技术。配套Cisco Packet Tracer实验。",
+    "richDesc": "<h3>课程概述</h3><p>哈工大计算机网络MOOC课程，以TCP/IP体系结构为主线，涵盖物理层到应用层的完整协议栈。配套思科模拟器实验环境。</p>",
+    "studentCount": 98000,
+    "rating": 4.6,
+    "resourceCount": 85,
+    "status": "ongoing",
+    "textbook": "计算机网络（第8版）·谢希仁",
+    "period": 56,
+    "chapterCount": 9,
+    "chapterTitles": [
+      "概述",
+      "物理层",
+      "数据链路层",
+      "网络层",
+      "运输层",
+      "应用层",
+      "网络安全",
+      "无线网络",
+      "下一代互联网"
+    ],
+    "chapters": {
+      "概述": {
+        "points": [
+          "计算机网络定义与分类",
+          "性能指标",
+          "OSI与TCP/IP体系结构",
+          "协议与服务"
+        ],
+        "lessons": []
+      },
+      "网络层": {
+        "points": [
+          "虚电路与数据报",
+          "IPv4编址与CIDR",
+          "ARP与ICMP",
+          "RIP/OSPF/BGP路由协议",
+          "IPv6"
+        ],
+        "lessons": []
+      },
+      "运输层": {
+        "points": [
+          "TCP/UDP协议",
+          "滑动窗口与流量控制",
+          "拥塞控制算法",
+          "三次握手与四次挥手"
+        ],
+        "lessons": []
+      },
+      "应用层": {
+        "points": [
+          "DNS域名系统",
+          "HTTP协议",
+          "SMTP与POP3",
+          "FTP与P2P"
+        ],
+        "lessons": []
+      }
+    },
+    "pptList": [
+      {
+        "name": "课件下载_MOOC平台",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 计算机网络概述",
+        "duration": "28:30",
+        "views": "42万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      },
+      {
+        "name": "第2章 物理层",
+        "duration": "35:20",
+        "views": "35万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=12",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      },
+      {
+        "name": "第3章 数据链路层",
+        "duration": "42:15",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=22",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      },
+      {
+        "name": "第4章 网络层",
+        "duration": "55:30",
+        "views": "56万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=35",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      },
+      {
+        "name": "第5章 运输层",
+        "duration": "48:20",
+        "views": "62万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=48",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      },
+      {
+        "name": "第6章 应用层",
+        "duration": "32:10",
+        "views": "28万",
+        "url": "https://www.bilibili.com/video/BV1BU4y1k7CV/?p=58",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/HIT-1002532006"
+      }
+    ],
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "TCP通过什么机制实现可靠传输？",
+        "options": [
+          "滑动窗口",
+          "CSMA/CD",
+          "ARP",
+          "ICMP"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "/24网络中可用主机地址数量是？",
+        "options": [
+          "256",
+          "254",
+          "128",
+          "512"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      }
+    ],
+    "source": "mooc_seed",
+    "sourceUrl": "https://www.icourse163.org/course/HIT-1002532006",
+    "bilibili_url": "https://www.bilibili.com/video/BV1BU4y1k7CV/"
+  },
+  {
+    "id": "mooc-db-004",
+    "name": "数据库系统概论",
+    "school": "中国人民大学",
+    "instructor": "王珊",
+    "category": "计算机科学",
+    "credit": 3,
+    "term": "2026春",
+    "description": "国家精品课程·国家级教学名师王珊教授主讲。全面学习关系模型、SQL语言、数据库设计方法、事务管理与查询优化技术。",
+    "sourceUrl": "https://www.icourse163.org/course/RUC-488001",
+    "studentCount": 112000,
+    "rating": 4.5,
+    "resourceCount": 78,
+    "status": "ongoing",
+    "textbook": "数据库系统概论（第5版）",
+    "period": 56,
+    "chapterCount": 11,
+    "chapterTitles": [
+      "绪论",
+      "关系数据库",
+      "SQL语言",
+      "数据库安全性",
+      "完整性",
+      "关系数据理论",
+      "数据库设计",
+      "嵌入式SQL",
+      "查询处理与优化",
+      "数据库恢复技术",
+      "并发控制"
+    ],
+    "pptList": [
+      {
+        "name": "MOOC官方课件下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "课件+习题(64讲)",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 数据库系统概述",
+        "duration": "30:20",
+        "views": "28万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第2章 关系数据库",
+        "duration": "42:30",
+        "views": "25万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=8",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第3章 SQL语言(上)",
+        "duration": "52:10",
+        "views": "42万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=16",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第4章 SQL语言(下)",
+        "duration": "45:20",
+        "views": "35万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=24",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第5章 数据库安全性",
+        "duration": "28:15",
+        "views": "18万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=32",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第6章 数据库完整性",
+        "duration": "32:40",
+        "views": "22万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=36",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第7章 关系数据理论",
+        "duration": "48:30",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=42",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第8章 数据库设计",
+        "duration": "55:10",
+        "views": "32万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=50",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      },
+      {
+        "name": "第9章 查询处理优化",
+        "duration": "38:25",
+        "views": "20万",
+        "url": "https://www.bilibili.com/video/BV1p1NoeTE89/?p=58",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/RUC-488001"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "关系模型的完整性约束不包括？",
+        "options": [
+          "实体完整性",
+          "参照完整性",
+          "用户定义完整性",
+          "事务完整性"
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "bilibili_url": "https://www.bilibili.com/video/BV1p1NoeTE89/"
+  },
+  {
+    "id": "mooc-co-005",
+    "name": "计算机组成原理",
+    "school": "清华大学",
+    "instructor": "王诚",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026秋",
+    "description": "学习计算机硬件系统组成与工作原理，包括运算器、存储器、控制器和I/O系统。配套Logisim数字电路仿真实验。",
+    "sourceUrl": "https://www.xuetangx.com/course/THU08091000267",
+    "studentCount": 89000,
+    "rating": 4.5,
+    "resourceCount": 72,
+    "status": "ongoing",
+    "textbook": "计算机组成原理（第3版）",
+    "period": 64,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "计算机系统概论",
+      "数据表示与运算",
+      "存储器层次",
+      "指令系统",
+      "中央处理器",
+      "总线",
+      "输入输出系统",
+      "并行体系结构"
+    ],
+    "pptList": [
+      {
+        "name": "清华课件+习题下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "在线播放50讲",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1讲 计算机系统概论",
+        "duration": "22:10",
+        "views": "35万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第2讲 数据表示",
+        "duration": "38:20",
+        "views": "32万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=8",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第3讲 运算方法与运算器",
+        "duration": "45:30",
+        "views": "28万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=16",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第4讲 存储系统",
+        "duration": "42:15",
+        "views": "30万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=24",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第5讲 指令系统",
+        "duration": "35:40",
+        "views": "25万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=32",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第6讲 CPU设计",
+        "duration": "52:20",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=40",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第7讲 总线",
+        "duration": "18:30",
+        "views": "15万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=46",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      },
+      {
+        "name": "第8讲 I/O系统",
+        "duration": "28:45",
+        "views": "22万",
+        "url": "https://www.bilibili.com/video/BV13t411C7gN/?p=50",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.xuetangx.com/course/THU08091000267"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "Cache的主要作用是？",
+        "options": [
+          "扩大存储容量",
+          "解决CPU与主存速度差异",
+          "永久存储数据",
+          "增加I/O接口"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "bilibili_url": "https://www.bilibili.com/video/BV13t411C7gN/"
+  },
+  {
+    "id": "mooc-am1-006",
+    "name": "高等数学（上）",
+    "school": "同济大学",
+    "instructor": "李教授",
+    "category": "数学",
+    "credit": 5,
+    "term": "2026春",
+    "description": "国家级精品课程·同济大学数学系出品。系统学习函数极限、导数与微分、不定积分与定积分，建立微积分基本思想与方法。配套同济《高等数学》第七版教材。",
+    "sourceUrl": "https://www.icourse163.org/course/TONGJI-53004",
+    "studentCount": 125800,
+    "rating": 4.8,
+    "resourceCount": 142,
+    "status": "ongoing",
+    "textbook": "高等数学（第7版）上册",
+    "period": 96,
+    "chapterCount": 7,
+    "chapterTitles": [
+      "函数与极限",
+      "导数与微分",
+      "微分中值定理与导数应用",
+      "不定积分",
+      "定积分",
+      "定积分的应用",
+      "微分方程"
+    ],
+    "chapters": {
+      "函数与极限": {
+        "points": [
+          "映射与函数",
+          "数列极限的ε-N定义",
+          "函数极限的ε-δ定义",
+          "两个重要极限",
+          "无穷小与无穷大",
+          "函数的连续性与间断点"
+        ],
+        "lessons": []
+      },
+      "导数与微分": {
+        "points": [
+          "导数定义与几何意义",
+          "基本求导公式",
+          "四则运算与链式法则",
+          "隐函数与参数方程求导",
+          "微分的定义与应用",
+          "高阶导数"
+        ],
+        "lessons": []
+      },
+      "微分中值定理与导数应用": {
+        "points": [
+          "Rolle定理",
+          "Lagrange中值定理",
+          "Cauchy中值定理",
+          "L'Hôpital法则",
+          "函数单调性与极值",
+          "曲线的凹凸性与拐点"
+        ],
+        "lessons": []
+      },
+      "不定积分": {
+        "points": [
+          "原函数与不定积分",
+          "基本积分公式",
+          "第一类换元积分法",
+          "第二类换元积分法",
+          "分部积分法",
+          "有理函数的积分"
+        ],
+        "lessons": []
+      },
+      "定积分": {
+        "points": [
+          "定积分的定义与几何意义",
+          "Newton-Leibniz公式",
+          "定积分的换元与分部",
+          "广义积分的收敛性"
+        ],
+        "lessons": []
+      },
+      "定积分的应用": {
+        "points": [
+          "平面图形面积",
+          "旋转体体积",
+          "平面曲线弧长",
+          "变力做功",
+          "液体压力与质心"
+        ],
+        "lessons": []
+      }
+    },
+    "pptList": [
+      {
+        "name": "超星学习通PPT下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "MOOC课件下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 函数与极限",
+        "duration": "45:20",
+        "views": "65万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=HHFS8NCI4",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第2章 导数与微分",
+        "duration": "52:10",
+        "views": "58万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=ZHGLDTAJD",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第3章 微分中值定理",
+        "duration": "48:30",
+        "views": "52万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=YHFS8NEFD",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第4章 不定积分",
+        "duration": "55:40",
+        "views": "48万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=QHFS8NFJA",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第5章 定积分",
+        "duration": "50:20",
+        "views": "45万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=THFS8NI1A",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第6章 定积分应用",
+        "duration": "38:15",
+        "views": "38万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=WHFS8NKBA",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第7章 微分方程",
+        "duration": "42:30",
+        "views": "35万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=RHFS8NMKA",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      }
+    ],
+    "textbookResources": [
+      {
+        "name": "高等数学（第7版）上册",
+        "author": "同济大学数学系",
+        "publisher": "高等教育出版社",
+        "edition": "十二五规划教材",
+        "chapters": 7,
+        "pages": 422,
+        "url": "https://book.yunzhan365.com/ghlf/wmvs/mobile/index.html"
+      },
+      {
+        "name": "OpenStax Calculus Volume 1",
+        "author": "Strang & Herman",
+        "publisher": "OpenStax",
+        "edition": "Free Open Textbook",
+        "chapters": 6,
+        "pages": 873,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "lim[x→0](sin3x)/x = ?",
+        "options": [
+          "0",
+          "1",
+          "3",
+          "不存在"
+        ],
+        "answer": "C"
+      },
+      {
+        "question": "f(x)=x³-3x的单调递增区间是？",
+        "options": [
+          "(-∞,-1)∪(1,+∞)",
+          "(-1,1)",
+          "(-∞,+∞)",
+          "(0,+∞)"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "∫₀¹x²dx = ?",
+        "options": [
+          "1/4",
+          "1/3",
+          "1/2",
+          "1"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "d/dx(ln x) = ?",
+        "options": [
+          "1/x",
+          "x",
+          "e^x",
+          "ln x"
+        ],
+        "answer": "A"
+      }
+    ],
+    "source": "mooc_seed",
+    "bilibili_url": "https://open.163.com/newview/movie/courseintro?newurl=KHFS8NBB2"
+  },
+  {
+    "id": "mooc-am2-007",
+    "name": "高等数学（下）",
+    "school": "同济大学",
+    "instructor": "张教授",
+    "category": "数学",
+    "credit": 5,
+    "term": "2026春",
+    "description": "多元函数微积分、曲线曲面积分及无穷级数理论。将一元微积分思想推广到多元，学习大学物理、工程力学必备数学基础。",
+    "sourceUrl": "https://www.icourse163.org/course/TONGJI-53004",
+    "studentCount": 102300,
+    "rating": 4.7,
+    "resourceCount": 118,
+    "status": "ongoing",
+    "textbook": "高等数学（第7版）下册",
+    "period": 80,
+    "chapterCount": 6,
+    "chapterTitles": [
+      "空间解析几何与向量代数",
+      "多元函数微分学",
+      "重积分",
+      "曲线积分与曲面积分",
+      "无穷级数",
+      "微分方程进阶"
+    ],
+    "chapters": {
+      "空间解析几何与向量代数": {
+        "points": [
+          "空间直角坐标系",
+          "向量运算",
+          "平面与直线方程",
+          "二次曲面"
+        ],
+        "lessons": []
+      },
+      "多元函数微分学": {
+        "points": [
+          "多元函数极限与连续",
+          "偏导数与全微分",
+          "方向导数与梯度",
+          "多元函数极值",
+          "Lagrange乘数法"
+        ],
+        "lessons": []
+      },
+      "重积分": {
+        "points": [
+          "二重积分计算",
+          "极坐标变换",
+          "三重积分",
+          "柱坐标与球坐标",
+          "重积分的应用"
+        ],
+        "lessons": []
+      },
+      "曲线积分与曲面积分": {
+        "points": [
+          "第一类曲线积分",
+          "第二类曲线积分",
+          "Green公式",
+          "Gauss公式",
+          "Stokes公式"
+        ],
+        "lessons": []
+      },
+      "无穷级数": {
+        "points": [
+          "数项级数",
+          "幂级数",
+          "Fourier级数",
+          "函数展开成幂级数"
+        ],
+        "lessons": []
+      }
+    },
+    "pptList": [
+      {
+        "name": "超星PPT下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第8章 空间解析几何",
+        "duration": "42:10",
+        "views": "32万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=HHFS8NCI5",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第9章 多元函数微分",
+        "duration": "48:30",
+        "views": "30万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=ZHGLDTAJ6",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第10章 重积分",
+        "duration": "52:20",
+        "views": "28万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=YHFS8NEF7",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第11章 曲线曲面积分",
+        "duration": "55:40",
+        "views": "25万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=QHFS8NFJ8",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      },
+      {
+        "name": "第12章 无穷级数",
+        "duration": "50:15",
+        "views": "35万",
+        "url": "https://open.163.com/newview/movie/theater?pid=KHFS8NBB2&mid=THFS8NIJ9",
+        "platform": "163open",
+        "_sourceUrl": "https://www.icourse163.org/course/TONGJI-53004"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "二元函数极值的充分判别条件中，AC-B²>0且A>0时是？",
+        "options": [
+          "极小值点",
+          "极大值点",
+          "鞍点",
+          "无法判断"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "函数f(x)在x=a处可导的充要条件是？",
+        "options": [
+          "左右导数存在且相等",
+          "函数在a处连续",
+          "函数在a处有定义",
+          "极限存在"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "下列哪个级数一定收敛？",
+        "options": [
+          "调和级数",
+          "p>1的p级数",
+          "几何级数|r|>=1",
+          "交错级数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "矩阵A可逆的充要条件是？",
+        "options": [
+          "det(A)=0",
+          "det(A)≠0",
+          "A是方阵",
+          "A的秩小于n"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "高等数学（第7版）上册",
+        "author": "同济大学数学系",
+        "publisher": "高等教育出版社",
+        "edition": "十二五规划教材",
+        "chapters": 7,
+        "pages": 422,
+        "url": "https://book.yunzhan365.com/ghlf/wmvs/mobile/index.html"
+      },
+      {
+        "name": "OpenStax Calculus Volume 1",
+        "author": "Strang & Herman",
+        "publisher": "OpenStax",
+        "edition": "Free Open Textbook",
+        "chapters": 6,
+        "pages": 873,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf"
+      }
+    ],
+    "bilibili_url": "https://open.163.com/newview/movie/courseintro?newurl=KHFS8NBB2"
+  },
+  {
+    "id": "mooc-la-008",
+    "name": "线性代数",
+    "school": "清华大学",
+    "instructor": "杨教授",
+    "category": "数学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "国家精品课程。系统学习行列式、矩阵理论、向量空间、特征值与二次型等核心代数内容。配套MIT线性代数公开课风格教学。",
+    "sourceUrl": "https://www.icourse163.org/course/THU-1002018015",
+    "studentCount": 153200,
+    "rating": 4.9,
+    "resourceCount": 105,
+    "status": "ongoing",
+    "textbook": "线性代数（第6版）",
+    "period": 64,
+    "chapterCount": 6,
+    "chapterTitles": [
+      "行列式",
+      "矩阵及其运算",
+      "向量组的线性相关性",
+      "线性方程组",
+      "相似矩阵与二次型",
+      "线性空间与线性变换"
+    ],
+    "pptList": [
+      {
+        "name": "李思老师开源讲义",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "讲义PDF下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 行列式",
+        "duration": "35:20",
+        "views": "42万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "第2章 矩阵",
+        "duration": "42:30",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=12",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "第3章 向量组",
+        "duration": "38:15",
+        "views": "32万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=22",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "第4章 线性方程组",
+        "duration": "45:40",
+        "views": "35万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=32",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "第5章 特征值与二次型",
+        "duration": "50:10",
+        "views": "45万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=42",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      },
+      {
+        "name": "第6章 线性空间",
+        "duration": "32:25",
+        "views": "22万",
+        "url": "https://www.bilibili.com/video/BV11z4y1f7ym/?p=52",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/THU-1002018015"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "n阶行列式的定义中，逆序数为奇数的排列项取什么符号？",
+        "options": [
+          "正号",
+          "负号",
+          "零",
+          "不确定"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "函数f(x)在x=a处可导的充要条件是？",
+        "options": [
+          "左右导数存在且相等",
+          "函数在a处连续",
+          "函数在a处有定义",
+          "极限存在"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "下列哪个级数一定收敛？",
+        "options": [
+          "调和级数",
+          "p>1的p级数",
+          "几何级数|r|>=1",
+          "交错级数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "矩阵A可逆的充要条件是？",
+        "options": [
+          "det(A)=0",
+          "det(A)≠0",
+          "A是方阵",
+          "A的秩小于n"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "高等数学（第7版）上册",
+        "author": "同济大学数学系",
+        "publisher": "高等教育出版社",
+        "edition": "十二五规划教材",
+        "chapters": 7,
+        "pages": 422,
+        "url": "https://book.yunzhan365.com/ghlf/wmvs/mobile/index.html"
+      },
+      {
+        "name": "OpenStax Calculus Volume 1",
+        "author": "Strang & Herman",
+        "publisher": "OpenStax",
+        "edition": "Free Open Textbook",
+        "chapters": 6,
+        "pages": 873,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf"
+      }
+    ],
+    "bilibili_url": "https://www.bilibili.com/video/BV11z4y1f7ym"
+  },
+  {
+    "id": "mooc-ps-009",
+    "name": "概率论与数理统计",
+    "school": "北京大学",
+    "instructor": "刘教授",
+    "category": "数学",
+    "credit": 4,
+    "term": "2026秋",
+    "description": "学习概率空间、随机变量分布、数字特征、大数定律与中心极限定理、参数估计与假设检验。理论与实践紧密结合，含Python统计实验。",
+    "sourceUrl": "https://www.icourse163.org/course/PKU-1002514003",
+    "studentCount": 89300,
+    "rating": 4.6,
+    "resourceCount": 88,
+    "status": "upcoming",
+    "textbook": "概率论与数理统计（第4版）",
+    "period": 64,
+    "chapterCount": 9,
+    "chapterTitles": [
+      "概率论基本概念",
+      "随机变量及其分布",
+      "多维随机变量",
+      "数字特征",
+      "大数定律与中心极限定理",
+      "样本及抽样分布",
+      "参数估计",
+      "假设检验",
+      "回归分析"
+    ],
+    "pptList": [
+      {
+        "name": "第1章·概率论基础",
+        "size": "3.0MB",
+        "pages": 42,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第2章·随机变量",
+        "size": "3.6MB",
+        "pages": 50,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第7章·参数估计",
+        "size": "4.0MB",
+        "pages": 55,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第8章·假设检验",
+        "size": "3.8MB",
+        "pages": 52,
+        "url": "",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "1-1 概率空间",
+        "duration": "30:20",
+        "views": "8.5万",
+        "url": "https://open.163.com/newview/movie/free?pid=PGVDOMMSI&mid=XGVDOMOAL",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=PGVDOMMSI&mid=XGVDOMOAL",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 武汉理工大学 概率论与数理统计"
+      },
+      {
+        "name": "2-1 常见分布",
+        "duration": "35:40",
+        "views": "7.2万",
+        "url": "https://open.163.com/newview/movie/free?pid=PGVDOMMSI&mid=UGVDONDTQ",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=PGVDOMMSI&mid=UGVDONDTQ",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 武汉理工大学 概率论与数理统计"
+      },
+      {
+        "name": "7-1 极大似然估计",
+        "duration": "28:50",
+        "views": "6.8万",
+        "url": "https://open.163.com/newview/movie/free?pid=PGVDOMMSI&mid=HGVDOOAPU",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=PGVDOMMSI&mid=HGVDOOAPU",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 武汉理工大学 概率论与数理统计"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "对于正态分布N(μ,σ²)，参数μ的极大似然估计是？",
+        "options": [
+          "样本均值",
+          "样本方差",
+          "样本中位数",
+          "样本标准差"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "函数f(x)在x=a处可导的充要条件是？",
+        "options": [
+          "左右导数存在且相等",
+          "函数在a处连续",
+          "函数在a处有定义",
+          "极限存在"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "下列哪个级数一定收敛？",
+        "options": [
+          "调和级数",
+          "p>1的p级数",
+          "几何级数|r|>=1",
+          "交错级数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "矩阵A可逆的充要条件是？",
+        "options": [
+          "det(A)=0",
+          "det(A)≠0",
+          "A是方阵",
+          "A的秩小于n"
+        ],
+        "answer": "B"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "高等数学（第7版）上册",
+        "author": "同济大学数学系",
+        "publisher": "高等教育出版社",
+        "edition": "十二五规划教材",
+        "chapters": 7,
+        "pages": 422,
+        "url": "https://book.yunzhan365.com/ghlf/wmvs/mobile/index.html"
+      },
+      {
+        "name": "OpenStax Calculus Volume 1",
+        "author": "Strang & Herman",
+        "publisher": "OpenStax",
+        "edition": "Free Open Textbook",
+        "chapters": 6,
+        "pages": 873,
+        "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-cs-013",
+    "name": "离散数学",
+    "school": "电子科技大学",
+    "instructor": "王教授",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "学习数理逻辑、集合论、图论、代数系统四大核心理论。计算机科学的重要数学基础，培养抽象思维和逻辑推理能力。",
+    "sourceUrl": "https://www.icourse163.org/course/UESTC-1002263009",
+    "studentCount": 45600,
+    "rating": 4.5,
+    "resourceCount": 68,
+    "status": "ongoing",
+    "textbook": "离散数学（第2版）",
+    "period": 64,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "数理逻辑",
+      "集合论",
+      "关系与函数",
+      "图论基础",
+      "树与平面图",
+      "代数系统",
+      "格与布尔代数",
+      "形式语言与自动机"
+    ],
+    "pptList": [
+      {
+        "name": "第1章·命题逻辑",
+        "size": "3.8MB",
+        "pages": 50,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第4章·图论",
+        "size": "4.5MB",
+        "pages": 58,
+        "url": "",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "1-1 命题与联结词",
+        "duration": "25:30",
+        "views": "4.8万",
+        "url": "https://open.163.com/newview/movie/free?pid=WEV1EUNVC&mid=EEV1EUO3J",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=WEV1EUNVC&mid=EEV1EUO3J",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 离散数学 · 命题与命题连接词（1）"
+      },
+      {
+        "name": "4-1 图的基本概念",
+        "duration": "32:15",
+        "views": "4.2万",
+        "url": "https://open.163.com/newview/movie/free?pid=WEV1EUNVC&mid=FEV1EUQI6",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=WEV1EUNVC&mid=FEV1EUQI6",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 离散数学 · 图的基本概念（1）"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "命题公式(p→q)∧p→q是？",
+        "options": [
+          "重言式",
+          "矛盾式",
+          "可满足式",
+          "永假式"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-ml-014",
+    "name": "机器学习",
+    "school": "清华大学",
+    "instructor": "张教授",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026秋",
+    "description": "MOOC明星课程。系统学习监督学习、无监督学习、强化学习等核心机器学习理论与算法，基于Python和Scikit-learn实现。",
+    "sourceUrl": "https://www.icourse163.org/course/WZU-1464096179",
+    "studentCount": 125000,
+    "rating": 4.8,
+    "resourceCount": 95,
+    "status": "upcoming",
+    "textbook": "机器学习（西瓜书）",
+    "period": 72,
+    "chapterCount": 10,
+    "chapterTitles": [
+      "绪论",
+      "模型评估与选择",
+      "线性模型",
+      "决策树",
+      "神经网络",
+      "支持向量机SVM",
+      "贝叶斯分类器",
+      "集成学习",
+      "聚类",
+      "降维与度量学习"
+    ],
+    "pptList": [
+      {
+        "name": "846页PPT课件下载",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "课程代码与资源",
+        "size": "在线访问",
+        "pages": "N/A",
+        "url": "",
+        "platform": "web",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "第1章 机器学习概述",
+        "duration": "28:10",
+        "views": "52万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第2章 回归",
+        "duration": "45:30",
+        "views": "48万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=10",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第3章 逻辑回归",
+        "duration": "38:20",
+        "views": "42万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=20",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第4章 朴素贝叶斯",
+        "duration": "32:15",
+        "views": "35万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=28",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第5章 KNN",
+        "duration": "25:40",
+        "views": "30万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=34",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第6章 决策树",
+        "duration": "42:10",
+        "views": "38万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=42",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第7章 集成学习",
+        "duration": "48:30",
+        "views": "32万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=52",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第8章 神经网络",
+        "duration": "55:20",
+        "views": "55万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=62",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第9章 SVM",
+        "duration": "46:40",
+        "views": "45万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=72",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第10章 聚类",
+        "duration": "36:15",
+        "views": "28万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=80",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      },
+      {
+        "name": "第11章 降维",
+        "duration": "28:30",
+        "views": "22万",
+        "url": "https://www.bilibili.com/video/BV1gP4y177cf/?p=88",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.icourse163.org/course/WZU-1464096179"
+      }
+    ],
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "SVM中核函数的作用是？",
+        "options": [
+          "特征降维",
+          "将数据映射到高维空间",
+          "加速训练",
+          "防止过拟合"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "bilibili_url": "https://www.bilibili.com/video/BV1gP4y177cf"
+  },
+  {
+    "id": "mooc-se-016",
+    "name": "软件工程",
+    "school": "复旦大学",
+    "instructor": "赵文耘",
+    "category": "计算机科学",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "国家精品课程。学习软件生命周期全过程：需求分析、系统设计、编码实现、测试与维护管理。配套UML建模工具实践。",
+    "sourceUrl": "https://www.icourse163.org/course/FUDAN-1001832012",
+    "studentCount": 76500,
+    "rating": 4.4,
+    "resourceCount": 72,
+    "status": "upcoming",
+    "textbook": "软件工程导论（第6版）",
+    "period": 48,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "软件工程概述",
+      "可行性分析",
+      "需求分析",
+      "总体设计",
+      "详细设计",
+      "编码实现",
+      "软件测试",
+      "软件维护"
+    ],
+    "pptList": [
+      {
+        "name": "第3章·需求分析",
+        "size": "4.2MB",
+        "pages": 56,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第4章·总体设计",
+        "size": "3.8MB",
+        "pages": 52,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第7章·软件测试",
+        "size": "4.5MB",
+        "pages": 60,
+        "url": "",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "3-1 需求获取技术",
+        "duration": "32:10",
+        "views": "5.8万",
+        "url": "https://open.163.com/newview/movie/free?pid=WHE4G08KE&mid=HHEPKC5QO",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=WHE4G08KE&mid=HHEPKC5QO",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 哈尔滨工业大学《软件工程专业导论》/《软件测试与质量》 · 理解问题——软件需求（上）"
+      },
+      {
+        "name": "4-1 架构设计",
+        "duration": "38:25",
+        "views": "5.2万",
+        "url": "https://open.163.com/newview/movie/free?pid=WHE4G08KE&mid=OHEPKC73D",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=WHE4G08KE&mid=OHEPKC73D",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 哈尔滨工业大学《软件工程专业导论》/《软件测试与质量》 · 软件的艺术——软件设计（上）"
+      },
+      {
+        "name": "7-1 白盒测试",
+        "duration": "28:40",
+        "views": "6.5万",
+        "url": "https://open.163.com/newview/movie/free?pid=IFVCR1G0I&mid=KFVCR1IPE",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=IFVCR1G0I&mid=KFVCR1IPE",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 哈尔滨工业大学《软件工程专业导论》/《软件测试与质量》 · 模块三 3.1 白盒测试技术概述"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "软件生命周期模型中，哪个模型强调风险驱动？",
+        "options": [
+          "瀑布模型",
+          "螺旋模型",
+          "增量模型",
+          "敏捷开发"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-c-019",
+    "name": "程序设计基础（C语言）",
+    "school": "浙江大学",
+    "instructor": "翁恺",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "中国大学MOOC零基础学编程第一课。从零开始学习C语言程序设计，掌握结构化编程思想，配套PTA在线判题系统。累计选课超200万人次。",
+    "sourceUrl": "https://www.icourse163.org/course/ZJU-1001615004",
+    "studentCount": 235000,
+    "rating": 4.9,
+    "resourceCount": 88,
+    "status": "ongoing",
+    "textbook": "C语言程序设计（第3版）",
+    "period": 72,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "程序设计入门",
+      "分支与循环",
+      "数组与函数",
+      "指针",
+      "字符串",
+      "结构体与链表",
+      "文件操作",
+      "综合项目"
+    ],
+    "pptList": [
+      {
+        "name": "第1章·入门",
+        "size": "3.0MB",
+        "pages": 42,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第3章·数组与函数",
+        "size": "4.2MB",
+        "pages": 55,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第4章·指针",
+        "size": "4.5MB",
+        "pages": 58,
+        "url": "",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "1-1 Hello World",
+        "duration": "12:30",
+        "views": "52.3万",
+        "url": "https://open.163.com/newview/movie/free?pid=ME7HONPPN&mid=ME7JS1SI8",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=ME7HONPPN&mid=ME7JS1SI8",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 浙江大学 翁恺《程序设计入门——C语言》/《C语言程序设计(下)》 · 第一个C程序"
+      },
+      {
+        "name": "3-1 数组",
+        "duration": "28:20",
+        "views": "35.8万",
+        "url": "https://open.163.com/newview/movie/free?pid=ME7HONPPN&mid=ME8IPNESK",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=ME7HONPPN&mid=ME8IPNESK",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 浙江大学 翁恺《程序设计入门——C语言》/《C语言程序设计(下)》 · 初试数组"
+      },
+      {
+        "name": "4-1 指针入门",
+        "duration": "35:40",
+        "views": "42.5万",
+        "url": "https://open.163.com/newview/movie/free?pid=QFVMG8J3G&mid=HFVMG8Q5O",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=QFVMG8J3G&mid=HFVMG8Q5O",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 浙江大学 翁恺《程序设计入门——C语言》/《C语言程序设计(下)》 · 指针的定义、初始化和引用（1）"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "C语言中，数组名作为函数参数传递的是？",
+        "options": [
+          "数组首地址",
+          "整个数组",
+          "数组长度",
+          "数组类型"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-ai-020",
+    "name": "人工智能导论",
+    "school": "北京大学",
+    "instructor": "李文新",
+    "category": "计算机科学",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "学习AI基本概念与方法：搜索策略、知识表示、机器学习、深度学习基础等。配套Python/AI平台实验。",
+    "sourceUrl": "https://www.icourse163.org/course/PKU-1002537008",
+    "studentCount": 68500,
+    "rating": 4.6,
+    "resourceCount": 58,
+    "status": "upcoming",
+    "textbook": "人工智能：一种现代方法（第3版）",
+    "period": 48,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "AI概述",
+      "问题求解与搜索",
+      "知识表示与推理",
+      "机器学习基础",
+      "神经网络与深度学习",
+      "自然语言处理",
+      "计算机视觉",
+      "AI伦理与安全"
+    ],
+    "pptList": [
+      {
+        "name": "第2章·搜索策略",
+        "size": "4.0MB",
+        "pages": 52,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第5章·深度学习",
+        "size": "5.5MB",
+        "pages": 68,
+        "url": "",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "2-1 盲目搜索",
+        "duration": "32:10",
+        "views": "4.8万",
+        "url": "https://open.163.com/newview/movie/free?pid=SGVD5F1NK&mid=UGVD5G718",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=SGVD5F1NK&mid=UGVD5G718",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 北京联合大学《人工智能概论》 · 6.3 盲目搜索"
+      },
+      {
+        "name": "5-1 CNN原理",
+        "duration": "42:30",
+        "views": "6.2万",
+        "url": "https://open.163.com/newview/movie/free?pid=SGVD5F1NK&mid=PGVD5GNRK",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=SGVD5F1NK&mid=PGVD5GNRK",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 北京联合大学《人工智能概论》 · 8.4 卷积神经网络"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "A*搜索算法中，启发式函数h(n)需满足什么条件才能保证最优解？",
+        "options": [
+          "可采纳性",
+          "一致性",
+          "单调性",
+          "对称性"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-se-021",
+    "name": "Python网络爬虫与信息提取",
+    "school": "中国农业大学",
+    "instructor": "嵩天",
+    "category": "计算机科学",
+    "credit": 2,
+    "term": "2026春",
+    "description": "中国大学MOOC Python系列课程。学习Requests/Scrapy框架、BeautifulSoup解析、动态网页爬取与反爬策略。",
+    "sourceUrl": "https://www.icourse163.org/course/CAU-1002472003",
+    "studentCount": 152000,
+    "rating": 4.7,
+    "resourceCount": 42,
+    "status": "ongoing",
+    "textbook": "Python网络爬虫与信息提取",
+    "period": 32,
+    "chapterCount": 6,
+    "chapterTitles": [
+      "爬虫入门与Requests",
+      "信息提取与BeautifulSoup",
+      "动态网页与Selenium",
+      "Scrapy框架",
+      "反爬与策略",
+      "数据存储与可视化"
+    ],
+    "pptList": [
+      {
+        "name": "第1章·Requests库",
+        "size": "2.8MB",
+        "pages": 38,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第4章·Scrapy",
+        "size": "3.5MB",
+        "pages": 48,
+        "url": "",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "1-1 Requests入门",
+        "duration": "22:10",
+        "views": "18.5万",
+        "url": "https://open.163.com/newview/movie/free?pid=MEEMCM1NP&mid=MEEME1P86",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=MEEMCM1NP&mid=MEEME1P86",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 北京理工大学 嵩天《Python网络爬虫与信息提取》 · HTTP协议及Requests库"
+      },
+      {
+        "name": "4-1 Scrapy架构",
+        "duration": "35:20",
+        "views": "12.8万",
+        "url": "https://open.163.com/newview/movie/free?pid=MEEMCM1NP&mid=MEF0L754M",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=MEEMCM1NP&mid=MEF0L754M",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 北京理工大学 嵩天《Python网络爬虫与信息提取》 · Scrapy爬虫框架介绍"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "Requests库中，获取网页内容的方法是？",
+        "options": [
+          "request.get()",
+          "requests.get()",
+          "request.post()",
+          "requests.post()"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-cn-023",
+    "name": "深入理解计算机系统",
+    "school": "北京大学",
+    "instructor": "陆俊林",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "CMU经典教材CS:APP中文配套MOOC。从程序员视角理解计算机系统，掌握内存层次、链接、异常控制流、虚拟内存等核心概念。",
+    "sourceUrl": "https://www.icourse163.org/course/PKU-1002536012",
+    "studentCount": 38000,
+    "rating": 4.9,
+    "resourceCount": 56,
+    "status": "ongoing",
+    "textbook": "深入理解计算机系统（第3版）",
+    "period": 72,
+    "chapterCount": 8,
+    "chapterTitles": [
+      "计算机系统漫游",
+      "信息的表示与处理",
+      "程序的机器级表示",
+      "处理器体系结构",
+      "优化程序性能",
+      "存储器层次结构",
+      "链接",
+      "异常控制流"
+    ],
+    "pptList": [
+      {
+        "name": "第2章·信息表示",
+        "size": "3.8MB",
+        "pages": 50,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第6章·存储器层次",
+        "size": "4.5MB",
+        "pages": 58,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第7章·链接",
+        "size": "3.5MB",
+        "pages": 46,
+        "url": "",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "2-1 信息存储",
+        "duration": "32:10",
+        "views": "4.2万",
+        "url": "https://open.163.com/newview/movie/free?pid=MERLH6SJ6&mid=MERLHOLC3",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=MERLH6SJ6&mid=MERLHOLC3",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 南京大学《计算机系统基础》/ 国防科技大学《计算机原理》 · 计算机系统基础（一）2.1 数据的表示"
+      },
+      {
+        "name": "6-1 局部性原理",
+        "duration": "38:20",
+        "views": "3.8万",
+        "url": "https://open.163.com/newview/movie/free?pid=CHK53FMAH&mid=YHK53FVJ0",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=CHK53FMAH&mid=YHK53FVJ0",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 南京大学《计算机系统基础》/ 国防科技大学《计算机原理》 · 5.5 局部性原理和Cache"
+      },
+      {
+        "name": "7-1 链接过程",
+        "duration": "42:15",
+        "views": "3.5万",
+        "url": "https://open.163.com/newview/movie/free?pid=MERLH6SJ6&mid=MERSJ6D75",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=MERLH6SJ6&mid=MERSJ6D75",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 南京大学《计算机系统基础》/ 国防科技大学《计算机原理》 · 计算机系统基础（一）程序的链接"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "虚拟内存的主要作用是？",
+        "options": [
+          "扩大物理内存",
+          "提供进程隔离",
+          "提高CPU速度",
+          "减少磁盘I/O"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "mooc-java-024",
+    "name": "Java程序设计",
+    "school": "北京大学",
+    "instructor": "唐大仕",
+    "category": "计算机科学",
+    "credit": 4,
+    "term": "2026春",
+    "description": "零基础学习Java面向对象编程。涵盖基础语法、面向对象、异常处理、集合框架、IO流、多线程、网络编程等核心内容。",
+    "sourceUrl": "https://www.icourse163.org/course/PKU-1001942002",
+    "studentCount": 168000,
+    "rating": 4.6,
+    "resourceCount": 76,
+    "status": "ongoing",
+    "textbook": "Java核心技术（第10版）",
+    "period": 64,
+    "chapterCount": 9,
+    "chapterTitles": [
+      "Java入门",
+      "面向对象基础",
+      "继承与多态",
+      "异常处理",
+      "集合与泛型",
+      "IO流",
+      "多线程",
+      "网络编程",
+      "Java新特性"
+    ],
+    "pptList": [
+      {
+        "name": "第2章·面向对象",
+        "size": "4.2MB",
+        "pages": 55,
+        "url": "",
+        "_sourceUrl": ""
+      },
+      {
+        "name": "第7章·多线程",
+        "size": "3.8MB",
+        "pages": 50,
+        "url": "",
+        "_sourceUrl": ""
+      }
+    ],
+    "videoList": [
+      {
+        "name": "2-1 类与对象",
+        "duration": "32:20",
+        "views": "22.5万",
+        "url": "https://open.163.com/newview/movie/free?pid=FFTLEM4DP&mid=KFTLMPUO5",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=FFTLEM4DP&mid=KFTLMPUO5",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 浙江大学 翁恺《面向对象程序设计》/ Java线程 · 用类制造对象"
+      },
+      {
+        "name": "7-1 线程创建",
+        "duration": "28:40",
+        "views": "15.8万",
+        "url": "https://open.163.com/newview/movie/free?pid=EGBU3OSU5&mid=IHSMKCD9L",
+        "_sourceUrl": "https://open.163.com/newview/movie/free?pid=EGBU3OSU5&mid=IHSMKCD9L",
+        "platform": "网易公开课",
+        "desc": "网易公开课 · 浙江大学 翁恺《面向对象程序设计》/ Java线程 · 以继承Thread类的形式创建线程"
+      }
+    ],
+    "exercises": [
+      {
+        "question": "Java中final关键字不能用来修饰？",
+        "options": [
+          "类",
+          "方法",
+          "变量",
+          "接口"
+        ],
+        "answer": "D"
+      },
+      {
+        "question": "算法的时间复杂度是指？",
+        "options": [
+          "算法执行的时间",
+          "算法执行时所需的基本操作次数",
+          "算法的输入规模",
+          "算法的代码行数"
+        ],
+        "answer": "B"
+      },
+      {
+        "question": "栈的插入和删除操作在什么位置进行？",
+        "options": [
+          "栈顶",
+          "栈底",
+          "任意位置",
+          "中间"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "在TCP协议中，三次握手用于？",
+        "options": [
+          "建立连接",
+          "释放连接",
+          "流量控制",
+          "差错控制"
+        ],
+        "answer": "A"
+      },
+      {
+        "question": "虚拟存储器的容量受什么限制？",
+        "options": [
+          "物理内存大小",
+          "磁盘空间大小",
+          "地址总线宽度",
+          "CPU速度"
+        ],
+        "answer": "C"
+      }
+    ],
+    "source": "mooc_seed",
+    "textbookResources": [
+      {
+        "name": "数据结构（C语言版）",
+        "author": "严蔚敏",
+        "publisher": "人民邮电出版社",
+        "edition": "经典教材",
+        "chapters": 12,
+        "pages": 368,
+        "url": "https://book.yunzhan365.com/vmla/izyw/mobile/index.html"
+      },
+      {
+        "name": "Data Structures and Algorithm Analysis in C",
+        "author": "Mark Allen Weiss",
+        "publisher": "Pearson",
+        "edition": "2nd Edition",
+        "chapters": 12,
+        "pages": 520,
+        "url": "https://people.cs.vt.edu/~shaffer/Book/C++3e20120102.pdf"
+      }
+    ]
+  },
+  {
+    "id": "career-dl-practice",
+    "name": "深度学习实战：从原理到工业落地",
+    "school": "B站 · 动手学深度学习",
+    "instructor": "李沐团队",
+    "category": "AI岗位技能",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "面向算法工程师与转岗人员的深度学习实战课。基于《动手学深度学习》开源教材，覆盖多层网络、CNN、RNN、注意力机制与视觉实战，全部代码可在免费GPU环境运行。",
+    "richDesc": "<h3>课程概述</h3><p>以「理论+代码+工业案例」三线并行，帮助学习者完成从数学基础到可交付模型的能力跃迁。配套本系统知识库切片：工程实操分册·训练调参章节。</p><h3>适合人群</h3><p>在职转岗算法、高年级本科生、企业算法岗新员工内训。</p><h3>先修要求</h3><p>Python编程、线性代数与概率论基础。</p>",
+    "studentCount": 28000,
+    "rating": 4.8,
+    "resourceCount": 128,
+    "status": "ongoing",
+    "textbook": "动手学深度学习（d2l.ai 中文版）· 人民邮电出版社",
+    "period": 64,
+    "chapterCount": 7,
+    "chapterTitles": [
+      "深度学习概述与环境搭建",
+      "多层感知机与调参基础",
+      "卷积神经网络CNN",
+      "循环网络与注意力雏形",
+      "注意力机制与Transformer",
+      "计算机视觉工业案例",
+      "优化算法与工程调参"
+    ],
+    "chapters": {
+      "深度学习概述与环境搭建": {
+        "points": [
+          "人工智能、机器学习与深度学习的关系：人工智能是让机器具备类人智能的总目标；机器学习用数据驱动方式让计算机自动学习规律；深度学习是机器学习的分支，依靠多层神经网络自动提取特征。三者逐层包含，深度学习凭借大数据与算力突破成为当前AI落地的主流技术路线。",
+          "深度学习发展的三次浪潮：1943年M-P神经元与1958年感知机完成第一次萌芽；1986年反向传播算法让多层网络可训练，形成第二次浪潮；2012年AlexNet在ImageNet竞赛夺冠引爆第三次浪潮。GPU算力、大数据与ReLU等算法改进共同促成深度学习全面爆发。",
+          "主流深度学习框架对比：PyTorch以动态图与Pythonic风格著称，是科研与教学的首选；TensorFlow 2.x与Keras在工业部署生态成熟；飞桨PaddlePaddle提供完善中文文档与国产化适配。本课程统一使用PyTorch，兼顾易用性与工程迁移能力。",
+          "Anaconda+CUDA+PyTorch环境搭建：用Anaconda创建独立虚拟环境隔离项目依赖；确认显卡型号后从PyTorch官网选择匹配的CUDA版本安装GPU版框架；最后用torch.cuda.is_available()验证GPU可用，并用nvidia-smi监控显存占用。"
+        ],
+        "lessons": [
+          {
+            "name": "1 课程导学与产业应用全景",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "1:17:20",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1ss4y1n7y5/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1ss4y1n7y5/?p=1",
+            "_bvid": "BV1ss4y1n7y5"
+          },
+          {
+            "name": "2 Colab/AI Studio 免费GPU实操",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "45:00:46",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1daQAYuEYm/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1daQAYuEYm/?p=1",
+            "_bvid": "BV1daQAYuEYm"
+          },
+          {
+            "name": "3 第1章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "32页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "多层感知机与调参基础": {
+        "points": [
+          "感知机与多层结构：单层感知机只能解决线性可分问题，异或问题暴露其根本局限；多层感知机通过隐藏层与非线性激活函数获得万能逼近能力。理论上两层网络即可拟合任意连续函数，关键在于如何训练。",
+          "激活函数的选择：Sigmoid存在梯度消失且输出非零中心；ReLU计算简单、正区间梯度恒为1，是隐藏层的默认选择。输出层二分类用Sigmoid、多分类用Softmax，激活函数选错会显著拖慢收敛。",
+          "过拟合与欠拟合诊断：欠拟合是模型容量不足，训练误差与测试误差都高；过拟合是模型记住了训练集噪声，训练误差低但测试误差高。将训练与验证损失画在同一张曲线上对比即可快速诊断问题类型。",
+          "正则化与早停：L2权重衰减限制权重幅度防止过大；Dropout训练时随机丢弃神经元，迫使网络学习冗余表达；早停监控验证集损失，在其开始上升时停止训练。数据增强则是治本手段。",
+          "超参数调参流程：学习率是最重要的超参数，通常从1e-3起步按对数尺度搜索；再按batch size、隐藏层宽度、网络深度的顺序逐一调整。务必固定独立验证集，绝不能用测试集调参造成信息泄漏。"
+        ],
+        "lessons": [
+          {
+            "name": "1 MLP从零实现",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "1:27:10",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1kX4y1g7jp/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1kX4y1g7jp/?p=1",
+            "_bvid": "BV1kX4y1g7jp"
+          },
+          {
+            "name": "2 模型选择·欠拟合过拟合",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "17:55",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1JU4y1H7PC/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1JU4y1H7PC/?p=1",
+            "_bvid": "BV1JU4y1H7PC"
+          },
+          {
+            "name": "3 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "28页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "卷积神经网络CNN": {
+        "points": [
+          "卷积操作的三大特性：局部连接让每个神经元只观察局部感受野；权值共享使同一卷积核在整张图上滑动，参数量骤减；平移不变性让目标无论出现在图像哪个位置都能被检测。三者共同契合图像的空间结构先验。",
+          "经典CNN架构演进：LeNet-5确立了卷积+池化+全连接的经典范式；AlexNet引入ReLU与Dropout大幅提升训练稳定性；VGG用堆叠3×3小卷积核加深网络；ResNet提出残差连接解决深层网络退化问题，使上千层网络可训练。",
+          "池化与特征图尺寸计算：最大池化保留局部最强响应，平均池化保留整体分布信息。输出尺寸=(输入尺寸-卷积核+2×padding)/步长+1，网络越深通道数越多、空间尺寸越小，形成金字塔式特征层级。",
+          "迁移学习训练要点：工业数据集小，从零训练不如用ImageNet预训练的ResNet18或YOLO backbone微调；先冻结骨干只训练新分类头，再解冻全网络用小学习率精调；训练中重点监控混淆矩阵而非只看总准确率。"
+        ],
+        "lessons": [
+          {
+            "name": "1 卷积神经网络双讲",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "1:00:26",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1t44y1r7ct/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1t44y1r7ct/?p=1",
+            "_bvid": "BV1t44y1r7ct"
+          },
+          {
+            "name": "2 批归一化与残差网络",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "45:00:46",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1daQAYuEYm/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1daQAYuEYm/?p=1",
+            "_bvid": "BV1daQAYuEYm"
+          },
+          {
+            "name": "3 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "36页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "循环网络与注意力雏形": {
+        "points": [
+          "序列数据的建模需求：文本、传感器时序、语音都是变长序列，前后存在依赖关系，全连接与CNN难以处理。RNN通过隐藏状态在时间步之间传递信息，参数跨时间步共享，天然适配序列建模任务。",
+          "RNN的梯度消失与爆炸：沿时间反向传播（BPTT）时梯度要连乘多个雅可比矩阵，导致消失或爆炸。梯度爆炸可用梯度裁剪快速处理；梯度消失则必须依靠门控机制解决，这正是LSTM诞生的直接动机。",
+          "LSTM的门控设计：遗忘门决定旧记忆的保留比例；输入门控制新信息写入细胞状态；输出门决定当前时刻的隐藏状态输出。细胞状态以加法更新为主干通道，让梯度可以近乎无衰减地长距离流动。",
+          "双向与多层RNN：双向LSTM同时编码正反两个方向的上下文信息，适合文本分类等离线任务；多层堆叠可增强表达能力。但实时流式场景只能用单向结构，因为未来信息在推理时尚不可见。"
+        ],
+        "lessons": [
+          {
+            "name": "1 现代循环神经网络",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "17:55",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1JU4y1H7PC/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1JU4y1H7PC/?p=1",
+            "_bvid": "BV1JU4y1H7PC"
+          },
+          {
+            "name": "2 注意力机制登场",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "17:55",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1JU4y1H7PC/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1JU4y1H7PC/?p=1",
+            "_bvid": "BV1JU4y1H7PC"
+          },
+          {
+            "name": "3 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "30页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "注意力机制与Transformer": {
+        "points": [
+          "注意力的核心思想：打破RNN顺序传递的信息瓶颈，让输出直接与输入的所有位置建立加权关联。通过Query与Key做点积计算相关性，经softmax归一化得到注意力权重，再对Value加权求和完成信息聚合。",
+          "自注意力与多头机制：自注意力让序列内部每个位置互相观察，一步捕捉任意距离的依赖；多头注意力把向量投影到多个子空间并行计算注意力，不同头分别关注语法、语义、位置等不同模式，最后拼接融合。",
+          "Transformer整体架构：编码器由多头注意力、前馈网络、残差连接与层归一化堆叠而成；解码器额外增加掩码注意力防止偷看未来信息；由于注意力本身不含位置概念，需要位置编码显式注入序列顺序。",
+          "预训练范式与BERT/GPT：BERT用双向掩码语言模型学习通用表征，擅长理解类任务；GPT用自回归的下一词预测训练，擅长生成类任务。预训练+微调范式正是从Transformer起步，直接催生了今天的大模型时代。"
+        ],
+        "lessons": [
+          {
+            "name": "1 注意力机制精讲",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "1:27:05",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1pu411o7BE/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1pu411o7BE/?p=1",
+            "_bvid": "BV1pu411o7BE"
+          },
+          {
+            "name": "2 Transformer从零实现",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "45:00:46",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1daQAYuEYm/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1daQAYuEYm/?p=1",
+            "_bvid": "BV1daQAYuEYm"
+          },
+          {
+            "name": "3 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "34页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "计算机视觉工业案例": {
+        "points": [
+          "工业视觉任务图谱：图像分类判断整图类别，目标检测定位目标并输出边界框，语义分割做到像素级标注。工业质检中缺陷往往小且形态不规则，通常需要检测加分割的组合方案才能覆盖完整需求。",
+          "迁移学习实战流程：选用ImageNet预训练的ResNet18或YOLO backbone作为起点；第一阶段冻结骨干仅训练新分类头，第二阶段解冻全网用小学习率精调。工业数据少时该流程可比从零训练提升十个百分点以上。",
+          "故障诊断的时频图方法：将振动信号经短时傅里叶变换转为时频谱图，把一维信号诊断转化为二维图像分类问题；CNN自动学习纹理与形态特征，比人工设计特征更鲁棒，已在轴承与齿轮箱诊断中广泛落地。",
+          "数据不平衡与小样本策略：缺陷样本远少于正常样本时，采用过采样、Focal Loss、Copy-Paste增强等手段缓解失衡。质检场景必须以召回率为核心指标——漏检一件缺陷的代价远高于误检十件良品。"
+        ],
+        "lessons": [
+          {
+            "name": "1 图像增广与微调实战",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "13:37",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1A4421A7MD/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1A4421A7MD/?p=1",
+            "_bvid": "BV1A4421A7MD"
+          },
+          {
+            "name": "2 热狗识别全流程复盘",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "17:55",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1JU4y1H7PC/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1JU4y1H7PC/?p=1",
+            "_bvid": "BV1JU4y1H7PC"
+          },
+          {
+            "name": "3 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "26页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "优化算法与工程调参": {
+        "points": [
+          "SGD与动量法：SGD按mini-batch梯度更新，噪声大但泛化性能好；动量法累积历史梯度方向，像小球滚坡的惯性一样抑制震荡、加速收敛。工业训练中SGD+动量在视觉任务上依然常驻 baseline。",
+          "自适应学习率家族：AdaGrad为稀疏特征累计梯度平方但学习率衰减过快；RMSProp引入指数衰减平均修正了这一问题；Adam结合动量与自适应步长，开箱即用，是深度学习的默认优化器选择。",
+          "Adam与AdamW的区别：Adam将L2正则混入梯度，与自适应步长相耦合，权重衰减效果被稀释；AdamW把权重衰减从梯度中解耦出来单独执行，在Transformer类模型上泛化显著更好，是大模型训练的标准配置。",
+          "学习率调度策略：StepLR阶梯衰减简单有效；Cosine退火配合warmup是大模型微调的标配；OneCycle在有限epoch内最大化收敛速度。调度时机应以验证集曲线为准，而不是机械执行预设计划。"
+        ],
+        "lessons": [
+          {
+            "name": "1 优化算法系统讲解",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "23:48",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1jh4y1q7ua/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1jh4y1q7ua/?p=1",
+            "_bvid": "BV1jh4y1q7ua"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "30页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      }
+    },
+    "videoList": [
+      {
+        "name": "深度学习实战：从原理到工业落地 第1讲 · 深度学习概述与环境搭建",
+        "duration": "1:17:20",
+        "url": "https://www.bilibili.com/video/BV1ss4y1n7y5/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1ss4y1n7y5/?p=1",
+        "_bvid": "BV1ss4y1n7y5",
+        "_realTitle": "手把手带你配动手学深度学习的环境"
+      },
+      {
+        "name": "深度学习实战：从原理到工业落地 第2讲 · 多层感知机与调参基础",
+        "duration": "1:27:10",
+        "url": "https://www.bilibili.com/video/BV1kX4y1g7jp/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1kX4y1g7jp/?p=1",
+        "_bvid": "BV1kX4y1g7jp",
+        "_realTitle": "11 模型选择 + 过拟合和欠拟合【动手学深度学习v2】"
+      },
+      {
+        "name": "深度学习实战：从原理到工业落地 第3讲 · 卷积神经网络CNN",
+        "duration": "1:00:26",
+        "url": "https://www.bilibili.com/video/BV1t44y1r7ct/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1t44y1r7ct/?p=1",
+        "_bvid": "BV1t44y1r7ct",
+        "_realTitle": "23 经典卷积神经网络 LeNet【动手学深度学习v2】"
+      },
+      {
+        "name": "深度学习实战：从原理到工业落地 第4讲 · 循环网络与注意力雏形",
+        "duration": "17:55",
+        "url": "https://www.bilibili.com/video/BV1JU4y1H7PC/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1JU4y1H7PC/?p=1",
+        "_bvid": "BV1JU4y1H7PC",
+        "_realTitle": "57 长短期记忆网络（LSTM）【动手学深度学习v2】"
+      },
+      {
+        "name": "深度学习实战：从原理到工业落地 第5讲 · 注意力机制与Transformer",
+        "duration": "1:27:05",
+        "url": "https://www.bilibili.com/video/BV1pu411o7BE/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1pu411o7BE/?p=1",
+        "_bvid": "BV1pu411o7BE",
+        "_realTitle": "Transformer论文逐段精读【论文精读】"
+      },
+      {
+        "name": "深度学习实战：从原理到工业落地 第6讲 · 计算机视觉工业案例",
+        "duration": "13:37",
+        "url": "https://www.bilibili.com/video/BV1A4421A7MD/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1A4421A7MD/?p=1",
+        "_bvid": "BV1A4421A7MD",
+        "_realTitle": "2.基于深度学习的故障诊断之卷积神经网络的故障诊断"
+      },
+      {
+        "name": "深度学习实战：从原理到工业落地 第7讲 · 优化算法与工程调参",
+        "duration": "23:48",
+        "url": "https://www.bilibili.com/video/BV1jh4y1q7ua/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1jh4y1q7ua/?p=1",
+        "_bvid": "BV1jh4y1q7ua",
+        "_realTitle": "优化器 ｜SGD ｜Momentum ｜Adagrad ｜RMSProp ｜Adam"
+      }
+    ],
+    "pptList": [
+      {
+        "name": "第1章 深度学习概述与环境搭建",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 0,
+        "_chTitle": "深度学习概述与环境搭建"
+      },
+      {
+        "name": "第2章 多层感知机与调参基础",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 1,
+        "_chTitle": "多层感知机与调参基础"
+      },
+      {
+        "name": "第3章 卷积神经网络CNN",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 2,
+        "_chTitle": "卷积神经网络CNN"
+      },
+      {
+        "name": "第4章 循环网络与注意力雏形",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 3,
+        "_chTitle": "循环网络与注意力雏形"
+      },
+      {
+        "name": "第5章 注意力机制与Transformer",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 4,
+        "_chTitle": "注意力机制与Transformer"
+      },
+      {
+        "name": "第6章 计算机视觉工业案例",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 5,
+        "_chTitle": "计算机视觉工业案例"
+      },
+      {
+        "name": "第7章 优化算法与工程调参",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 6,
+        "_chTitle": "优化算法与工程调参"
+      }
+    ]
+  },
+  {
+    "id": "career-llm-app",
+    "name": "大模型应用开发：RAG与Agent实战",
+    "school": "DataWhale 开源社区",
+    "instructor": "DataWhale LLM 组",
+    "category": "大模型应用",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "面向大模型应用开发岗位与企业内训场景。系统讲解Prompt工程、RAG检索增强生成、多智能体编排与生产化部署，最终独立交付一个带引用溯源的知识问答系统。",
+    "richDesc": "<h3>课程概述</h3><p>围绕「能上岗」目标设计：每章配真实业务脱敏案例与可运行仓库。配套本系统知识库切片：《llm_application_dev.md》全文。</p><h3>适合人群</h3><p>Java/后端工程师转型LLM应用开发、企业智能化改造团队、AI产品工程师。</p><h3>先修要求</h3><p>Python基础；了解HTTP API调用。</p>",
+    "studentCount": 28000,
+    "rating": 4.8,
+    "resourceCount": 112,
+    "status": "ongoing",
+    "textbook": "LLM应用开发实战（DataWhale开源教程）",
+    "period": 56,
+    "chapterCount": 6,
+    "chapterTitles": [
+      "大模型API与Prompt工程",
+      "文本向量化与语义检索",
+      "RAG系统构建全流程",
+      "Agent与多智能体编排",
+      "评测与幻觉防控工程",
+      "生产化部署与成本控制"
+    ],
+    "chapters": {
+      "大模型API与Prompt工程": {
+        "points": [
+          "大模型API调用范式：主流API均为消息数组结构，system设定角色、user承载输入、assistant存储历史回复。temperature控制随机性，max_tokens限制输出长度；流式SSE返回可显著改善交互体验。",
+          "Token计费与上下文窗口：一次调用成本等于输入token单价乘以长度加输出token单价乘以长度；中文通常1.5字符左右折合1个token。上下文窗口有限，超长对话需要做截断或摘要压缩策略。",
+          "System Prompt设计原则：按角色设定、行为约束、输出格式三段式书写；硬性要求放在前部并明确禁止项；给出少样本示例比形容词堆砌有效得多。prompt要版本化管理，便于回归测试与效果对比。",
+          "API工程化要点：使用官方SDK处理重试与超时；429限流错误用指数退避重试；密钥必须放在服务端环境变量，绝不能进入前端代码。同时记录每次调用的prompt版本与token用量，支撑成本核算。"
+        ],
+        "lessons": [
+          {
+            "name": "1 Prompt Engineering系统方法",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "3:35:07",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1z2cBzbEpE/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1z2cBzbEpE/?p=1",
+            "_bvid": "BV1z2cBzbEpE"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "30页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "文本向量化与语义检索": {
+        "points": [
+          "Embedding的本质：将文本映射为高维稠密向量，语义相近的文本在向量空间中距离更近。它把语义理解问题转化为向量近邻搜索问题，是RAG、推荐、去重等系统的共同技术底座。",
+          "相似度度量选择：余弦相似度忽略向量长度只关注方向，是文本检索的首选；点积在高维归一化后与余弦等价且计算更快；欧氏距离对绝对位置敏感，更常用于图像特征匹配场景。",
+          "向量数据库对比：Faiss是嵌入式库，适合单机百万级检索；Milvus与Qdrant提供分布式部署与标量过滤能力；Chroma轻量易用适合原型验证。生产选型需综合评估持久化、过滤能力与吞吐要求。",
+          "检索质量优化三板斧：混合检索（向量+BM25关键词）兼顾语义与精确匹配；查询改写与扩展提升召回覆盖；用Reranker精排模型对top50候选重排序，可显著提升最终准确率。"
+        ],
+        "lessons": [
+          {
+            "name": "1 向量数据库入门到实操",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "11:05:21",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1YaRhY9EqV/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1YaRhY9EqV/?p=1",
+            "_bvid": "BV1YaRhY9EqV"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "28页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "RAG系统构建全流程": {
+        "points": [
+          "RAG的动机与架构：大模型存在知识截止与幻觉两大问题，RAG先从外部知识库检索相关片段，再让模型基于证据作答。文档加载、切分、向量化、检索、增强生成是标准五步架构。",
+          "文档切分策略：固定长度切分简单但容易割裂语义；按标题与段落的结构感知切分能保留完整性。chunk size在300-500 token、重叠50左右是常见起点，需按文档类型实验调整。",
+          "增强生成的Prompt设计：把用户问题与检索片段拼装进模板，明确要求仅依据给定资料回答并标注引用来源。引用溯源让答案可验证，是工程上控制幻觉的第一道防线。",
+          "RAG效果评估体系：用RAGAS等框架评估忠实度、答案相关性、上下文精确率与召回率四个维度；构建带标准答案的评测集做版本回归。检索质量决定系统上限，生成质量决定下限。"
+        ],
+        "lessons": [
+          {
+            "name": "1 手把手搭建RAG问答系统",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "46:30",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV16fDfYNEzg/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV16fDfYNEzg/?p=1",
+            "_bvid": "BV16fDfYNEzg"
+          },
+          {
+            "name": "2 重排序让检索质量翻倍",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "11:05:21",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1YaRhY9EqV/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1YaRhY9EqV/?p=1",
+            "_bvid": "BV1YaRhY9EqV"
+          },
+          {
+            "name": "3 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "34页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "Agent与多智能体编排": {
+        "points": [
+          "Agent的构成要素：以LLM为大脑，加上工具调用、记忆与规划能力，构成能自主决策的执行体。ReAct范式让模型交替进行思考与行动，观察结果回填上下文，是Agent的基本工作循环。",
+          "Function Calling机制：将函数名称、描述与参数JSON Schema注册给模型；模型输出结构化调用意图，运行时执行后将结果回填对话继续推理。工具描述的质量直接决定调用准确率。",
+          "从单Agent到多智能体：单一Agent上下文膨胀后指令遵循能力下降；按职能拆分为规划者、执行者、审查者，通过消息传递协作。LangGraph以状态图显式定义协作拓扑，过程可控、可回溯。",
+          "编排框架选型：LangChain生态最全适合快速原型；LangGraph提供图编排与状态持久化适合生产；AutoGen主打多Agent对话协作。框架只是工具，核心仍是任务拆解与工具设计能力。"
+        ],
+        "lessons": [
+          {
+            "name": "1 Function Calling与Agent基础",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "7:57",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1rY6mBqEj2/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1rY6mBqEj2/?p=1",
+            "_bvid": "BV1rY6mBqEj2"
+          },
+          {
+            "name": "2 多智能体协作框架解析",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "11:05:21",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1YaRhY9EqV/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1YaRhY9EqV/?p=1",
+            "_bvid": "BV1YaRhY9EqV"
+          },
+          {
+            "name": "3 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "32页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "评测与幻觉防控工程": {
+        "points": [
+          "幻觉的成因分类：知识缺失型源于训练数据未覆盖；推理漂移型是多步推理中途偏离；对齐偏差型表现为模型迎合提问而非陈述事实。分清类型才能对症下药。",
+          "检索侧防幻觉：提高top-k召回质量、加入时间过滤、对低置信检索结果明确拒答。必须显式允许模型说资料中没有相关信息，否则模型会被迫编造答案。",
+          "生成侧约束技术：prompt中要求逐句标注引用来源；输出后用NLI模型做答案与证据的一致性校验；结构化输出配合JSON Schema校验，可拦截大部分格式与内容幻觉。",
+          "在线评估双轨制：离线评测集回归+在线抽样人工复核并行；关键业务上线前先跑影子模式对比新旧版本；建立badcase回流机制，持续补充评测集形成飞轮。"
+        ],
+        "lessons": [
+          {
+            "name": "1 RAG系统量化评测",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "11:38",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1sWMD6MEwX/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1sWMD6MEwX/?p=1",
+            "_bvid": "BV1sWMD6MEwX"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "26页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "生产化部署与成本控制": {
+        "points": [
+          "模型服务化基础：vLLM、TGI提供OpenAI兼容接口与连续批处理，吞吐可达原始推理的数倍。生产环境用Docker加K8s部署，配置健康检查与HPA自动扩缩容是标配。",
+          "推理成本优化：利用prompt缓存复用相同前缀；输出长度是成本大头，用max_tokens与few-shot示例约束；小模型能胜任的任务绝不上大模型，路由分流可节省一半以上成本。",
+          "缓存与降级策略：高频问答对做结果缓存；向量检索结果按文档版本失效更新；大模型超时或异常时降级到小模型或固定话术兜底，可用性优先于效果完整性。",
+          "安全合规底线：输入侧过滤敏感词与注入攻击；输出侧接入内容审核；用户数据遵循最小化留存并加密存储。完整留存prompt审计日志，满足合规追溯要求。"
+        ],
+        "lessons": [
+          {
+            "name": "1 LLM应用上线 checklist",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "6:44",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1Guth61EJz/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1Guth61EJz/?p=1",
+            "_bvid": "BV1Guth61EJz"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "24页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      }
+    },
+    "videoList": [
+      {
+        "name": "大模型应用开发：RAG与Agent实战 第1讲 · 大模型API与Prompt工程",
+        "duration": "3:35:07",
+        "url": "https://www.bilibili.com/video/BV1z2cBzbEpE/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1z2cBzbEpE/?p=1",
+        "_bvid": "BV1z2cBzbEpE",
+        "_realTitle": "2027版 基于LangChain的RAG与Agent智能体开发视频教程，一周轻松搞定，无废话版 ，"
+      },
+      {
+        "name": "大模型应用开发：RAG与Agent实战 第2讲 · 文本向量化与语义检索",
+        "duration": "11:05:21",
+        "url": "https://www.bilibili.com/video/BV1YaRhY9EqV/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1YaRhY9EqV/?p=1",
+        "_bvid": "BV1YaRhY9EqV",
+        "_realTitle": "【全网首发大模型RAG教程】B站首推！手把手带你结合企业级项目实战完成一套完整的RAG项目！增加检索"
+      },
+      {
+        "name": "大模型应用开发：RAG与Agent实战 第3讲 · RAG系统构建全流程",
+        "duration": "46:30",
+        "url": "https://www.bilibili.com/video/BV16fDfYNEzg/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV16fDfYNEzg/?p=1",
+        "_bvid": "BV16fDfYNEzg",
+        "_realTitle": "【大模型RAG完整教程】手把手带你结合项目实战，完成一套完整的RAG项目！增加检索/文本向量/知识库搭建"
+      },
+      {
+        "name": "大模型应用开发：RAG与Agent实战 第4讲 · Agent与多智能体编排",
+        "duration": "7:57",
+        "url": "https://www.bilibili.com/video/BV1rY6mBqEj2/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1rY6mBqEj2/?p=1",
+        "_bvid": "BV1rY6mBqEj2",
+        "_realTitle": "基于LangGraph构建一个多角色协作的智能体系统"
+      },
+      {
+        "name": "大模型应用开发：RAG与Agent实战 第5讲 · 评测与幻觉防控工程",
+        "duration": "11:38",
+        "url": "https://www.bilibili.com/video/BV1sWMD6MEwX/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1sWMD6MEwX/?p=1",
+        "_bvid": "BV1sWMD6MEwX",
+        "_realTitle": "【硬核拆解】10分钟深度解析AI大模型幻觉， 从幻觉根源到缓解治理策略全程干货！全程干货无废话，让你少走99%弯路！大模型|LLM"
+      },
+      {
+        "name": "大模型应用开发：RAG与Agent实战 第6讲 · 生产化部署与成本控制",
+        "duration": "6:44",
+        "url": "https://www.bilibili.com/video/BV1Guth61EJz/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1Guth61EJz/?p=1",
+        "_bvid": "BV1Guth61EJz",
+        "_realTitle": "大模型推理优化原理"
+      }
+    ],
+    "pptList": [
+      {
+        "name": "第1章 大模型API与Prompt工程",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 0,
+        "_chTitle": "大模型API与Prompt工程"
+      },
+      {
+        "name": "第2章 文本向量化与语义检索",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 1,
+        "_chTitle": "文本向量化与语义检索"
+      },
+      {
+        "name": "第3章 RAG系统构建全流程",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 2,
+        "_chTitle": "RAG系统构建全流程"
+      },
+      {
+        "name": "第4章 Agent与多智能体编排",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 3,
+        "_chTitle": "Agent与多智能体编排"
+      },
+      {
+        "name": "第5章 评测与幻觉防控工程",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 4,
+        "_chTitle": "评测与幻觉防控工程"
+      },
+      {
+        "name": "第6章 生产化部署与成本控制",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 5,
+        "_chTitle": "生产化部署与成本控制"
+      }
+    ]
+  },
+  {
+    "id": "career-prompt-eng",
+    "name": "提示工程与大模型交互设计",
+    "school": "DeepLearning.AI · B站翻译版",
+    "instructor": "Andrew Ng · Isa Fulford",
+    "category": "大模型应用",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "吴恩达《ChatGPT Prompt Engineering for Developers》中文社区版。面向需要把大模型嵌入业务流程的工程师与产品人员，掌握迭代式提示开发方法。",
+    "richDesc": "<h3>课程概述</h3><p>两大原则：清晰具体的指令、给模型思考时间。覆盖总结/推断/转换/扩展四大任务范式与温度参数调优。配套知识库切片：《llm_application_dev.md》第一章。</p><h3>适合人群</h3><p>业务开发工程师、企业内训全员普及、AI产品经理。</p><h3>先修要求</h3><p>无硬性编程要求；有Python经验更佳。</p>",
+    "studentCount": 28000,
+    "rating": 4.8,
+    "resourceCount": 32,
+    "status": "ongoing",
+    "textbook": "ChatGPT Prompt Engineering for Developers（官方Notebooks）",
+    "period": 16,
+    "chapterCount": 3,
+    "chapterTitles": [
+      "提示工程两大原则",
+      "四大任务范式",
+      "对话机器人与温度参数"
+    ],
+    "chapters": {
+      "提示工程两大原则": {
+        "points": [
+          "原则一：写清晰具体的指令：用分隔符隔离指令与待处理数据，防止提示注入；明确要求结构化输出（JSON、表格）便于下游解析；让模型先检查前提条件是否满足，再执行任务。",
+          "原则二：给模型思考时间：把复杂任务拆解为编号步骤指引；让模型先自行完整推导再下结论，而不是直接判断对错。链式思考能显著提升数学与逻辑类任务的准确率。",
+          "迭代式prompt开发：第一版prompt必然不完美；遵循分析badcase、补充指令或示例、重新评测的循环。建立固定评测集量化每次修改的效果，避免凭感觉调优。",
+          "少样本示例的威力：给出2-5个输入输出示例，模型会自动模仿其格式与风格；示例应覆盖边界情况。示例与真实输入的分布越接近，效果越好。"
+        ],
+        "lessons": [
+          {
+            "name": "1 Guidelines 原则精讲",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "6:30",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1Bo4y1A7FU/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1Bo4y1A7FU/?p=1",
+            "_bvid": "BV1Bo4y1A7FU"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "18页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "四大任务范式": {
+        "points": [
+          "概括任务：指定摘要的侧重点（面向受众、限定字数、提取要点）远比笼统地说总结一下效果好；处理多篇评论时可分别概括再聚合为一份生产摘要。",
+          "推断任务：情感极性、情绪类型、信息抽取等任务零样本即可完成；一条prompt就能替代传统需要标注数据训练的NLP流水线，这是大模型最提效的用法之一。",
+          "转换任务：翻译时指定语域与目标受众；语气改写、格式转换（HTML转JSON）、拼写语法纠错都是典型场景。关键是把输入输出的格式契约写清楚。",
+          "扩展任务：根据要点生成客服邮件等完整文本；用temperature控制创造性程度；提供写作角色与语气示例，让输出风格稳定可控。"
+        ],
+        "lessons": [
+          {
+            "name": "1 Inferring/Transforming 实操",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "57:56",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1qo4y1w7zV/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1qo4y1w7zV/?p=1",
+            "_bvid": "BV1qo4y1w7zV"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "22页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "对话机器人与温度参数": {
+        "points": [
+          "ChatAPI的对话管理：messages数组天然支持多轮对话；每轮请求需携带完整历史，模型才能理解上下文。长对话要做历史压缩或滑动窗口，控制token成本。",
+          "System角色设定人格：system消息定义助手的身份、语气、知识边界与拒绝策略，相当于整个对话的操作系统，其优先级高于用户消息中的相反指令。",
+          "温度参数的直观理解：temperature为0时近似贪心解码，输出确定可复现，适合抽取与分类；接近1时输出多样有创造性，适合文案创作。生产环境按任务类型固化温度配置。",
+          "对话机器人工程边界：设置最大轮数与token预算防止失控；敏感话题及时转向人工；把机器人定位与拒绝话术写入system，并纳入定期回归测试。"
+        ],
+        "lessons": [
+          {
+            "name": "1 ChatBot 与 Temperature",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "1:33:55",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1173jzNELG/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1173jzNELG/?p=1",
+            "_bvid": "BV1173jzNELG"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "20页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      }
+    },
+    "videoList": [
+      {
+        "name": "提示工程与大模型交互设计 第1讲 · 提示工程两大原则",
+        "duration": "6:30",
+        "url": "https://www.bilibili.com/video/BV1Bo4y1A7FU/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1Bo4y1A7FU/?p=1",
+        "_bvid": "BV1Bo4y1A7FU",
+        "_realTitle": "《吴恩达 x OpenAI Prompt课程》【专业翻译，配套代码笔记】01.课程介绍"
+      },
+      {
+        "name": "提示工程与大模型交互设计 第2讲 · 四大任务范式",
+        "duration": "57:56",
+        "url": "https://www.bilibili.com/video/BV1qo4y1w7zV/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1qo4y1w7zV/?p=1",
+        "_bvid": "BV1qo4y1w7zV",
+        "_realTitle": "一起学 OpenAI+吴恩达 Prompt工程师课程 Part 1"
+      },
+      {
+        "name": "提示工程与大模型交互设计 第3讲 · 对话机器人与温度参数",
+        "duration": "1:33:55",
+        "url": "https://www.bilibili.com/video/BV1173jzNELG/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1173jzNELG/?p=1",
+        "_bvid": "BV1173jzNELG",
+        "_realTitle": "【吴恩达】2025年公认最好的【提示词工程】教程！大模型入门到进阶，一套全解决！Prompt Eng"
+      }
+    ],
+    "pptList": [
+      {
+        "name": "第1章 提示工程两大原则",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 0,
+        "_chTitle": "提示工程两大原则"
+      },
+      {
+        "name": "第2章 四大任务范式",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 1,
+        "_chTitle": "四大任务范式"
+      },
+      {
+        "name": "第3章 对话机器人与温度参数",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 2,
+        "_chTitle": "对话机器人与温度参数"
+      }
+    ]
+  },
+  {
+    "id": "career-llm-finetune",
+    "name": "大模型微调实战：LoRA与QLoRA",
+    "school": "Hugging Face Course · B站中文区",
+    "instructor": "HF 社区讲师",
+    "category": "大模型应用",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "面向需要在私有领域定制大模型的工程师。从微调路线决策到QLoRA显存压缩实测，完成一次领域SFT并建立前后评测基线，规避灾难性遗忘。",
+    "richDesc": "<h3>课程概述</h3><p>核心信条：能RAG解决的不微调，能LoRA解决的不全参微调。配套知识库切片：《llm_application_dev.md》第四章。</p><h3>适合人群</h3><p>算法工程师进阶、企业私有大模型建设团队、科研向研究生。</p><h3>先修要求</h3><p>深度学习基础；了解Transformer结构。</p>",
+    "studentCount": 28000,
+    "rating": 4.8,
+    "resourceCount": 80,
+    "status": "ongoing",
+    "textbook": "Hugging Face NLP Course（hf.co/learn）· Transformers文档",
+    "period": 40,
+    "chapterCount": 4,
+    "chapterTitles": [
+      "微调路线决策框架",
+      "LoRA原理与实现",
+      "QLoRA与单卡训练",
+      "评测与灾难性遗忘治理"
+    ],
+    "chapters": {
+      "微调路线决策框架": {
+        "points": [
+          "Prompt、RAG与微调的决策链：知识更新频繁用RAG；任务风格或格式需要内化用微调，两者可以叠加。先穷尽prompt优化再考虑微调，两者成本差一个数量级。",
+          "全量微调与参数高效微调：全量微调更新全部权重，7B模型需要数十GB显存与完整训练管线；LoRA类PEFT只训练低秩增量，单张24GB卡即可微调7B-13B模型，效果损失极小。",
+          "数据质量决定上限：垃圾进垃圾出在微调中尤其明显；一千条高质量、分布一致、去重后的样本往往胜过十万条脏数据。数据清洗与人工抽检环节不可省略。",
+          "微调数据格式规范：采用instruction-input-output三元组或messages对话格式；样本需覆盖任务边界与异常case；按8:1:1切分训练验证测试集，严防数据泄漏。"
+        ],
+        "lessons": [
+          {
+            "name": "1 什么时候该微调",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "9:03",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1TTbFegELr/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1TTbFegELr/?p=1",
+            "_bvid": "BV1TTbFegELr"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "22页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "LoRA原理与实现": {
+        "points": [
+          "低秩分解的数学直觉：微调时权重变化量ΔW近似低秩，可用两个小矩阵A与B的乘积近似表示，秩r取8到64即可，可训练参数量降至原模型的百分之一以下。",
+          "LoRA的实现细节：原权重W全程冻结，前向传播为Wx加BAx；通常只对注意力层的q_proj与v_proj注入LoRA。推理时可将BA合并回W，实现零额外推理延迟。",
+          "HuggingFace PEFT实战流程：prepare_model_for_kbit_training预处理基座，LoraConfig配置秩与目标模块，get_peft_model包装模型；配合bitsandbytes加载4bit基座即可单卡训练。",
+          "超参数经验值：r=8起步效果已可观，复杂任务可提升到32或64；alpha取2倍r是常见配置；LoRA学习率比全量微调大约一个数量级（1e-4左右）；训练2-3个epoch防止过拟合。"
+        ],
+        "lessons": [
+          {
+            "name": "1 LoRA低秩适配精讲",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "34:31",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1cHPLeUEfs/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1cHPLeUEfs/?p=1",
+            "_bvid": "BV1cHPLeUEfs"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "28页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "QLoRA与单卡训练": {
+        "points": [
+          "NF4量化的原理：4-bit NormalFloat是针对正态分布权重设计的量化格式，信息损失低于均匀INT4；双重量化把量化常数本身也压缩，进一步节省显存开销。",
+          "QLoRA的显存账本：7B模型FP16需要约14GB显存，NF4量化后仅约3.5GB；加上LoRA参数、梯度与激活值，单张24GB消费级显卡即可完成7B模型微调，这是QLoRA最大的工程意义。",
+          "分页优化器与训练稳定性：paged optimizer在显存峰值时把优化器状态换页到CPU内存避免OOM；梯度检查点用重复计算换取显存节省，两者配合让长序列训练成为可能。",
+          "单卡训练实操清单：bitsandbytes加载4bit基座，开启梯度检查点，batch size设1-2配合梯度累积，启用bf16混合精度，最终用peft只保存适配器权重而非完整模型。"
+        ],
+        "lessons": [
+          {
+            "name": "1 QLoRA单卡实战",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "21:09",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1sVRyY5EJT/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1sVRyY5EJT/?p=1",
+            "_bvid": "BV1sVRyY5EJT"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "24页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "评测与灾难性遗忘治理": {
+        "points": [
+          "微调效果评测双维度：任务内指标（准确率、ROUGE、人工评分）加上通用能力回归（MMLU等基准抽样）。只看任务指标会发现模型学会了任务、却变笨了其它能力。",
+          "灾难性遗忘的机理：微调梯度把原有权重推向新任务最优解，旧任务的知识表征被覆盖。数据分布越窄、学习率越大、训练越久，遗忘越严重。",
+          "遗忘治理策略：混入一定比例通用指令数据做正则回放；降低学习率与训练轮数；LoRA天然缓解遗忘因为主干被冻结只动低秩增量；必要时用EWC等正则约束重要参数。",
+          "模型卡与发布规范：记录基座版本、数据构成、训练超参、评测结果与已知局限；灰度发布对比线上表现；保留回滚到基座加旧适配器的能力，确保随时可退。"
+        ],
+        "lessons": [
+          {
+            "name": "1 微调前后评测体系",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "5:58",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1nJ4m1M7P2/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1nJ4m1M7P2/?p=1",
+            "_bvid": "BV1nJ4m1M7P2"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "24页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      }
+    },
+    "videoList": [
+      {
+        "name": "大模型微调实战：LoRA与QLoRA 第1讲 · 微调路线决策框架",
+        "duration": "9:03",
+        "url": "https://www.bilibili.com/video/BV1TTbFegELr/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1TTbFegELr/?p=1",
+        "_bvid": "BV1TTbFegELr",
+        "_realTitle": "微调技术大比拼：全量微调与LoRA、QLoRA实测对比！"
+      },
+      {
+        "name": "大模型微调实战：LoRA与QLoRA 第2讲 · LoRA原理与实现",
+        "duration": "34:31",
+        "url": "https://www.bilibili.com/video/BV1cHPLeUEfs/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1cHPLeUEfs/?p=1",
+        "_bvid": "BV1cHPLeUEfs",
+        "_realTitle": "【喂饭教程】30分钟学会DeepSeek R1模型Lora微调训练，环境配置+模型微调+模型部署+效"
+      },
+      {
+        "name": "大模型微调实战：LoRA与QLoRA 第3讲 · QLoRA与单卡训练",
+        "duration": "21:09",
+        "url": "https://www.bilibili.com/video/BV1sVRyY5EJT/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1sVRyY5EJT/?p=1",
+        "_bvid": "BV1sVRyY5EJT",
+        "_realTitle": "QLoRA量化微调实战"
+      },
+      {
+        "name": "大模型微调实战：LoRA与QLoRA 第4讲 · 评测与灾难性遗忘治理",
+        "duration": "5:58",
+        "url": "https://www.bilibili.com/video/BV1nJ4m1M7P2/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1nJ4m1M7P2/?p=1",
+        "_bvid": "BV1nJ4m1M7P2",
+        "_realTitle": "什么是灾难性遗忘？为什么要重视它？"
+      }
+    ],
+    "pptList": [
+      {
+        "name": "第1章 微调路线决策框架",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 0,
+        "_chTitle": "微调路线决策框架"
+      },
+      {
+        "name": "第2章 LoRA原理与实现",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 1,
+        "_chTitle": "LoRA原理与实现"
+      },
+      {
+        "name": "第3章 QLoRA与单卡训练",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 2,
+        "_chTitle": "QLoRA与单卡训练"
+      },
+      {
+        "name": "第4章 评测与灾难性遗忘治理",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 3,
+        "_chTitle": "评测与灾难性遗忘治理"
+      }
+    ]
+  },
+  {
+    "id": "career-model-deploy",
+    "name": "模型部署与推理加速实战",
+    "school": "B站技术区 · MLOps 讲师团",
+    "instructor": "一线推理优化工程师",
+    "category": "AI岗位技能",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "面向MLOps与推理工程师岗位培训。覆盖ONNX/TensorRT转换链路、INT8/GPTQ量化、vLLM服务化部署与灰度发布规范，对标生产环境P99延迟指标。",
+    "richDesc": "<h3>课程概述</h3><p>以「延迟下降一半」为验收目标的实操课。配套知识库切片：《ai_engineering_practice.md》第四五章。</p><h3>适合人群</h3><p>后端/运维转型MLOps、算法工程师补齐部署能力、企业AI平台组。</p><h3>先修要求</h3><p>Docker基础；了解Linux命令行。</p>",
+    "studentCount": 28000,
+    "rating": 4.8,
+    "resourceCount": 80,
+    "status": "ongoing",
+    "textbook": "ML模型部署实战手册（内部讲义）",
+    "period": 40,
+    "chapterCount": 5,
+    "chapterTitles": [
+      "部署架构与服务化基础",
+      "ONNX与TensorRT加速",
+      "量化技术实战",
+      "vLLM与大模型服务化",
+      "发布流程与线上运维"
+    ],
+    "chapters": {
+      "部署架构与服务化基础": {
+        "points": [
+          "从notebook到生产的鸿沟：实验代码假设单用户低并发，生产要面对高并发、低延迟、故障恢复与监控告警。推理服务必须提供标准化API、批处理与资源隔离能力。",
+          "推理服务的标准形态：模型封装为HTTP或gRPC接口，OpenAI兼容格式已成事实标准；内部由请求队列、批处理器、推理引擎组成；健康检查与指标端点必不可少。",
+          "部署全流程概述：模型导出、容器化、压测定容量、灰度上线、监控迭代五步走。每一步的产物都要版本化管理，确保可复现、可回滚、可审计。",
+          "延迟与吞吐的权衡：延迟是单个请求的响应时间，吞吐是单位时间处理总量。批处理提升吞吐但增加排队延迟；在线交互看P99延迟，离线任务看吞吐量。"
+        ],
+        "lessons": [
+          {
+            "name": "1 模型服务化第一课",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "12:45",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1LG78zBEyy/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1LG78zBEyy/?p=1",
+            "_bvid": "BV1LG78zBEyy"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "26页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "ONNX与TensorRT加速": {
+        "points": [
+          "ONNX的定位：开放中立的模型交换格式，把PyTorch、TF等模型统一为标准计算图表示。一次导出即可在GPU、CPU、移动端多环境推理，解耦训练框架与部署环境。",
+          "PyTorch导出ONNX要点：torch.onnx.export需要示例输入做图追踪；用dynamic_axes标明batch与序列长度可变；导出后必须用onnxruntime做一致性校验，误差应控制在千分之一以内。",
+          "TensorRT的三大优化：算子融合把卷积、BN、ReLU合并为单一kernel；FP16或INT8量化降低访存开销；kernel自动调优为当前显卡挑选最优实现，综合提速2到5倍。",
+          "典型加速流水线：PyTorch训练、ONNX导出、trtexec构建引擎、C++或Python运行时部署。注意引擎与显卡型号绑定，更换显卡必须重建引擎。"
+        ],
+        "lessons": [
+          {
+            "name": "1 ONNX Runtime推理优化",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "2:34:41",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1MZbjzSEtV/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1MZbjzSEtV/?p=1",
+            "_bvid": "BV1MZbjzSEtV"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "30页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "量化技术实战": {
+        "points": [
+          "量化的基本原理：用更低比特（FP16、INT8、INT4）表示权重与激活，显存与访存量成比例下降。核心是用校准数据确定各层缩放因子，最小化量化误差。",
+          "PTQ与QAT两条路线：训练后量化PTQ无需重训练，几十条校准数据即可完成，是首选尝试；量化感知训练QAT在训练中模拟量化误差，精度更高但成本也高，用于PTQ不达标时。",
+          "大模型量化实务：GPTQ与AWQ面向4bit权重量化，压缩后精度损失通常在1%以内；KL散度校准比minmax更稳健。先做W4A16权重量化验证，更激进的全量化需要完整评测背书。",
+          "压缩组合拳：量化降低比特、剪枝删除冗余通道、蒸馏让小模型学大模型输出，三者可以叠加。工业落地通常是蒸馏出小模型、INT8量化、TensorRT部署的完整链路。"
+        ],
+        "lessons": [
+          {
+            "name": "1 大模型量化落地",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "14:07",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1MFPReTECW/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1MFPReTECW/?p=1",
+            "_bvid": "BV1MFPReTECW"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "26页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "vLLM与大模型服务化": {
+        "points": [
+          "KV Cache与显存困境：自回归生成时历史token的KV缓存随长度增长，静态预分配导致大量显存碎片。PagedAttention借鉴虚拟内存分页思想管理KV Cache，碎片率从60-80%降至4%以下。",
+          "连续批处理：传统静态batch必须等最慢的请求完成才能开始下一批；vLLM的连续批处理在每个解码步动态插入新请求、移除完成请求，吞吐提升2到4倍，是它成为部署事实标准的关键。",
+          "vLLM部署实践：一条命令即可启动OpenAI兼容服务；gpu-memory-utilization控制显存占比，max-model-len限制上下文长度，tensor-parallel-size支持多卡切分大模型。",
+          "服务化配套能力：前缀缓存让相同system prompt只计算一次；AWQ、GPTQ量化模型可直接加载进一步省显存；配合Prometheus指标与负载均衡可构建高可用推理集群。"
+        ],
+        "lessons": [
+          {
+            "name": "1 vLLM生产级部署",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "34:36",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1u6h1zrEWu/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1u6h1zrEWu/?p=1",
+            "_bvid": "BV1u6h1zrEWu"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "28页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "发布流程与线上运维": {
+        "points": [
+          "灰度发布策略：按流量百分比从1%、10%、50%到100%逐步放量，全程对比新旧版本核心指标与错误率。出问题秒级回滚是灰度的前提，模型服务必须支持双版本并存。",
+          "蓝绿与滚动发布：蓝绿发布双环境一键切换，资源翻倍但回滚最快；滚动发布逐实例替换，节省资源但周期较长。模型大、启动慢的服务更适合蓝绿模式。",
+          "线上监控三件套：业务指标（准确率、转化率）、系统指标（QPS、P99、显存）、数据指标（输入分布漂移）。大盘、告警、值班响应形成闭环，任何恶化一小时内可定位。",
+          "模型版本管理：模型文件、推理引擎配置、预处理代码三位一体版本化。发布记录写明训练数据快照与评测报告，满足可追溯与审计要求。"
+        ],
+        "lessons": [
+          {
+            "name": "1 灰度发布与监控闭环",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "5:04",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1FDjUzhEJQ/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1FDjUzhEJQ/?p=1",
+            "_bvid": "BV1FDjUzhEJQ"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "24页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      }
+    },
+    "videoList": [
+      {
+        "name": "模型部署与推理加速实战 第1讲 · 部署架构与服务化基础",
+        "duration": "12:45",
+        "url": "https://www.bilibili.com/video/BV1LG78zBEyy/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1LG78zBEyy/?p=1",
+        "_bvid": "BV1LG78zBEyy",
+        "_realTitle": "[入门篇]2.1.模型推理部署流程概述"
+      },
+      {
+        "name": "模型部署与推理加速实战 第2讲 · ONNX与TensorRT加速",
+        "duration": "2:34:41",
+        "url": "https://www.bilibili.com/video/BV1MZbjzSEtV/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1MZbjzSEtV/?p=1",
+        "_bvid": "BV1MZbjzSEtV",
+        "_realTitle": "YOLOv13 从训练到模型部署全流程实战：PyTorch → ONNX → TensorRT"
+      },
+      {
+        "name": "模型部署与推理加速实战 第3讲 · 量化技术实战",
+        "duration": "14:07",
+        "url": "https://www.bilibili.com/video/BV1MFPReTECW/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1MFPReTECW/?p=1",
+        "_bvid": "BV1MFPReTECW",
+        "_realTitle": "【人工智能】模型压缩四大方法概述 | 量化、剪枝、蒸馏和二值化 | 模型瘦身 |  降低精度 | 速度提升 | 知识蒸馏 | 温度参数 | XNOR | 优缺点"
+      },
+      {
+        "name": "模型部署与推理加速实战 第4讲 · vLLM与大模型服务化",
+        "duration": "34:36",
+        "url": "https://www.bilibili.com/video/BV1u6h1zrEWu/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1u6h1zrEWu/?p=1",
+        "_bvid": "BV1u6h1zrEWu",
+        "_realTitle": "【VLLM本地部署大模型】30分钟手把手带你使用VLLM本地部署企业级DeepSeek模型！全程干货！附配套文档！AI大模型|程序员|大模型部署"
+      },
+      {
+        "name": "模型部署与推理加速实战 第5讲 · 发布流程与线上运维",
+        "duration": "5:04",
+        "url": "https://www.bilibili.com/video/BV1FDjUzhEJQ/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1FDjUzhEJQ/?p=1",
+        "_bvid": "BV1FDjUzhEJQ",
+        "_realTitle": "上线规范，发版上线流程｜分级发布、灰度发布｜CICD 流水线、CPU、内存、Panic、Fatal"
+      }
+    ],
+    "pptList": [
+      {
+        "name": "第1章 部署架构与服务化基础",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 0,
+        "_chTitle": "部署架构与服务化基础"
+      },
+      {
+        "name": "第2章 ONNX与TensorRT加速",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 1,
+        "_chTitle": "ONNX与TensorRT加速"
+      },
+      {
+        "name": "第3章 量化技术实战",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 2,
+        "_chTitle": "量化技术实战"
+      },
+      {
+        "name": "第4章 vLLM与大模型服务化",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 3,
+        "_chTitle": "vLLM与大模型服务化"
+      },
+      {
+        "name": "第5章 发布流程与线上运维",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 4,
+        "_chTitle": "发布流程与线上运维"
+      }
+    ]
+  },
+  {
+    "id": "career-industrial-vision",
+    "name": "工业视觉质检实训：YOLO缺陷检测",
+    "school": "阿里云天池 · B站实训",
+    "instructor": "天池认证讲师",
+    "category": "工业AI",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "面向制造企业质检智能化改造与转岗人员。从相机选型光源布置到YOLO训练、无监督异常检测PatchCore，再到人机对拍验收标准，完整走通一条产线质检项目。",
+    "richDesc": "<h3>课程概述</h3><p>按「能立项、能落地、能验收」组织内容，含ROI核算模板。配套知识库切片：《ai_industry_cases.md》制造业质检章节。</p><h3>适合人群</h3><p>机械/质量工程师转岗AI质检、企业质检数字化团队、高职智能制造专业。</p><h3>先修要求</h3><p>Python基础；无需深度学习经验。</p>",
+    "studentCount": 28000,
+    "rating": 4.8,
+    "resourceCount": 96,
+    "status": "ongoing",
+    "textbook": "工业机器视觉项目实战讲义",
+    "period": 48,
+    "chapterCount": 5,
+    "chapterTitles": [
+      "产线图像采集基础",
+      "缺陷检测数据集构建",
+      "YOLO检测模型训练",
+      "无监督异常检测",
+      "产线部署与验收对拍"
+    ],
+    "chapters": {
+      "产线图像采集基础": {
+        "points": [
+          "工业相机与镜头选型：面阵相机适合静态拍照，线阵相机适合传送带连续扫描；分辨率按缺陷最小尺寸除以视野再乘3倍冗余估算；远心镜头消除透视畸变，是尺寸测量的标配。",
+          "光源与成像方案：明场、暗场、背光对应不同缺陷类型——划痕用暗场凸显散射，尺寸测量用背光剪影；频闪配合短曝光冻结运动模糊。光源是整套系统里最值得投入的一环。",
+          "采集稳定性保障：固定工作距离与曝光参数，锁定相机白平衡与增益；建立每日标准片标定流程。光照漂移是工业视觉系统上线后精度劣化的头号原因。",
+          "数据采集规范：每个缺陷类别至少采集300到500张实拍样本，覆盖极端光照与位置变化；原始图像不做压缩存档；标注前完成保密脱敏处理。"
+        ],
+        "lessons": [
+          {
+            "name": "1 光源与成像方案设计",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "6:00:20",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1VQJSz8EYa/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1VQJSz8EYa/?p=1",
+            "_bvid": "BV1VQJSz8EYa"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "28页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "缺陷检测数据集构建": {
+        "points": [
+          "数据标注规范：统一标注工具与类别定义手册；边界框紧贴缺陷外沿；歧义样本双人标注交叉仲裁。标注质量抽检不合格率应控制在5%以内。",
+          "数据增强策略：旋转、翻转、亮度对比度扰动、马赛克增强都可提升泛化能力；但工业图像要注意物理合理性，例如上下翻转可能制造出产线上不存在的缺陷方向。增强参数随配置版本管理。",
+          "数据集划分与泄漏防控：按批次或工件划分训练验证测试集，而不是按图片随机划分，防止同一工件不同角度的照片跨集泄漏；类别不平衡时采用分层抽样。",
+          "公开数据集冷启动：NEU表面缺陷、PCB缺陷等公开数据集可用于算法预研；但产线域差异大，正式模型必须用自有数据微调，公开数据集只能作为起点。"
+        ],
+        "lessons": [
+          {
+            "name": "1 LabelImg/Roboflow标注实操",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "2:06",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1tiTLzbEfr/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1tiTLzbEfr/?p=1",
+            "_bvid": "BV1tiTLzbEfr"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "24页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "YOLO检测模型训练": {
+        "points": [
+          "YOLO一阶段检测思想：把检测转化为单次前向传播的回归问题，网格直接预测框与类别，速度远超两阶段方法。v8沿用anchor-free设计并采用解耦检测头分离分类与回归。",
+          "训练配置要点：输入尺寸640是精度与速度的平衡点；batch size按显存拉满；数据yaml写明训练验证路径与类别；从yolov8s预训练权重起步做迁移学习。",
+          "训练过程监控：紧盯mAP50-95与各类别AP；loss不降先检查标注质量与学习率；用训练中的验证图可视化预测框，直观发现漏检模式；早停patience默认50轮。",
+          "常见问题排查：小目标漏检就提高输入分辨率并增加P2检测层；类别混淆检查标注一致性与困难样本；过拟合则加强增强、缩小模型规模。实验日志与权重按编号归档。"
+        ],
+        "lessons": [
+          {
+            "name": "1 YOLO缺陷检测全流程",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "1:40:55",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1d1W9z9E2G/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1d1W9z9E2G/?p=1",
+            "_bvid": "BV1d1W9z9E2G"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "30页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "无监督异常检测": {
+        "points": [
+          "无监督范式的动机：缺陷种类无法穷举且新型缺陷不断出现，有监督检测永远缺类别样本。异常检测只用正常样本建模，偏离即异常，天然覆盖未知缺陷类型。",
+          "PatchCore方法原理：用预训练网络提取正常样本的局部patch特征建立memory bank；推理时计算测试patch到memory bank的最近邻距离，距离大即为异常，同时输出图像级与像素级异常图。",
+          "MVTec AD基准与指标：MVTec AD是工业异常检测的标准评测集；常用指标为图像级与像素级AUROC。PatchCore在该基准上达到99%以上的图像级AUROC，是首选基线方法。",
+          "落地要点：正常样本必须覆盖产线所有正常状态，包括换料与光照波动；判定阈值按漏检率倒推设定；定期用新正常样本更新memory bank以应对分布漂移。"
+        ],
+        "lessons": [
+          {
+            "name": "1 PatchCore零缺陷样本方案",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "6:00",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1tnDiBGEXJ/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1tnDiBGEXJ/?p=1",
+            "_bvid": "BV1tnDiBGEXJ"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "22页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "产线部署与验收对拍": {
+        "points": [
+          "边缘部署方案：NVIDIA Jetson或工控机加TensorRT是主流组合；ONNX导出、FP16引擎构建、C#或C++ SDK集成到产线上位机；帧率需求决定模型规格选择。",
+          "产线系统集成：光电开关触发采图、推理、结果经IO或Modbus回传、剔除机构动作，端到端节拍必须小于产线节拍，通常预留20%以上的余量。",
+          "验收对拍流程：盲测集与人工质检员对拍至少一周；统计漏检率、误检率、过杀率并与人工基线对比。验收标准要在合同中量化写明，例如漏检率不超过千分之一。",
+          "上线后持续运营：建立badcase回流标注机制，按月做增量训练；监控光照与相机健康度；模型与配置变更全部走版本管理，任何调整都可回滚。"
+        ],
+        "lessons": [
+          {
+            "name": "1 质检项目验收标准",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "9:33",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV11eRRY6ENu/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV11eRRY6ENu/?p=1",
+            "_bvid": "BV11eRRY6ENu"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "26页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      }
+    },
+    "videoList": [
+      {
+        "name": "工业视觉质检实训：YOLO缺陷检测 第1讲 · 产线图像采集基础",
+        "duration": "6:00:20",
+        "url": "https://www.bilibili.com/video/BV1VQJSz8EYa/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1VQJSz8EYa/?p=1",
+        "_bvid": "BV1VQJSz8EYa",
+        "_realTitle": "yolov8教程从零开始，环境安装+训练+数据构建，手把手教会教你，草履虫轻松学会！！目标检测/物体"
+      },
+      {
+        "name": "工业视觉质检实训：YOLO缺陷检测 第2讲 · 缺陷检测数据集构建",
+        "duration": "2:06",
+        "url": "https://www.bilibili.com/video/BV1tiTLzbEfr/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1tiTLzbEfr/?p=1",
+        "_bvid": "BV1tiTLzbEfr",
+        "_realTitle": "PCB缺陷检测识别项目-基于YOLOv8：完整源码+PyQt5界面+完整训练，源码数据集一步到位！【"
+      },
+      {
+        "name": "工业视觉质检实训：YOLO缺陷检测 第3讲 · YOLO检测模型训练",
+        "duration": "1:40:55",
+        "url": "https://www.bilibili.com/video/BV1d1W9z9E2G/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1d1W9z9E2G/?p=1",
+        "_bvid": "BV1d1W9z9E2G",
+        "_realTitle": "一小时成功！YOLOv8环境搭建+模型训练+训练自己的数据集，手把手带你从零部署YOLOv8目标检测"
+      },
+      {
+        "name": "工业视觉质检实训：YOLO缺陷检测 第4讲 · 无监督异常检测",
+        "duration": "6:00",
+        "url": "https://www.bilibili.com/video/BV1tnDiBGEXJ/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1tnDiBGEXJ/?p=1",
+        "_bvid": "BV1tnDiBGEXJ",
+        "_realTitle": "基于Dinov3+Patchcore的工业视觉异常检与定位"
+      },
+      {
+        "name": "工业视觉质检实训：YOLO缺陷检测 第5讲 · 产线部署与验收对拍",
+        "duration": "9:33",
+        "url": "https://www.bilibili.com/video/BV11eRRY6ENu/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV11eRRY6ENu/?p=1",
+        "_bvid": "BV11eRRY6ENu",
+        "_realTitle": "基于C# winform部署yolov8的onnx模型进行GPU推理"
+      }
+    ],
+    "pptList": [
+      {
+        "name": "第1章 产线图像采集基础",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 0,
+        "_chTitle": "产线图像采集基础"
+      },
+      {
+        "name": "第2章 缺陷检测数据集构建",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 1,
+        "_chTitle": "缺陷检测数据集构建"
+      },
+      {
+        "name": "第3章 YOLO检测模型训练",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 2,
+        "_chTitle": "YOLO检测模型训练"
+      },
+      {
+        "name": "第4章 无监督异常检测",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 3,
+        "_chTitle": "无监督异常检测"
+      },
+      {
+        "name": "第5章 产线部署与验收对拍",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 4,
+        "_chTitle": "产线部署与验收对拍"
+      }
+    ]
+  },
+  {
+    "id": "career-predictive-maintenance",
+    "name": "设备预测性维护与时序数据分析",
+    "school": "阿里云天池 · C-MAPSS实战",
+    "instructor": "工业大数据讲师团",
+    "category": "工业AI",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "面向工业互联网岗位的预测性维护实训。从振动信号特征工程到轴承故障特征频率、自编码器健康指标与RUL剩余寿命预测，建立报警精确率优先的落地方法论。",
+    "richDesc": "<h3>课程概述</h3><p>以NASA C-MAPSS涡扇发动机数据集为主线项目。配套知识库切片：《ai_industry_cases.md》预测性维护章节。</p><h3>适合人群</h3><p>设备工程师转型、工业互联网实施顾问、时序算法初学者、企业设备管理部内训。</p><h3>先修要求</h3><p>基础统计概念；Python pandas 操作。</p>",
+    "studentCount": 28000,
+    "rating": 4.8,
+    "resourceCount": 80,
+    "status": "ongoing",
+    "textbook": "基于深度学习的装备剩余寿命预测（C-MAPSS论文集）",
+    "period": 40,
+    "chapterCount": 5,
+    "chapterTitles": [
+      "工业数据采集与时序基础",
+      "振动信号特征工程",
+      "健康指标构建",
+      "RUL剩余寿命预测",
+      "报警治理与维护闭环"
+    ],
+    "chapters": {
+      "工业数据采集与时序基础": {
+        "points": [
+          "工业时序数据特点：传感器按固定频率采样形成多元时间序列，包含趋势、周期与突发异常三类模式。采样频率须满足奈奎斯特定理，至少覆盖故障特征频率的两倍。",
+          "数据采集架构：传感器、边缘网关做预处理与降采样、时序数据库如InfluxDB或TDengine存储、分析平台消费。多源数据融合前必须完成时间戳对齐与时区统一。",
+          "时序预处理四步：缺失值用插值补齐或状态标记；异常点用3σ或箱线图识别后按业务判断修正；重采样统一频率；滑动窗口切分是后续特征工程与建模的基础操作。",
+          "机理知识先行：转速、负载、工况切换信息必须与振动温度数据同步采集。脱离工况谈数据会得出错误结论，机理标签是数据驱动模型的护栏。"
+        ],
+        "lessons": [
+          {
+            "name": "1 预测性维护业务全景",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "1:06:46",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1kyXcYjEhx/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1kyXcYjEhx/?p=1",
+            "_bvid": "BV1kyXcYjEhx"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "24页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "振动信号特征工程": {
+        "points": [
+          "振动信号的三大分析域：时域统计量如均值、峰值、峭度反映整体能量与冲击；频域FFT频谱与特征频率用于定位故障部位；时频域小波与包络谱处理非平稳信号。",
+          "轴承特征频率计算：根据转速与几何参数计算内外圈、滚动体、保持架的特征频率BPFO、BPFI、BSF、FTF；频谱中特征频率处出现峰值即指向对应部件故障。",
+          "包络解调技术：轴承早期故障的周期冲击会调制在高频共振区，Hilbert包络解调后低频故障特征清晰浮现。这是滚动轴承诊断中最经典有效的手段。",
+          "特征选择与降维：从数百个候选特征中用相关性分析、递归消除结合机理筛选；PCA压缩共线维度；特征集必须跨设备验证稳定性，避免过拟合到单台设备。"
+        ],
+        "lessons": [
+          {
+            "name": "1 轴承故障特征频率计算",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "1:21:52",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1h7s8zSEbv/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1h7s8zSEbv/?p=1",
+            "_bvid": "BV1h7s8zSEbv"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "28页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "健康指标构建": {
+        "points": [
+          "健康指标HI的定义：将多维监测数据融合为单一标量，单调反映设备退化程度。好的HI应具备单调性、趋势性与跨设备一致性三个性质。",
+          "基于机理的HI构建：选取对退化敏感的物理特征如振动RMS、油液铁含量，按退化模型归一化融合。优点是可解释性强，缺点是依赖专家经验。",
+          "数据驱动的HI构建：用正常数据训练自编码器，重构误差即为健康指标——正常时误差低，退化后误差上升；也可以用健康样本训练分类器输出健康概率。",
+          "HI规范化处理：消除转速负载等工况影响做归一化；按首点归一化到0到1区间便于跨设备比较；对HI做平滑去噪后再交给寿命预测模型使用。"
+        ],
+        "lessons": [
+          {
+            "name": "1 自编码器异常检测实操",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "12:40",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1i3tzzxEmH/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1i3tzzxEmH/?p=1",
+            "_bvid": "BV1i3tzzxEmH"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "26页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "RUL剩余寿命预测": {
+        "points": [
+          "RUL预测的问题定义：给定当前观测与历史退化轨迹，预测设备距失效的剩余可用时间。它是预测性维护的核心输出，直接决定维护排期计划。",
+          "C-MAPSS基准数据集：NASA涡扇发动机仿真数据，包含四个子集与真实RUL标签，是该领域的标准评测集。评价指标常用RMSE与不对称评分函数，晚发现惩罚更重。",
+          "三大建模路线：相似度匹配与历史轨迹比对、基于HI的退化曲线拟合外推、LSTM或Transformer端到端深度建模。工业实践常用LSTM配合分阶段RUL标签，clip上限一般取120到130。",
+          "不确定性量化：在点预测之外给出置信区间供维护决策参考；用MC Dropout或分位数回归输出P10、P50、P90三档预测。维护排期按保守分位规划更安全。"
+        ],
+        "lessons": [
+          {
+            "name": "1 C-MAPSS寿命预测实战",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "9:35",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1Kz421m7Wx/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1Kz421m7Wx/?p=1",
+            "_bvid": "BV1Kz421m7Wx"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "30页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "报警治理与维护闭环": {
+        "points": [
+          "报警阈值设计：静态阈值简单但误报多；动态阈值基于历史同期基线自适应调整；预警分注意、警告、危险三级，对应不同响应时效，避免狼来了效应。",
+          "报警治理机制：合并同源报警、抑制已确认故障的衍生报警、定期复盘报警响应率与准确率。治理目标是将可行动报警占比提升到90%以上。",
+          "从预测到维护闭环：RUL预测结合备件库存与生产计划联合优化维护窗口；通过CMMS或EAM系统自动生成工单形成闭环。预测的价值最终体现在维护成本与非计划停机的下降。",
+          "闭环效果度量：跟踪预警命中率、平均提前量、误报率、非计划停机时长、维护成本五个指标。每季度复盘模型表现并增量更新，系统才能越用越准。"
+        ],
+        "lessons": [
+          {
+            "name": "1 从预警到工单的落地",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "2:11:41",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1NJ411r7Ry/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1NJ411r7Ry/?p=1",
+            "_bvid": "BV1NJ411r7Ry"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "22页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      }
+    },
+    "videoList": [
+      {
+        "name": "设备预测性维护与时序数据分析 第1讲 · 工业数据采集与时序基础",
+        "duration": "1:06:46",
+        "url": "https://www.bilibili.com/video/BV1kyXcYjEhx/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1kyXcYjEhx/?p=1",
+        "_bvid": "BV1kyXcYjEhx",
+        "_realTitle": "温度传感器数据处理"
+      },
+      {
+        "name": "设备预测性维护与时序数据分析 第2讲 · 振动信号特征工程",
+        "duration": "1:21:52",
+        "url": "https://www.bilibili.com/video/BV1h7s8zSEbv/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1h7s8zSEbv/?p=1",
+        "_bvid": "BV1h7s8zSEbv",
+        "_realTitle": "【CNN+LSTM+Attention】有代码可复现论文合集，轻松搞定多特征变量序列预测！多热点搭配"
+      },
+      {
+        "name": "设备预测性维护与时序数据分析 第3讲 · 健康指标构建",
+        "duration": "12:40",
+        "url": "https://www.bilibili.com/video/BV1i3tzzxEmH/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1i3tzzxEmH/?p=1",
+        "_bvid": "BV1i3tzzxEmH",
+        "_realTitle": "剩余机械寿命RUL预测系统（python代码，训练好的模型可以对新数据直接预测剩余寿命和状态）"
+      },
+      {
+        "name": "设备预测性维护与时序数据分析 第4讲 · RUL剩余寿命预测",
+        "duration": "9:35",
+        "url": "https://www.bilibili.com/video/BV1Kz421m7Wx/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1Kz421m7Wx/?p=1",
+        "_bvid": "BV1Kz421m7Wx",
+        "_realTitle": "轴承故障寿命预测方法_估计剩余使用寿命（RUL）_预测性维护"
+      },
+      {
+        "name": "设备预测性维护与时序数据分析 第5讲 · 报警治理与维护闭环",
+        "duration": "2:11:41",
+        "url": "https://www.bilibili.com/video/BV1NJ411r7Ry/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1NJ411r7Ry/?p=1",
+        "_bvid": "BV1NJ411r7Ry",
+        "_realTitle": "1.智能运维技术引述--PHM算法与智能分析技术"
+      }
+    ],
+    "pptList": [
+      {
+        "name": "第1章 工业数据采集与时序基础",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 0,
+        "_chTitle": "工业数据采集与时序基础"
+      },
+      {
+        "name": "第2章 振动信号特征工程",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 1,
+        "_chTitle": "振动信号特征工程"
+      },
+      {
+        "name": "第3章 健康指标构建",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 2,
+        "_chTitle": "健康指标构建"
+      },
+      {
+        "name": "第4章 RUL剩余寿命预测",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 3,
+        "_chTitle": "RUL剩余寿命预测"
+      },
+      {
+        "name": "第5章 报警治理与维护闭环",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 4,
+        "_chTitle": "报警治理与维护闭环"
+      }
+    ]
+  },
+  {
+    "id": "career-mlops",
+    "name": "MLOps工程实践：从训练到上线",
+    "school": "Microsoft Learn · DataWhale",
+    "instructor": "MLOps Community",
+    "category": "AI岗位技能",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "面向AI平台工程师与算法团队的工程化必修课。打通实验追踪、特征商店、CI/CD、模型注册与监控告警全链路，实现模型发布全自动与指标可追溯。",
+    "richDesc": "<h3>课程概述</h3><p>以开源栈（MLflow+Feast+GitHub Actions+Prometheus）为主线。配套知识库切片：《ai_engineering_practice.md》第六章。</p><h3>适合人群</h3><p>DevOps转MLOps、算法团队平台化建设、企业IT部门智能化升级。</p><h3>先修要求</h3><p>Docker/K8s基础概念；Git协作经验。</p>",
+    "studentCount": 28000,
+    "rating": 4.8,
+    "resourceCount": 80,
+    "status": "ongoing",
+    "textbook": "MLOps工程实践指南（Google/Microsoft白皮书）",
+    "period": 40,
+    "chapterCount": 5,
+    "chapterTitles": [
+      "MLOps成熟度模型",
+      "特征商店与数据版本",
+      "CI/CD for ML",
+      "K8s上的模型服务",
+      "监控告警与持续演进"
+    ],
+    "chapters": {
+      "MLOps成熟度模型": {
+        "points": [
+          "MLOps三级成熟度：Level0手工流程，笔记本训练手动发布，迭代以月计；Level1流水线自动化，训练评估发布由pipeline驱动；Level2 CI/CD全自动化，代码与数据变更自动触发测试与部署。",
+          "手动发布的十二个坑：环境不一致、数据无版本、模型无追踪、评测靠肉眼、发布靠人肉拷贝、无回滚能力等。每一项在规模化后都会演变成线上事故的来源。",
+          "实验追踪MLflow上手：记录每次训练的超参数、指标、模型工件与数据版本；通过UI横向对比实验确定最优配置。就像git管理代码一样，MLflow管理的是模型侧的版本历史。",
+          "模型卡与合规留痕：模型卡写明用途、数据、评测、局限与伦理考量；训练数据的血缘记录满足审计要求。在金融与医疗行业，这些文档是模型上线的硬性门槛。"
+        ],
+        "lessons": [
+          {
+            "name": "1 MLOps全景与工具地图",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "16:40",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1GjJK6sESN/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1GjJK6sESN/?p=1",
+            "_bvid": "BV1GjJK6sESN"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "24页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "特征商店与数据版本": {
+        "points": [
+          "特征商店解决的两个问题：训练服务偏斜——同一特征离线在线各算一遍结果不一致；特征重复开发——多团队重复造轮子。特征商店统一特征的定义、计算与存储，训练推理读取同一来源。",
+          "Feast快速上手：feature repo用Python声明数据源与实体；离线store对接数仓供训练取数，在线store如Redis供低延迟查询；get_historical_features接口保证point-in-time正确性。",
+          "数据版本管理DVC：数据文件用git可寻址哈希管理，配合S3或MinIO远程存储。每次实验记录代码commit、数据版本、超参三元组，任何模型都能精确复现。",
+          "特征质量监控：用PSI与KS检验检测特征漂移，监控空值率与更新延迟并告警；上游表结构变更必须走评审流程，特征下线要有消费者通知机制。"
+        ],
+        "lessons": [
+          {
+            "name": "1 Feature Store实战",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "10:19",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1oE4m1X7nb/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1oE4m1X7nb/?p=1",
+            "_bvid": "BV1oE4m1X7nb"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "26页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "CI/CD for ML": {
+        "points": [
+          "ML的CI/CD与传统差异：测试对象除了代码，还包括数据schema、模型质量与训练管线本身；CD的最终产物不是软件包，而是通过评测门槛的模型版本。",
+          "机器学习流水线组成：数据校验、预处理、训练、评估、模型验证、注册发布六个环节，每步产出工件化，步骤间依赖显式声明。Kubeflow Pipelines与TFX是代表框架。",
+          "模型评估门禁：测试集指标低于阈值自动阻断发布；与线上当前模型做影子对比；公平性指标与鲁棒性测试纳入CI检查项，不达标一律不放行。",
+          "GitHub Actions实践：单元测试与数据契约测试在PR时触发；训练作业在GPU runner或云端触发；评测通过后自动构建镜像推送registry，人工审批后部署生产。"
+        ],
+        "lessons": [
+          {
+            "name": "1 模型CI/CD流水线搭建",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "11:07",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1ccH2eLEDe/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1ccH2eLEDe/?p=1",
+            "_bvid": "BV1ccH2eLEDe"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "28页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "K8s上的模型服务": {
+        "points": [
+          "模型服务上K8s的理由：弹性扩缩容应对流量波峰、健康检查自愈、滚动更新零停机、GPU资源池化调度。这些能力自建机房很难达到同等水平。",
+          "KServe框架：InferenceService声明式定义predictor、transformer、explainer组件；支持金丝雀流量切分与自动扩缩容，甚至可缩容到零；底层可选用Triton、TorchServe或vLLM运行时。",
+          "GPU资源调度要点：GPU通过nvidia.com/gpu资源申请；MIG切分可提升利用率；结合GPU显存与利用率指标设置合理的HPA阈值，同时注意冷启动延迟的权衡。",
+          "发布与回滚：金丝雀按5%、25%、100%三阶段放量，以错误率与P99延迟为门禁指标；kubectl rollout undo实现秒级回滚；模型热更新与服务扩缩容解耦设计。"
+        ],
+        "lessons": [
+          {
+            "name": "1 Kubernetes模型服务部署",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "1:07:46",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1u6KRzKE88/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1u6KRzKE88/?p=1",
+            "_bvid": "BV1u6KRzKE88"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "30页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "监控告警与持续演进": {
+        "points": [
+          "模型监控三层次：基础设施层监控CPU、GPU与延迟；预测层监控输出分布与置信度；效果层监控真实标签回流后的业务指标。三层缺一不可，效果层最滞后也最重要。",
+          "数据漂移与概念漂移：数据漂移是输入分布变化，概念漂移是输入输出关系变化。PSI大于0.2触发关注；但检测到漂移不等于要重训，先分析背后的业务原因。",
+          "告警治理实践：告警分层分级，P0线上一票否决立即处理，P1次工作日处理，P2周会复盘；每条告警必须附带runbook；定期清理无效告警避免告警疲劳。",
+          "持续演进飞轮：badcase回流、标注、增量数据集、定期重训流水线；季度模型健康审查；每次迭代用A/B测试验证收益，形成监控、诊断、重训、验证的完整闭环。"
+        ],
+        "lessons": [
+          {
+            "name": "1 线上模型监控体系",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "4:00",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1Jr4y1z7hN/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1Jr4y1z7hN/?p=1",
+            "_bvid": "BV1Jr4y1z7hN"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "26页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      }
+    },
+    "videoList": [
+      {
+        "name": "MLOps工程实践：从训练到上线 第1讲 · MLOps成熟度模型",
+        "duration": "16:40",
+        "url": "https://www.bilibili.com/video/BV1GjJK6sESN/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1GjJK6sESN/?p=1",
+        "_bvid": "BV1GjJK6sESN",
+        "_realTitle": "从MLOps、LLMOps到GenAIOps：一口气讲清AI工程化三代演进"
+      },
+      {
+        "name": "MLOps工程实践：从训练到上线 第2讲 · 特征商店与数据版本",
+        "duration": "10:19",
+        "url": "https://www.bilibili.com/video/BV1oE4m1X7nb/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1oE4m1X7nb/?p=1",
+        "_bvid": "BV1oE4m1X7nb",
+        "_realTitle": "10分钟带你了解特征商店（Feature Store）及其双数据库系统"
+      },
+      {
+        "name": "MLOps工程实践：从训练到上线 第3讲 · CI/CD for ML",
+        "duration": "11:07",
+        "url": "https://www.bilibili.com/video/BV1ccH2eLEDe/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1ccH2eLEDe/?p=1",
+        "_bvid": "BV1ccH2eLEDe",
+        "_realTitle": "10分钟带你了解MLOps以及CI/CD"
+      },
+      {
+        "name": "MLOps工程实践：从训练到上线 第4讲 · K8s上的模型服务",
+        "duration": "1:07:46",
+        "url": "https://www.bilibili.com/video/BV1u6KRzKE88/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1u6KRzKE88/?p=1",
+        "_bvid": "BV1u6KRzKE88",
+        "_realTitle": "Kserve：在Kubernetes上快速部署大模型"
+      },
+      {
+        "name": "MLOps工程实践：从训练到上线 第5讲 · 监控告警与持续演进",
+        "duration": "4:00",
+        "url": "https://www.bilibili.com/video/BV1Jr4y1z7hN/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1Jr4y1z7hN/?p=1",
+        "_bvid": "BV1Jr4y1z7hN",
+        "_realTitle": "如何解决数据漂移？"
+      }
+    ],
+    "pptList": [
+      {
+        "name": "第1章 MLOps成熟度模型",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 0,
+        "_chTitle": "MLOps成熟度模型"
+      },
+      {
+        "name": "第2章 特征商店与数据版本",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 1,
+        "_chTitle": "特征商店与数据版本"
+      },
+      {
+        "name": "第3章 CI/CD for ML",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 2,
+        "_chTitle": "CI/CD for ML"
+      },
+      {
+        "name": "第4章 K8s上的模型服务",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 3,
+        "_chTitle": "K8s上的模型服务"
+      },
+      {
+        "name": "第5章 监控告警与持续演进",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 4,
+        "_chTitle": "监控告警与持续演进"
+      }
+    ]
+  },
+  {
+    "id": "career-agent-dev",
+    "name": "多智能体系统开发实战",
+    "school": "B站技术区 · LangGraph中文社区",
+    "instructor": "LLM Ops 讲师",
+    "category": "大模型应用",
+    "credit": 3,
+    "term": "2026秋",
+    "description": "对标本系统架构的多智能体开发实训。基于LangGraph实现Supervisor编排、共享态协同、辩论交叉验证与动态决策节点，理解「分析-生成-校验-决策」闭环的工程细节。",
+    "richDesc": "<h3>课程概述</h3><p>以本平台的多智能体协作为教学案例逆向拆解。配套知识库切片：《llm_application_dev.md》第三章、《ai_industry_cases.md》岗位矩阵。</p><h3>适合人群</h3><p>已完成RAG课程的进阶学员、企业智能体中台建设团队、竞赛参赛选手。</p><h3>先修要求</h3><p>RAG基础；Python异步编程初步。</p>",
+    "studentCount": 28000,
+    "rating": 4.8,
+    "resourceCount": 80,
+    "status": "ongoing",
+    "textbook": "LangGraph官方文档 · Multi-Agent设计模式白皮书",
+    "period": 40,
+    "chapterCount": 4,
+    "chapterTitles": [
+      "Agent设计模式总览",
+      "共享态协同与依赖编排",
+      "辩论交叉验证机制",
+      "动态决策与人机协同"
+    ],
+    "chapters": {
+      "Agent设计模式总览": {
+        "points": [
+          "Agent与工作流的分界：工作流是预先编排的固定路径，可控且成本低；Agent由LLM动态决策下一步行动，灵活但成本高。实践建议是能用工作流解决就不要上Agent。",
+          "四大基础模式：提示链将任务分步串联每步可校验；路由按意图分流到专用分支；并行化多路生成后投票或汇聚；评估者优化者通过生成加反馈循环迭代质量。",
+          "ReAct循环：Thought、Action、Observation三步迭代，让模型边推理边调用工具，每轮把观察结果回填上下文。必须设置最大步数与预算上限，防止死循环烧钱。",
+          "模式组合与选型：真实系统是模式的组合——主流程用提示链保证可控，分支节点用路由，关键产出用评估者循环把关。先画出任务状态图，再决定用哪些模式。"
+        ],
+        "lessons": [
+          {
+            "name": "1 多智能体模式精讲",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "5:20:20",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV18Ro7YEEqu/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV18Ro7YEEqu/?p=1",
+            "_bvid": "BV18Ro7YEEqu"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "26页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "共享态协同与依赖编排": {
+        "points": [
+          "共享状态的设计：多Agent系统的核心是状态Schema——任务目标、中间产物、消息历史、控制标记。状态即唯一事实源，所有Agent围绕状态读写，避免上下文相互抄写导致失真。",
+          "LangGraph状态图机制：StateGraph定义状态类型与节点；节点是读取状态、执行、返回增量更新的函数；边与条件边决定流转方向；reducer定义并行写入如何合并，如消息列表追加。",
+          "依赖编排实践：用条件边实现质量不达标回退重做的分支逻辑；checkpointer持久化每步状态，使断点恢复与时间旅行调试成为可能；interrupt节点实现人工审批。",
+          "上下文与成本控制：每个节点只传递必要的状态切片而非全量历史；为每个Agent配置独立的system prompt与最小工具集；持续监控token预算防止长图跑飞。"
+        ],
+        "lessons": [
+          {
+            "name": "1 用LangGraph编排协作流水线",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "3:04:35",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1xb4kzmEKX/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1xb4kzmEKX/?p=1",
+            "_bvid": "BV1xb4kzmEKX"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "28页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "辩论交叉验证机制": {
+        "points": [
+          "辩论模式的动机：单模型自我检查容易自己骗自己；多个独立实例以不同视角、温度或角色生成答案后互相质证，能显著暴露推理漏洞，是提升可靠性的有效手段。",
+          "多角色辩论实现：辩论者A与B分别独立作答，交换答案后要求反驳对方论据，再由仲裁者综合裁决。每轮辩论内容写入共享状态，保留完整论证链供追溯。",
+          "交叉验证的变体：自我一致性对同一问题多次采样投票；Verifier模型单独对答案打分；工具校验用代码执行器验证数学或SQL结果。按错误代价选择验证强度。",
+          "成本与收益平衡：辩论使token成本成倍增加，适合医疗、金融、代码上线等高风险决策；低风险任务用采样一致性即可。把验证预算集中花在关键节点。"
+        ],
+        "lessons": [
+          {
+            "name": "1 辩论式多智能体消幻觉",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "21:16:49",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1z3NY66EY1/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1z3NY66EY1/?p=1",
+            "_bvid": "BV1z3NY66EY1"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "24页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      },
+      "动态决策与人机协同": {
+        "points": [
+          "Human-in-the-loop的定位：对外发送、资金操作、不可逆删除等高风险动作前中断等待人工确认。LangGraph的interrupt_before在指定节点暂停，人工审批后resume继续执行。",
+          "动态路由与升级：Agent按置信度决策——高置信自动执行，中等置信降级为简化流程，低置信转人工处理。置信度可来自模型自评、验证器打分或历史统计。",
+          "状态持久化与恢复：checkpointer支持内存、SQLite、Postgres等多种后端保存图执行状态；进程重启或人工介入数小时后可从断点继续；异步审批通过webhook唤醒流程。",
+          "生产级保障：全链路日志记录每次决策的输入输出与理由，满足审计要求；工具代码在沙箱中执行；为每个Agent设置权限白名单，最小权限与人机协同双保险。"
+        ],
+        "lessons": [
+          {
+            "name": "1 自适应学习路由实现",
+            "type": "video",
+            "iconClass": "el-icon-video-play",
+            "desc": "5:55:40",
+            "btnIcon": "el-icon-video-play",
+            "btnText": "B站播放",
+            "url": "https://www.bilibili.com/video/BV1pStR6vEXJ/?p=1",
+            "_sourceUrl": "https://www.bilibili.com/video/BV1pStR6vEXJ/?p=1",
+            "_bvid": "BV1pStR6vEXJ"
+          },
+          {
+            "name": "2 本章课件",
+            "type": "ppt",
+            "iconClass": "el-icon-presentation",
+            "desc": "22页",
+            "btnIcon": "el-icon-view",
+            "btnText": "查看"
+          }
+        ]
+      }
+    },
+    "videoList": [
+      {
+        "name": "多智能体系统开发实战 第1讲 · Agent设计模式总览",
+        "duration": "5:20:20",
+        "url": "https://www.bilibili.com/video/BV18Ro7YEEqu/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV18Ro7YEEqu/?p=1",
+        "_bvid": "BV18Ro7YEEqu",
+        "_realTitle": "2025B站最新！LangGraph以图的方式构建AI Agent实战指南，零基础极简入门到项目落地"
+      },
+      {
+        "name": "多智能体系统开发实战 第2讲 · 共享态协同与依赖编排",
+        "duration": "3:04:35",
+        "url": "https://www.bilibili.com/video/BV1xb4kzmEKX/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1xb4kzmEKX/?p=1",
+        "_bvid": "BV1xb4kzmEKX",
+        "_realTitle": "【吴恩达】2025年公认最好的【Agentic AI】教程！大模型入门到进阶，一套全解决！Agent"
+      },
+      {
+        "name": "多智能体系统开发实战 第3讲 · 辩论交叉验证机制",
+        "duration": "21:16:49",
+        "url": "https://www.bilibili.com/video/BV1z3NY66EY1/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1z3NY66EY1/?p=1",
+        "_bvid": "BV1z3NY66EY1",
+        "_realTitle": "尚硅谷LangGraph教程，langgraph入门，langgraph智能体项目实战"
+      },
+      {
+        "name": "多智能体系统开发实战 第4讲 · 动态决策与人机协同",
+        "duration": "5:55:40",
+        "url": "https://www.bilibili.com/video/BV1pStR6vEXJ/?p=1",
+        "platform": "bilibili",
+        "_sourceUrl": "https://www.bilibili.com/video/BV1pStR6vEXJ/?p=1",
+        "_bvid": "BV1pStR6vEXJ",
+        "_realTitle": "LangChain  × LangGraph 企业级Agent实战：状态持久化 + 人机协同 + 多智能体，生产级全流程！"
+      }
+    ],
+    "pptList": [
+      {
+        "name": "第1章 Agent设计模式总览",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 0,
+        "_chTitle": "Agent设计模式总览"
+      },
+      {
+        "name": "第2章 共享态协同与依赖编排",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 1,
+        "_chTitle": "共享态协同与依赖编排"
+      },
+      {
+        "name": "第3章 辩论交叉验证机制",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 2,
+        "_chTitle": "辩论交叉验证机制"
+      },
+      {
+        "name": "第4章 动态决策与人机协同",
+        "size": "2.2 MB",
+        "pages": 12,
+        "url": "",
+        "platform": "local",
+        "_sourceUrl": "",
+        "_chapterIdx": 3,
+        "_chTitle": "动态决策与人机协同"
+      }
+    ]
+  }
+]
