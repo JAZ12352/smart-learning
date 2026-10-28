@@ -463,7 +463,7 @@ def generate_report():
 
     score = (passed / total * 100) if total > 0 else 0
 
-    # 按榜题（XH-202630）要求映射
+    # 按考察维度映射
     scoring_map = {
         "0. 服务健康检查": "基础运行环境就绪",
         "1. 学生学习画像": "学情诊断：画像 ≥6 维",

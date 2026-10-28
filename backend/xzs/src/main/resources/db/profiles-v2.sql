@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
--- 差异化学习者画像种子数据 v2（对齐赛题 XH-202630 受众要求）
+-- 差异化学习者画像种子数据 v2（覆盖多类职业身份与先验知识字段）
 -- 由 test-data/learner_profiles.json 自动生成：python generate_profiles_sql.py
 -- 覆盖在校生/转岗/在职进阶/企业内训等职业身份，含先验知识字段：
 -- education_background / occupation_target / theory_test_result

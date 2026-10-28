@@ -107,3 +107,6 @@ backend/xzs/_*
 *.orig
 *.rej
 .workbuddy/
+
+# === 运行时生成的评测报告（脚本产出，不提交）===
+/docs/

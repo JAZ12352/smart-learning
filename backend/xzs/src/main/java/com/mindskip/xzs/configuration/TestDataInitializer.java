@@ -48,7 +48,7 @@ public class TestDataInitializer implements CommandLineRunner {
                 }
             }
 
-            // 差异化学习者画像 v2（赛题 XH-202630 受众：转岗/在职/企业内训/在校生，user_id 21-32）
+            // 差异化学习者画像 v2（面向：转岗/在职/企业内训/在校生，user_id 21-32）
             if (!hasV2Profiles(conn)) {
                 Resource v2 = new ClassPathResource("db/profiles-v2.sql");
                 if (v2.exists()) {
