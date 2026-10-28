@@ -140,11 +140,9 @@
 │       ├── exam/                   # 考试管理
 │       └── knowledge-base/         # 知识库管理
 │
-├── deploy-package/                  # Docker 一键部署包
-│   ├── docker-compose.yml          # 三服务编排
-│   ├── backend/xzs-3.9.0.jar       # 预编译 JAR
-│   ├── app/dist/                   # 前端构建产物
-│   └── db/init.sql                 # 数据库初始化（含种子数据）
+├── docker-compose.yml              # 三服务编排（mysql / backend / admin）
+├── .env.example                    # 环境变量模板（复制为 .env 后填写密钥）
+├── backend/xzs/src/main/resources/db/   # 数据库脚本（schema / 种子数据）
 │
 ├── docs/                           # 项目文档
 └── README.md                       # 本文件
@@ -154,16 +152,34 @@
 
 ## 🚀 快速启动
 
+### 第 0 步：配置密钥（必读）
+
+仓库**不含任何凭据**，所有密钥通过环境变量注入。先复制模板并填写：
+
+```bash
+cp .env.example .env
+# 编辑 .env，至少填入 DEEPSEEK_API_KEY；七牛云 QN_ACCESS_KEY / QN_SECRET_KEY 用于文件上传，可留空
+```
+
+| 变量 | 用途 | 不填的后果 |
+|---|---|---|
+| `DEEPSEEK_API_KEY` | 大模型调用 | AI 对话、资源生成、画像抽取全部不可用 |
+| `QN_ACCESS_KEY` / `QN_SECRET_KEY` | 七牛云对象存储 | 课件与图片上传接口不可用 |
+| `MYSQL_ROOT_PASSWORD` | 数据库口令 | 使用默认值 123456 |
+
+> `.env` 已被 `.gitignore` 忽略，不会误提交；后台「模型配置」页写入的 `model-config.json` 同样不入库。
+
 ### 方式一：Docker 一键部署（推荐评委使用）
 
 ```bash
-cd deploy-package
+cp .env.example .env   # 填入 DEEPSEEK_API_KEY
 docker compose up -d
 ```
 
-访问 http://localhost:8010 ，使用 `admin` / `123456` 登录。
+访问 http://localhost:8006 （管理端），使用 `admin` / `123456` 登录。
 
-> 前置要求：Docker Desktop 4.x+，确保 3306 / 8001 / 8010 端口未被占用。
+> 前置要求：Docker Desktop 4.x+，确保 3306 / 8001 / 8006 端口未被占用。
+> compose 会自动读取根目录 `.env` 并把密钥透传给后端容器。
 
 ### 方式二：本地开发启动
 
@@ -189,9 +205,11 @@ npm run serve
 
 ```bash
 # 1. 启动 MySQL 8.0，创建数据库 xzs
-# 2. 导入 deploy-package/db/init.sql
-# 3. 启动后端
+# 2. 导入建表与种子数据（db 目录下按需导入）
+mysql -uroot -p xzs < backend/xzs/src/main/resources/db/ai_schema.sql
+# 3. 启动后端（密钥由 .env 注入，见第 0 步）
 cd backend/xzs
+mvn clean package -DskipTests
 java -jar target/xzs-3.9.0.jar --spring.profiles.active=dev
 # 4. 启动前端
 cd frontend/xzs-admin && npm run serve
